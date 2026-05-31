@@ -1,0 +1,21 @@
+Here’s a quick‑reference list of the major oceanic layers, ordered from the shallowest (near‑shore) to the deepest (the trenches).  The exact depth ranges are approximate because they can vary from place to place, but the zones are widely used in marine science.
+
+| Zone (shallow → deep) | Approx. depth range | Common name & key characteristics |
+|-----------------------|---------------------|------------------------------------|
+| **Littoral (Intertidal) zone** | 0 m (between high‑ and low‑tide marks) | Exposed at low tide, covered at high tide; intense wave action, daily temperature and salinity swings. |
+| **Neritic (Subtidal) zone** | 0 – ~200 m (over the continental shelf) | Sunlit waters over the shallow sea floor; supports the bulk of coastal marine life (seaweed, fish, invertebrates). |
+| **Epipelagic (Sunlight) zone** | 0 – ~200 m (open ocean) | Fully illuminated; photosynthetic phytoplankton thrive; highest primary production and most marine megafauna. |
+| **Mesopelagic (Twilight) zone** | ~200 – 1,000 m | Light fades to a dim, blue twilight; temperature drops sharply; bioluminescent organisms become common. |
+| **Bathypelagic (Midnight) zone** | ~1,000 – 4,000 m | No sunlight reaches; temperatures near 2–4 °C; organisms are adapted to high pressure, scarce food, and often rely on detritus falling from above. |
+| **Abyssopelagic (Abyssal) zone** | ~4,000 – 6,000 m | Extreme pressure, near‑freezing temperatures; sediment‑dwelling organisms (e.g., sea cucumbers, polychaete worms) dominate; food supply is very limited. |
+| **Hadopelagic (Hadal) zone** | >6,000 m (oceanic trenches) | The deepest, darkest layer; pressure > 1,000 atm; specialized extremophiles (e.g., snailfish, amphipods) live in the narrow trench habitats. |
+
+---
+
+### Why the zones matter
+* **Light & temperature** – The epipelagic is warm and sun‑lit; the deeper zones become progressively colder and darker.
+* **Pressure** – Organisms in the hadopelagic zone have evolved unique生理 adaptations to survive crushing pressures.
+* **Food supply** – Most marine life depends on organic “marine snow” that drifts down from productive surface waters; the deeper you go, the scarcer the food.
+* **Biodiversity patterns** – Shallow zones host the greatest species richness; deep zones are inhabited by a more limited but uniquely adapted fauna.
+
+If you need more detail on any specific zone (e.g., typical species, physical processes, or how humans impact them), just let me know!

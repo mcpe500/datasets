@@ -1,0 +1,23 @@
+<answer>
+The colors you see in a rainbow are the **spectral hues** that correspond to the single‑wavelength portion of visible light (roughly 380 nm – 700 nm). Anything that cannot be produced by a single wavelength of light — including mixes of wavelengths, the absence of light, or the presence of all wavelengths together — is not found in a rainbow.  
+
+Below are some common examples of **non‑spectral** (or “rainbow‑free”) colors:
+
+| Category | Examples |
+|----------|----------|
+| **Mix‑of‑red‑and‑blue** (no single‑wavelength counterpart) | magenta, fuchsia, violet (as a pure purple, distinct from spectral violet) |
+| **Pink shades** | rose, blush, salmon, hot‑pink |
+| **Brown‑earth tones** | brown, tan, khaki, olive, ochre, chestnut |
+| **Dark/rich reds** | maroon, burgundy, wine |
+| **Cool teal‑turquoise shades** | teal, turquoise, aquamarine, cerulean (as distinct from a pure cyan) |
+| **Neutral tones** | gray (all shades), silver, charcoal |
+| **Achromatic colors** | white (all wavelengths together) and black (absence of light) |
+| **Metallic / fashion colors** | gold, bronze, copper, pewter |
+| **Neon / electric hues** | neon green, electric blue, hot orange (these are vivid versions of spectral colors but are created by mixing wavelengths or using fluorescent pigments) |
+
+**Why they’re absent from a rainbow**  
+- A rainbow displays a continuous spectrum of wavelengths; each point on the arc corresponds to a single, pure wavelength of light.  
+- Colors such as magenta, pink, brown, gray, white, and black require **multiple wavelengths** (or the complete absence of them). Therefore they can’t be assigned a unique position on the rainbow’s spectrum.  
+
+So, any color that isn’t a pure spectral hue (or a subtle variant of those hues) belongs to the “not in the rainbow” category.
+</answer>

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generation": 2,
-  "active_candidate_id": "parallel-all",
-  "stagnation_runs": 1,
+  "generation": 3,
+  "active_candidate_id": "parallel-all-text",
+  "stagnation_runs": 0,
   "candidates": [
     {
       "id": "baseline-seq",
@@ -41,7 +41,7 @@
         "retry": false,
         "parallel_media": true
       },
-      "status": "evaluated",
+      "status": "active",
       "fitness_history": [
         {
           "run": 2,
@@ -117,10 +117,20 @@
         "parallel_text": true,
         "text_batches": 4
       },
-      "status": "pending",
-      "fitness_history": [],
-      "last_result_ref": null,
-      "notes": "Media generators in parallel + text split into 4 parallel batches."
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 3,
+          "status": "keep",
+          "metric": 26,
+          "direction": "higher",
+          "confidence": 1,
+          "timestamp": 1780211606986,
+          "description": "Parallel text (4 batches of 5) + parallel media: 26 files in 339s (vs baseline 25/600s). 1.77x faster, same quality. Text fully parallelized."
+        }
+      ],
+      "last_result_ref": 3,
+      "notes": []
     },
     {
       "id": "parallel-highvol",
@@ -139,20 +149,89 @@
         "parallel_text": true,
         "text_batches": 4
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "text-heavy-50",
+      "family": "architecture",
+      "parent_id": "parallel-all-text",
+      "operator": "mutate",
+      "hypothesis": "Scale text to 50 topics (5 batches of 10). Text is cheap/fast; more topics = more files per cycle within600s budget.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 50,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 5,
+        "batch_size": 10
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Scaled up counts with full parallelization."
+      "notes": "Text volume up from 20 to 50. Keep media same.5 batches of 10."
+    },
+    {
+      "id": "full-overlap",
+      "family": "architecture",
+      "parent_id": "parallel-all-text",
+      "operator": "mutate",
+      "hypothesis": "True overlap: media + text run simultaneously from cycle start. Currently text waits for media. Full overlap should cut cycle to ~max(media,text) \u2248 170s.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 20,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 4,
+        "media_text_overlap": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "All generators (media + text) run in parallel from t=0. Text starts immediately."
+    },
+    {
+      "id": "text-large-batch",
+      "family": "architecture",
+      "parent_id": "parallel-all-text",
+      "operator": "mutate",
+      "hypothesis": "2 large batches of 10 instead of 4 small batches of 5. Fewer batches = less scheduling overhead, more sustained concurrency.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 20,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 2,
+        "batch_size": 10
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Fewer, larger batches.2 batches of 10 topics each."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 2,
+      "attempts": 3,
       "failures": 1,
-      "keeps": 1,
+      "keeps": 2,
       "retired": false,
-      "consecutive_failures": 1
+      "consecutive_failures": 0
     }
   ],
   "scheduler": {

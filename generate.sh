@@ -8,8 +8,9 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 GH="/data/data/com.termux/files/usr/bin/gh"
 
 acquire_lock() {
-    if [ -f "$LOCK" ]; then
-        rm -f "$LOCK"
+    # Clean stale lock (file or directory leftover from crashed run)
+    if [ -e "$LOCK" ]; then
+        rm -rf "$LOCK"
     fi
     if ! mkdir "$LOCK" 2>/dev/null; then
         echo "[$(date '+%H:%M:%S')] ABORTED: another instance running" >> "$LOG"
@@ -229,22 +230,22 @@ main() {
     log "=== Gen cycle started ==="
 
 
-    # Parallelize media generators (images, speech, music run concurrently)
+    # Full overlap: ALL generators start at t=0 simultaneously
     gen_image_01 &
     local pid_img=$!
     gen_speech_hd &
     local pid_sp=$!
     gen_music_26 &
     local pid_mus=$!
+    gen_music_cover &
+    gen_text &
+    local pid_txt=$!
 
-
-    # Wait for media — each has its own sleep delays baked in
+    # Wait for media (text runs in parallel, doesn't block)
     wait $pid_img || log "image-01 subshell exited non-zero"
     wait $pid_sp || log "speech-2.8-hd subshell exited non-zero"
     wait $pid_mus || log "music-2.6 subshell exited non-zero"
-
-    gen_music_cover
-    gen_text
+    wait $pid_txt || log "text subshell exited non-zero"
 
     git_push
 
