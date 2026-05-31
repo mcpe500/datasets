@@ -12,8 +12,8 @@ log() {
 
 cd "$REPO_DIR"
 
-# ==== IMAGES ====
-generate_images() {
+# ==== image-01 ====
+gen_image_01() {
     local prompts=(
         "A serene mountain lake at golden hour with reflections"
         "Cyberpunk cityscape with neon-lit streets and flying cars"
@@ -35,20 +35,24 @@ generate_images() {
         "A cozy reading nook with books and soft blankets"
         "Bioluminescent cave with glowing mushrooms"
         "A futuristic city at night with holographic advertisements"
+        "A coral reef teeming with tropical fish at sunset"
+        "A steampunk airship floating above fluffy clouds"
+        "A wizard's library with floating books and magical chandelier"
     )
-    
+
     local count=3
     for i in $(seq 1 $count); do
         prompt="${prompts[$((RANDOM % ${#prompts[@]}))]}"
-        output="images/img_${TIMESTAMP}_${i}.png"
-        log "Generating image: ${prompt:0:50}..."
-        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: image $i"
+        output="images/image_01/img_${TIMESTAMP}_${i}.png"
+        mkdir -p "images/image_01"
+        log "image-01: ${prompt:0:50}..."
+        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: image-01 $i"
         sleep 15
     done
 }
 
-# ==== SPEECH ====
-generate_speech() {
+# ==== speech-2.8-hd ====
+gen_speech_hd() {
     local texts=(
         "Welcome to the future of artificial intelligence. Today we explore the boundaries of creativity and technology working together as one."
         "In the depths of the ocean, light filters through the water in beautiful patterns. Life thrives in the most unexpected places."
@@ -62,19 +66,20 @@ generate_speech() {
         "In the kitchen, ingredients come together like old friends, creating dishes that nourish both body and soul."
         "The stars have witnessed countless stories throughout human history and beyond."
     )
-    
+
     local count=2
     for i in $(seq 1 $count); do
         text="${texts[$((RANDOM % ${#texts[@]}))]}"
-        output="speech/speech_${TIMESTAMP}_${i}.mp3"
-        log "Generating speech: ${text:0:50}..."
+        output="speech/speech_28_hd/speech_${TIMESTAMP}_${i}.mp3"
+        mkdir -p "speech/speech_28_hd"
+        log "speech-2.8-hd: ${text:0:50}..."
         mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: speech $i"
         sleep 10
     done
 }
 
-# ==== MUSIC ====
-generate_music() {
+# ==== music-2.6 ====
+gen_music_26() {
     local prompts=(
         "Upbeat electronic dance music with pulsing bass and uplifting melodies perfect for a party atmosphere"
         "Peaceful acoustic instrumental with gentle guitar and soft piano creating a calm meditation atmosphere"
@@ -89,19 +94,26 @@ generate_music() {
         "Classical piano piece with gentle melodic passages in the style of Debussy"
         "Reggae groove with laid-back rhythm guitar and expressive organ sounds"
     )
-    
+
     local count=1
     for i in $(seq 1 $count); do
         prompt="${prompts[$((RANDOM % ${#prompts[@]}))]}"
-        output="music/music_${TIMESTAMP}_${i}.mp3"
-        log "Generating music: ${prompt:0:50}..."
-        mmx music generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: music $i"
+        output="music/music_26/music_${TIMESTAMP}_${i}.mp3"
+        mkdir -p "music/music_26"
+        log "music-2.6: ${prompt:0:50}..."
+        mmx music generate --prompt "$prompt" --lyrics-optimizer --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: music $i"
         sleep 30
     done
 }
 
-# ==== TEXT ====
-generate_text() {
+# ==== music-cover ====
+gen_music_cover() {
+    # music-cover needs reference audio — skip in auto-generate
+    log "music-cover: skipped (requires reference audio)"
+}
+
+# ==== MiniMax-M2.7 (text) ====
+gen_text() {
     local topics=(
         "Write a haiku about mountains"
         "Write a short limerick about a curious cat"
@@ -109,14 +121,14 @@ generate_text() {
         "List five benefits of meditation"
         "Write a fortune cookie message"
         "Describe the color blue to someone who has never seen"
-        "What would you find at the end of a rainbow?"
-        "Write an example of onomatopoeia for each letter A-Z"
-        "How does photosynthesis work in one sentence?"
+        "What would you find at the end of a rainbow"
+        "Write an example of onomatopoeia for each letter A to Z"
+        "How does photosynthesis work in one sentence"
         "Name three things that are always improving"
         "Write a very short horror micro-story"
-        "What time is it on the sun?"
+        "What time is it on the sun"
         "Create a creative excuse for being late"
-        "Name colors that don't exist in the rainbow"
+        "Name colors that do not exist in the rainbow"
         "Write a haiku about code"
         "Give me a random fact"
         "Write a tongue twister"
@@ -124,12 +136,25 @@ generate_text() {
         "Name the layers of the ocean from shallow to deep"
         "Write a one-sentence summary of the meaning of life"
     )
-    
+
+    mkdir -p "text/MiniMax_M27"
     for topic in "${topics[@]}"; do
-        output="text/text_${TIMESTAMP}_$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25).txt"
-        log "Generating text: $topic"
-        result=$(mmx text chat --message "$topic" --output json --quiet 2>/dev/null)
-        echo "$result" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('content',''))" > "$output"
+        safe=$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25)
+        output="text/MiniMax_M27/text_${TIMESTAMP}_${safe}.txt"
+        log "text/M2.7: $topic"
+        mmx text chat --message "$topic" --output json 2>/dev/null | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+content=d.get('content','')
+if isinstance(content,list):
+    for block in content:
+        if block.get('type')=='text':
+            txt=block.get('text','').strip()
+            if txt:
+                print(txt)
+elif isinstance(content,str) and content.strip():
+    print(content.strip())
+" > "$output"
         if [ -s "$output" ]; then
             log "Saved: $output"
         else
@@ -147,31 +172,30 @@ git_push() {
         log "No changes to commit"
     else
         git commit -m "Auto-commit $(date '+%Y-%m-%d %H:%M')" 2>/dev/null
-        # Use gh auth token for push
-        TOKEN=$(/data/data/com.termux/files/usr/bin/gh auth token)
+        TOKEN=$($GH auth token)
         git push "https://${TOKEN}@github.com/mcpe500/datasets.git" HEAD:main 2>&1 | tee -a "$LOG" || log "Push failed (will retry next cycle)"
         log "Git push complete"
     fi
-    
-    # Stats
-    img_count=$(find "$REPO_DIR/images" -type f 2>/dev/null | wc -l)
-    sp_count=$(find "$REPO_DIR/speech" -type f 2>/dev/null | wc -l)
-    ms_count=$(find "$REPO_DIR/music" -type f 2>/dev/null | wc -l)
-    tx_count=$(find "$REPO_DIR/text" -type f 2>/dev/null | wc -l)
-    log "Stats — images:$img_count | speech:$sp_count | music:$ms_count | text:$tx_count"
+
+    log "--- Stats ---"
+    for folder in images/speech music text video; do
+        count=$(find "$REPO_DIR/$folder" -type f 2>/dev/null | wc -l)
+        log "  $folder: $count files"
+    done
 }
 
 # ==== MAIN ====
 main() {
-    log "=== Generation cycle started ==="
-    
-    generate_images
-    generate_speech
-    generate_music
-    generate_text
-    
+    log "=== Gen cycle started ==="
+
+    gen_image_01
+    gen_speech_hd
+    gen_music_26
+    gen_music_cover
+    gen_text
+
     git_push
-    
+
     log "=== Cycle complete ==="
 }
 
