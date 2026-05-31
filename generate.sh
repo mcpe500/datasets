@@ -125,7 +125,7 @@ gen_music_cover() {
     log "music-cover: skipped (requires reference audio)"
 }
 
-# ==== MiniMax-M2.7 (text) ====
+# ==== MiniMax-M2.7 (text) — parallel batched ====
 gen_text() {
     local topics=(
         "Write a haiku about mountains"
@@ -151,10 +151,39 @@ gen_text() {
     )
 
     mkdir -p "text/MiniMax_M27"
-    for topic in "${topics[@]}"; do
+
+    # Split topics into 4 parallel batches
+    local batch1=("${topics[0]}" "${topics[1]}" "${topics[2]}" "${topics[3]}" "${topics[4]}")
+    local batch2=("${topics[5]}" "${topics[6]}" "${topics[7]}" "${topics[8]}" "${topics[9]}")
+    local batch3=("${topics[10]}" "${topics[11]}" "${topics[12]}" "${topics[13]}" "${topics[14]}")
+    local batch4=("${topics[15]}" "${topics[16]}" "${topics[17]}" "${topics[18]}" "${topics[19]}")
+
+
+    # Run each batch in parallel
+    _text_batch "batch1" "${batch1[@]}" &
+    local pid1=$!
+    _text_batch "batch2" "${batch2[@]}" &
+    local pid2=$!
+    _text_batch "batch3" "${batch3[@]}" &
+    local pid3=$!
+    _text_batch "batch4" "${batch4[@]}" &
+    local pid4=$!
+
+
+    wait $pid1 || log "text batch1 subshell exited non-zero"
+    wait $pid2 || log "text batch2 subshell exited non-zero"
+    wait $pid3 || log "text batch3 subshell exited non-zero"
+    wait $pid4 || log "text batch4 subshell exited non-zero"
+}
+
+
+_text_batch() {
+    local batch_name=$1
+    shift
+    for topic in "$@"; do
         safe=$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25)
         output="text/MiniMax_M27/text_${TIMESTAMP}_${safe}.txt"
-        log "text/M2.7: $topic"
+        log "text/M2.7 [$batch_name]: $topic"
         _raw=$(mmx text chat --message "$topic" --output json 2>/dev/null)
         printf '%s' "$_raw" | python3 -c "
 import sys,json

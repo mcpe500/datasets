@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generation": 1,
-  "active_candidate_id": "baseline-seq",
-  "stagnation_runs": 0,
+  "generation": 2,
+  "active_candidate_id": "parallel-all",
+  "stagnation_runs": 1,
   "candidates": [
     {
       "id": "baseline-seq",
@@ -41,10 +41,20 @@
         "retry": false,
         "parallel_media": true
       },
-      "status": "pending",
-      "fitness_history": [],
-      "last_result_ref": null,
-      "notes": "Parallelize image, speech, music generators using background jobs. Text runs sequentially after."
+      "status": "evaluated",
+      "fitness_history": [
+        {
+          "run": 2,
+          "status": "discard",
+          "metric": 21,
+          "direction": "higher",
+          "confidence": null,
+          "timestamp": 1780211185948,
+          "description": "Parallel media saved ~45s but text bottleneck unchanged.21 files in 600s (vs 25 baseline). Text ~34s/item."
+        }
+      ],
+      "last_result_ref": 2,
+      "notes": []
     },
     {
       "id": "retry-resilient",
@@ -62,10 +72,10 @@
         "retry_attempts": 3,
         "retry_delay": 5
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Same as baseline but each API call retries up to 3 times on failure."
+      "notes": []
     },
     {
       "id": "parallel-retry",
@@ -85,20 +95,64 @@
         "parallel_media": true,
         "parallel_text": true
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "parallel-all-text",
+      "family": "architecture",
+      "parent_id": "baseline-seq",
+      "operator": "combine",
+      "hypothesis": "Parallel media + parallel text (4 batches of 5). Expected: media ~45s + text ~170s = ~215s total vs600s baseline.5x speedup.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 20,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 4
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Parallel media + parallel text + retry. Highest throughput hypothesis."
+      "notes": "Media generators in parallel + text split into 4 parallel batches."
+    },
+    {
+      "id": "parallel-highvol",
+      "family": "architecture",
+      "parent_id": "baseline-seq",
+      "operator": "combine",
+      "hypothesis": "High volume + parallel everything: 10 images + 5 speech + 2 music + 40 text in parallel batches. Expected ~300s.",
+      "genome": {
+        "images": 10,
+        "speech": 5,
+        "music": 2,
+        "text": 40,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 4
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Scaled up counts with full parallelization."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 1,
-      "failures": 0,
+      "attempts": 2,
+      "failures": 1,
       "keeps": 1,
       "retired": false,
-      "consecutive_failures": 0
+      "consecutive_failures": 1
     }
   ],
   "scheduler": {

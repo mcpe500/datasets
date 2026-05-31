@@ -1,0 +1,19 @@
+The Sun doesn’t keep a “clock” in the way Earth does. It’s a ball of hot plasma, so there’s no fixed surface you can stand on to watch a sunrise‑sunset cycle the way we do on our planet. What astronomers use instead is the Sun’s **rotation period**:
+
+| Sun’s rotation | Period (as seen from Earth) |
+|----------------|-----------------------------|
+| Equatorial (≈ 26° latitude) | ~ 27 Earth days |
+| Mid‑latitudes (≈ 30°) | ~ 30 Earth days |
+| Polar regions | ~ 34 Earth days |
+
+Because the Sun is a gas, different latitudes rotate at different speeds. When scientists talk about “a day on the Sun,” they’re usually referring to the **synodic rotation period**—the time it takes a feature on the Sun’s surface (like a sunspot) to return to the same position relative to an Earth observer. That’s roughly **27 days** at the equator.
+
+In practice, astronomers sometimes use a **Carrington rotation**, which is a fixed 27‑day period (actually 27.2753 days) defined by the time it takes the Sun’s central meridian (the line running from the Sun’s north to south pole through its center) to rotate back into view from Earth. This rotation number is used as a convenient way to label solar observations (e.g., “CR 2205”).
+
+So:
+
+- **There is no official “time zone” on the Sun**; the Sun simply rotates with a period of about 27 Earth days.
+- If you were on the Sun (ignoring the obvious fact that you’d be vaporized), you’d experience a day/night cycle of about 27 Earth days.
+- For coordination of solar observations, scientists sometimes use **solar time** based on the Carrington rotation, but this isn’t a “clock time” in the everyday sense.
+
+In short, the Sun has a rotation‑driven “day” that’s roughly a month long, but no fixed time like we have on Earth. If you ever hear someone ask “what time is it on the Sun?” the answer is that it’s essentially “about 27 Earth days per solar day.”

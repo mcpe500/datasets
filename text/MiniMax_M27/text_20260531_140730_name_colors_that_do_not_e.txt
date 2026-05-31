@@ -1,0 +1,34 @@
+A rainbow only contains the *pure spectral hues* – the colors you see when a single wavelength of visible light is isolated (the classic “ROYGBIV” sequence: red, orange, yellow, green, blue, indigo, violet).  
+All other colors that you can name or see on a paint‑chip, a computer screen, or a printed page are **mixtures** of two or more wavelengths (or they are the result of non‑spectral effects such as absorption, scattering, or neural processing).  
+
+Below are some well‑known colors that **do not appear in a rainbow**, together with a short note on why they’re missing:
+
+| Color (common name) | Why it isn’t in a rainbow |
+|---------------------|---------------------------|
+| **Black** | The absence of light – there is no single wavelength that produces black. |
+| **White** | The presence of *all* visible wavelengths at once; a rainbow is a spread of individual wavelengths, not their sum. |
+| **Gray / Grey** | A desaturated version of white; like white, it requires many wavelengths blended together. |
+| **Brown** | Usually a dark, low‑saturation orange‑red created by mixing red, orange, and a bit of green or black. No single wavelength looks brown. |
+| **Pink / Magenta** | A mix of red and violet/blue light (or the brain’s “missing‑green” response). Neither red‑violet nor pink is a pure spectral hue. |
+| **Purple** (or violet‑red) | In everyday language “purple” is a mix of red and blue; the violet end of a rainbow is a single wavelength, not a blend with red. |
+| **Maroon** | Deep reddish‑brown – again a mixture of red with darkening agents, not a pure wavelength. |
+| **Olive** | A muted, yellowish‑green that results from mixing green, yellow, and a touch of brown/black. |
+| **Khaki / Beige** | Light, desaturated yellowish‑browns; they need mixing of several hues and often some white (or gray) to achieve their look. |
+| **Teal** | Typically a blue‑green that straddles the border between blue and green; it is a blend of two adjacent spectral colors, not a single wavelength. |
+| **Turquoise** | Similar to teal – a blend of blue and green light. |
+| **Chartreuse** | A bright yellow‑green that sits between yellow and green but does not correspond to any one wavelength. |
+| **Lavender** | A pale, desaturated violet‑pink; requires mixing violet (or blue) with red and white. |
+| **Coral** | A pinkish‑orange blend (red + orange + a touch of pink). |
+| **Burgundy** | A deep, dark red that includes a lot of black (or very low‑light) mixing, not a pure spectral hue. |
+| **Gold** | In practice, a metallic yellow‑orange with a hint of brown; it’s produced by pigment mixing and lighting effects, not by a single wavelength. |
+| **Silver** | A metallic gray created by mixing white, black, and sometimes a faint tint; again, not spectral. |
+| **Neon** colors (e.g., neon green, neon pink) | High‑saturation hues that usually rely on special fluorescent pigments or LED emissions that cover a broad spectrum; they’re not found in a natural prism‑dispersed rainbow. |
+
+### The Underlying Reason
+
+- **Spectral (monochromatic) colors** – each corresponds to a single wavelength between ~380 nm (violet) and ~700 nm (red).  
+- **Non‑spectral colors** – produced by **additive** mixing (e.g., red + blue = magenta on a screen) or **subtractive** mixing (e.g., pigments, paints). They may also arise from **perceptual** tricks (e.g., brown is seen as “dark orange” after the brain discounts the surrounding light).  
+
+Because a rainbow is a *physical* separation of those individual wavelengths, only the pure spectral hues appear. Everything else—black, white, the greys, browns, magentas, pinks, and many greens, blues, purples, etc.—requires **more than one wavelength** (or the complete absence/overabundance of light) and thus is absent from the rainbow’s arc.  
+
+So, if you ever see a color outside the rainbow’s seven‑color band, you’re looking at a **mixture** or a **non‑spectral** hue rather than a single, isolated wavelength of light.

@@ -1,0 +1,29 @@
+Here are the classic **pelagic (water‑column) zones** of the ocean, listed from the shallowest (near the surface) down to the deepest‑most trench areas:
+
+| Zone (common name) | Typical depth range | Key characteristics |
+|---------------------|---------------------|---------------------|
+| **Epipelagic (Sunlight) Zone** | 0 – ≈200 m (0‑~650 ft) | Full sunlight, photosynthesis, warmest temperatures, most marine life (plankton, fish, mammals). |
+| **Mesopelagic (Twilight) Zone** | ≈200 – ≈1,000 m (650‑~3,300 ft) | Light is dim but enough for some vision; temperature drops sharply (thermocline). Animals include lanternfish, squid, and diel vertical migrators. |
+| **Bathypelagic (Midnight) Zone** | ≈1,000 – ≈4,000 m (3,300‑~13,100 ft) | No sunlight, near‑freezing temperatures (≈2‑4 °C). Pressure high; bioluminescence common. Life is sparse but includes deep‑sea fish, cephalopods, and gelatinous zooplankton. |
+| **Abyssopelagic (Abyssal) Zone** | ≈4,000 – ≈6,000 m (13,100‑~19,700 ft) | Extreme pressure, constant near‑freezing temperatures (~0‑2 °C). Soft sediments dominate the sea floor. Organisms are few (e.g., sea cucumbers, brittle stars, certain fishes). |
+| **Hadopelagic (Hadal) Zone** | ≈6,000 m – ≈11,000 m (19,700 ft – ≈36,000 ft) | Includes oceanic trenches (e.g., Mariana Trench). Temperatures just above freezing, pressure > 1,000 atm. Specialized life such as snailfish, amphipods, and microbes survive here. |
+
+**Quick mnemonic:** **E**pipelagic → **M**esopelagic → **B**athypelagic → **A**byssopelagic → **H**adopelagic  
+
+*(E‑M‑B‑A‑H – think “Every **M**outh **B**reathes **A**t **H**igh”)*
+
+---
+
+### Other ways the ocean is sometimes divided
+
+| Term | What it refers to |
+|------|-------------------|
+| **Photic zone** | Upper 0‑200 m where light is sufficient for photosynthesis (roughly the epipelagic). |
+| **Dysphotic zone** | 200‑1,000 m; dim light that permits limited vision but not photosynthesis. |
+| **Aphotic zone** | Below ~1,000 m; essentially no sunlight. Encompasses the mesopelagic through hadopelagic zones. |
+| **Benthic zones** (bottom‑focused) | **Littoral / neritic** (shoreline to ~200 m), **Bathyal** (200‑4,000 m), **Abyssal** (4,000‑6,000 m), **Hadial** (trenches). These correspond roughly to the water‑column zones above them. |
+
+---
+
+#### Bottom line
+The ocean’s water column is most commonly divided into **five pelagic layers** – from the sun‑lit epipelagic down to the pitch‑black, high‑pressure hadopelagic zone of the deep‑sea trenches. Each layer has its own distinct physical conditions and characteristic organisms.
