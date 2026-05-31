@@ -1,0 +1,17 @@
+**Diamond** is the hardest natural material known.  
+
+- **Mohs hardness:** 10 (the highest rating on the scale).  
+- **Vickers hardness:** ≈ 70–120 GPa (depending on crystal orientation and sample quality).  
+- **Knoop hardness:** ≈ 60–100 GPa.  
+
+Diamond’s hardness comes from the very strong, rigid three‑dimensional network of covalent C‑C bonds in its cubic crystal structure. Because of this, it can scratch or cut every other natural mineral and is widely used in cutting, drilling, and polishing tools.
+
+*Other ultra‑hard natural minerals (found in trace amounts, mostly in meteorite impact rocks) include:*
+
+| Mineral | Mohs hardness | Comment |
+|---------|---------------|---------|
+| **Lonsdaleite** (hexagonal diamond) | ≈ 7–8 (depends on orientation) | Occurs in impact craters; theoretically can be harder than cubic diamond under certain stress states. |
+| **Wurtzite boron nitride** (w‑BN) | ≈ 9.5 | Has been identified in a few meteorite impact sites; can exceed diamond’s indentation resistance in specific directions, but it is extremely rare in nature. |
+| **Qingsongite** (cubic BN) | 9.5–10 (estimated) | Discovered in a meteorite; also very rare. |
+
+Nevertheless, **diamond remains the hardest naturally occurring substance that is both abundant enough to be found and used, and its hardness is well‑established across all standard measurement scales.**

@@ -1,0 +1,8 @@
+The days of the week (in order) are:  
+- Monday  
+- Tuesday  
+- Wednesday  
+- Thursday  
+- Friday  
+- Saturday  
+- Sunday.

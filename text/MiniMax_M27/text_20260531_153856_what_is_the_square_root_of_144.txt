@@ -1,0 +1,2 @@
+The principal (positive) square root of 144 is **12**.  
+(If you also consider the negative solution, then -12 is the other square root, since \( (-12)^2 = 144 \).)

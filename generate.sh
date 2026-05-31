@@ -25,7 +25,7 @@ trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO_DIR"
 
-# ==== image-01 (3-retry) ====
+# ==== image-01 (no retry — retry hurts rate-limited slow generators) ====
 gen_image_01() {
     local prompts=(
         "A serene mountain lake at golden hour with reflections"
@@ -59,29 +59,12 @@ gen_image_01() {
         output="images/image_01/img_${TIMESTAMP}_${i}.png"
         mkdir -p "images/image_01"
         log "image-01: ${prompt:0:50}..."
-
-        success=0
-        for attempt in 1 2 3; do
-            if mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && [ -s "$output" ]; then
-                success=1
-                break
-            fi
-            if [ $attempt -lt 3 ]; then
-                log "image-01 retry $attempt failed, waiting 3s..."
-                sleep 3
-            fi
-        done
-
-        if [ $success -eq 1 ]; then
-            log "Saved: $output"
-        else
-            log "FAILED: image-01 $i (3 attempts)"
-        fi
+        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: image-01 $i"
         sleep 15
     done
 }
 
-# ==== speech-2.8-hd (3-retry) ====
+# ==== speech-2.8-hd (no retry) ====
 gen_speech_hd() {
     local texts=(
         "Welcome to the future of artificial intelligence. Today we explore the boundaries of creativity and technology working together as one."
@@ -103,29 +86,12 @@ gen_speech_hd() {
         output="speech/speech_28_hd/speech_${TIMESTAMP}_${i}.mp3"
         mkdir -p "speech/speech_28_hd"
         log "speech-2.8-hd: ${text:0:50}..."
-
-        success=0
-        for attempt in 1 2 3; do
-            if mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && [ -s "$output" ]; then
-                success=1
-                break
-            fi
-            if [ $attempt -lt 3 ]; then
-                log "speech retry $attempt failed, waiting 3s..."
-                sleep 3
-            fi
-        done
-
-        if [ $success -eq 1 ]; then
-            log "Saved: $output"
-        else
-            log "FAILED: speech $i (3 attempts)"
-        fi
+        mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: speech $i"
         sleep 10
     done
 }
 
-# ==== music-2.6 (3-retry) ====
+# ==== music-2.6 (no retry) ====
 gen_music_26() {
     local prompts=(
         "Upbeat electronic dance music with pulsing bass and uplifting melodies perfect for a party atmosphere"
@@ -148,24 +114,7 @@ gen_music_26() {
         output="music/music_26/music_${TIMESTAMP}_${i}.mp3"
         mkdir -p "music/music_26"
         log "music-2.6: ${prompt:0:50}..."
-
-        success=0
-        for attempt in 1 2 3; do
-            if mmx music generate --prompt "$prompt" --lyrics-optimizer --out "$output" --quiet 2>/dev/null && [ -s "$output" ]; then
-                success=1
-                break
-            fi
-            if [ $attempt -lt 3 ]; then
-                log "music retry $attempt failed, waiting 3s..."
-                sleep 3
-            fi
-        done
-
-        if [ $success -eq 1 ]; then
-            log "Saved: $output"
-        else
-            log "FAILED: music $i (3 attempts)"
-        fi
+        mmx music generate --prompt "$prompt" --lyrics-optimizer --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: music $i"
         sleep 30
     done
 }
@@ -175,7 +124,7 @@ gen_music_cover() {
     log "music-cover: skipped (requires reference audio)"
 }
 
-# ==== MiniMax-M2.7 (text) — 50 topics, 5 parallel batches, retry ====
+# ==== MiniMax-M2.7 (text) — 100 topics, 10 parallel batches, retry ====
 gen_text() {
     local topics=(
         "Write a haiku about mountains"
@@ -230,6 +179,59 @@ gen_text() {
         "Write a haiku about the moon"
         "Name three types of music"
         "What is the smallest country in the world"
+        "What is the largest mammal"
+        "Name four cardinal directions"
+        "Write a haiku about autumn leaves"
+        "What is the hardest natural substance"
+        "Name three famous inventors"
+        "Write a tongue twister about a tiger"
+        "What is the currency of Japan"
+        "Name five types of dinosaurs"
+        "Write a fortune cookie message about friendship"
+        "What is the tallest building in the world"
+        "Name three things that glow in the dark"
+        "Write a limerick about a monkey"
+        "What is the freezing point of water in Celsius"
+        "Name the seven continents"
+        "Write a haiku about springtime"
+        "What is the most spoken language in the world"
+        "Name three things made of metal"
+        "Write a short riddle with an apple as the answer"
+        "What is the speed of sound"
+        "Name four seasons of the year"
+        "Write a fortune cookie message about courage"
+        "What is the square root of 81"
+        "Name three types of clouds"
+        "Write a haiku about winter snow"
+        "What is the capital of France"
+        "Name five wild animals"
+        "Write a tongue twister about a fish"
+        "What is the largest bird"
+        "Name three things you can ride"
+        "Write a limerick about a mouse"
+        "What is the boiling point of milk"
+        "Name the planets in order from the sun"
+        "Write a fortune cookie message about wisdom"
+        "What is the fastest flying bird"
+        "Name three things that are soft"
+        "Write a haiku about a butterfly"
+        "What is the capital of Brazil"
+        "Name four ocean zones"
+        "Write a short riddle with a key as the answer"
+        "What is the deepest ocean trench"
+        "Name three ancient civilizations"
+        "Write a tongue twister about a frog"
+        "What is the tallest tree species"
+        "Name five colors of the rainbow"
+        "Write a fortune cookie message about perseverance"
+        "What is the loudest animal on Earth"
+        "Name three things that spark"
+        "Write a limerick about a bird"
+        "What is the brightest star in the night sky"
+        "Name four types of precipitation"
+        "Write a haiku about the sunrise"
+        "What is the deepest lake in the world"
+        "Name three things that hum"
     )
 
     mkdir -p "text/MiniMax_M27"
@@ -239,6 +241,11 @@ gen_text() {
     local batch3=("${topics[20]}" "${topics[21]}" "${topics[22]}" "${topics[23]}" "${topics[24]}" "${topics[25]}" "${topics[26]}" "${topics[27]}" "${topics[28]}" "${topics[29]}")
     local batch4=("${topics[30]}" "${topics[31]}" "${topics[32]}" "${topics[33]}" "${topics[34]}" "${topics[35]}" "${topics[36]}" "${topics[37]}" "${topics[38]}" "${topics[39]}")
     local batch5=("${topics[40]}" "${topics[41]}" "${topics[42]}" "${topics[43]}" "${topics[44]}" "${topics[45]}" "${topics[46]}" "${topics[47]}" "${topics[48]}" "${topics[49]}")
+    local batch6=("${topics[50]}" "${topics[51]}" "${topics[52]}" "${topics[53]}" "${topics[54]}" "${topics[55]}" "${topics[56]}" "${topics[57]}" "${topics[58]}" "${topics[59]}")
+    local batch7=("${topics[60]}" "${topics[61]}" "${topics[62]}" "${topics[63]}" "${topics[64]}" "${topics[65]}" "${topics[66]}" "${topics[67]}" "${topics[68]}" "${topics[69]}")
+    local batch8=("${topics[70]}" "${topics[71]}" "${topics[72]}" "${topics[73]}" "${topics[74]}" "${topics[75]}" "${topics[76]}" "${topics[77]}" "${topics[78]}" "${topics[79]}")
+    local batch9=("${topics[80]}" "${topics[81]}" "${topics[82]}" "${topics[83]}" "${topics[84]}" "${topics[85]}" "${topics[86]}" "${topics[87]}" "${topics[88]}" "${topics[89]}")
+    local batch10=("${topics[90]}" "${topics[91]}" "${topics[92]}" "${topics[93]}" "${topics[94]}" "${topics[95]}" "${topics[96]}" "${topics[97]}" "${topics[98]}" "${topics[99]}")
 
     _text_batch "batch1" "${batch1[@]}" &
     local pid1=$!
@@ -250,12 +257,20 @@ gen_text() {
     local pid4=$!
     _text_batch "batch5" "${batch5[@]}" &
     local pid5=$!
+    _text_batch "batch6" "${batch6[@]}" &
+    local pid6=$!
+    _text_batch "batch7" "${batch7[@]}" &
+    local pid7=$!
+    _text_batch "batch8" "${batch8[@]}" &
+    local pid8=$!
+    _text_batch "batch9" "${batch9[@]}" &
+    local pid9=$!
+    _text_batch "batch10" "${batch10[@]}" &
+    local pid10=$!
 
-    wait $pid1 || log "text batch1 subshell exited non-zero"
-    wait $pid2 || log "text batch2 subshell exited non-zero"
-    wait $pid3 || log "text batch3 subshell exited non-zero"
-    wait $pid4 || log "text batch4 subshell exited non-zero"
-    wait $pid5 || log "text batch5 subshell exited non-zero"
+    for pid in $pid1 $pid2 $pid3 $pid4 $pid5 $pid6 $pid7 $pid8 $pid9 $pid10; do
+        wait $pid || log "text batch subshell exited non-zero"
+    done
 }
 
 # _text_batch: handles one batch of topics with 3-retry on failure

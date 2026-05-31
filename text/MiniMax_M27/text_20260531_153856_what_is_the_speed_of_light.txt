@@ -1,0 +1,9 @@
+The speed of light in a vacuum, denoted **c**, is exactly  
+
+\[
+c = 299{,}792{,}458\ \text{meters per second}
+\]
+
+(about \(3.00 \times 10^{8}\) m s⁻¹, or roughly \(1.08 \times 10^{9}\) km h⁻¹).  
+
+Because the meter is now defined by fixing the speed of light, this value is exact and does not change with experimental measurements.

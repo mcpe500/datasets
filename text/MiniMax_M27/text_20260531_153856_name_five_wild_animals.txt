@@ -1,0 +1,7 @@
+Here are five wild animals:
+
+- **Lion**
+- **Elephant**
+- **Gray Wolf**
+- **Red Fox**
+- **Bald Eagle**

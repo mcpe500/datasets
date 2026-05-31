@@ -1,0 +1,43 @@
+The speed of sound is the distance a pressure wave travels per unit time in a given medium.  The most commonly quoted value is for **dry air at sea‑level and 20 °C (68 °F)**, where:
+
+| Quantity | Value |
+|----------|-------|
+| **Meters per second (m s⁻¹)** | **≈ 343 m/s** |
+| **Kilometres per hour (km/h)** | **≈ 1235 km/h** |
+| **Miles per hour (mph)** | **≈ 767 mph** |
+| **Mach 1** | This is the reference (Mach 1 ≈ 343 m/s in those conditions) |
+
+### Why it varies
+- **Temperature**: The speed rises with temperature because the molecules move faster. In cold air at 0 °C the speed is about 331 m/s; at 30 °C it’s about 349 m/s.
+- **Humidity**: Moist air is less dense than dry air, so sound actually travels a little faster in humid conditions (≈ 0.1 % faster at typical humidity).
+- **Pressure / altitude**: In an ideal gas at a given temperature, pressure has a negligible direct effect; the dominant altitude effect comes from temperature changes in the atmosphere.
+- **Medium**: Different materials support sound at very different speeds.  
+
+| Medium | Approx. speed (m/s) |
+|--------|-------------------|
+| Air (20 °C, sea‑level) | **≈ 343** |
+| Fresh water (25 °C) | **≈ 1498** |
+| Seawater (25 °C) | **≈ 1531** |
+| Steel (bulk) | **≈ 5960** |
+| Aluminum | **≈ 6420** |
+| Diamond | **≈ 12000** |
+
+### Quick formula for dry air
+For an ideal gas, the speed of sound can be expressed as  
+
+\[
+c = \sqrt{\gamma \, R \, T / M},
+\]
+
+where  
+
+- \(\gamma\) = ratio of specific heats (≈ 1.40 for diatomic air)  
+- \(R\) = universal gas constant (8.314 J mol⁻¹ K⁻¹)  
+- \(T\) = absolute temperature (K)  
+- \(M\) = molar mass of air (≈ 0.028964 kg mol⁻¹).
+
+Plugging in \(T = 293 K\) (20 °C) yields ≈ 343 m/s.
+
+### Bottom line
+- **In everyday conditions (dry air, ~20 °C, sea level)** the speed of sound is **≈ 343 m/s** (≈ 767 mph).  
+- If you need a different medium or temperature, let me know and I can compute the appropriate speed.

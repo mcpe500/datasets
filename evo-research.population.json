@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generation": 6,
-  "active_candidate_id": "retry-resilient-v2",
-  "stagnation_runs": 0,
+  "generation": 7,
+  "active_candidate_id": "media-retry-v3",
+  "stagnation_runs": 1,
   "candidates": [
     {
       "id": "baseline-seq",
@@ -425,10 +425,20 @@
         "media_text_overlap": true,
         "media_retry": true
       },
-      "status": "pending",
-      "fitness_history": [],
-      "last_result_ref": null,
-      "notes": "Full retry on all generators. Expected: 3 img + 2 speech + 1 music + 50 text = 56 files."
+      "status": "failed",
+      "fitness_history": [
+        {
+          "run": 7,
+          "status": "discard",
+          "metric": 53,
+          "direction": "higher",
+          "confidence": 5.8,
+          "timestamp": 1780216678803,
+          "description": "media-retry-v3: full retry on all generators. 0/3 images (vs 1/3 without retry). Text retry works (50/50). Total53 files in 303s vs retry-resilient-v2 54/270s. Retry on images is COUNTERPRODUCTIVE \u20149 API calls vs 3 triggers harder rate limit. Only apply retry to fast/cheap generators."
+        }
+      ],
+      "last_result_ref": 7,
+      "notes": []
     },
     {
       "id": "balanced-retry-scale",
@@ -452,10 +462,10 @@
         "media_text_overlap": true,
         "media_retry": true
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Scale media + full retry. Expected:5+3+2+50 = 60 files."
+      "notes": []
     },
     {
       "id": "text-ultra-100-retry",
@@ -479,20 +489,105 @@
         "media_text_overlap": true,
         "media_retry": true
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "text-ultra-100-retry",
+      "family": "architecture",
+      "parent_id": "retry-resilient-v2",
+      "operator": "mutate",
+      "hypothesis": "Double text to 100 topics (10 batches of 10) with 3-retry. Text is cheap/fast \u2014 retry helps. 100 text files dominates count. Expected ~104 files.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 10,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": false
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "100 text + all retry. 100 text items in10 batches. Budget ~350s."
+      "notes": "100 text (10 batches) + retry on text only. media_retry=False (retry hurts slow generators). 100 text items >> all else."
+    },
+    {
+      "id": "img-sleep-more",
+      "family": "architecture",
+      "parent_id": "retry-resilient-v2",
+      "operator": "mutate",
+      "hypothesis": "Increase image sleep from 15s to 30s. Last run: 2/3 images failed. Retry failed too (9 calls vs 3). Longer sleep spaces out rate-limited calls \u2014 more reliable without extra API calls.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 50,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 5,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": false,
+        "image_sleep": 30,
+        "speech_sleep": 15
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Same as retry-resilient-v2 but longer media sleep (30s img, 15s speech) instead of retry. No extra API calls."
+    },
+    {
+      "id": "text-100-plus-sleep",
+      "family": "architecture",
+      "parent_id": "retry-resilient-v2",
+      "operator": "mutate",
+      "hypothesis": "100 text + longer image sleep (30s). Best of both: max text count + more reliable images without retry overhead.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 10,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": false,
+        "image_sleep": 30,
+        "speech_sleep": 15
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "100 text + retry + longer image sleep. Most aggressive combo."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 6,
-      "failures": 1,
+      "attempts": 7,
+      "failures": 2,
       "keeps": 5,
       "retired": false,
-      "consecutive_failures": 0
+      "consecutive_failures": 1
     }
   ],
   "scheduler": {

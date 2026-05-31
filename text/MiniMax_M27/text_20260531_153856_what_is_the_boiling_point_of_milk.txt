@@ -1,0 +1,16 @@
+The boiling point of milk is only a little higher than that of water because the water in milk contains dissolved proteins, sugars, salts, and fats that raise its boiling temperature.
+
+- **Typical boiling point (at standard atmospheric pressure, 1 atm):** ≈ 100.5 °C (≈ 212.9 °F)  
+- **Range you’ll often see quoted:** 100.2 °C – 101 °C, depending on the exact composition (fat content, solids‑not‑fat, added minerals, etc.)
+
+**Why it’s slightly higher than water**
+
+- **Raoult’s law & colligative properties:** Dissolved substances (lactose, whey proteins, minerals) lower the vapor pressure of the water, so more heat is required to reach the vapor pressure equal to atmospheric pressure.
+- **Fat content:** Higher fat milks have a marginally higher boiling point because fats are not volatile and contribute to the overall solute load.
+
+**Practical notes**
+
+- Milk is usually pasteurized at 72 °C – 85 °C (well below its boiling point) and is rarely boiled in cooking unless you want to concentrate it (e.g., for sweetened condensed milk or certain sauces).
+- At high altitudes, the boiling point of both water and milk drops (e.g., ~95 °C at 2,000 m), so the milk will boil at a lower temperature than at sea level.
+
+So, under normal sea‑level conditions, you can expect milk to start boiling at roughly **100.5 °C (212.9 °F)**.

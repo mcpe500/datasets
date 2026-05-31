@@ -1,0 +1,26 @@
+The ocean is usually divided into **pelagic (water‑column) zones** that run from the surface down to the deepest trenches. Here they are listed from the shallowest to the deepest, together with typical depth ranges:
+
+| Zone (pelagic) | Common name | Typical depth range* |
+|----------------|-------------|----------------------|
+| **Epipelagic** | Sunlight (or photic) zone | 0 – ≈ 200 m (0 – ≈ 660 ft) |
+| **Mesopelagic** | Twilight zone | 200 – ≈ 1 000 m (≈ 660 – ≈ 3 300 ft) |
+| **Bathypelagic** | Midnight zone | 1 000 – ≈ 4 000 m (≈ 3 300 – ≈ 13 100 ft) |
+| **Abyssopelagic** | Abyssal zone | 4 000 – ≈ 6 000 m (≈ 13 100 – ≈ 19 700 ft) |
+| **Hadopelagic** | Hadal zone (trenches) | ≈ 6 000 – ≈ 11 000 m (≈ 19 700 – ≈ 36 100 ft) |
+
+\*Depth boundaries are approximate; they can vary slightly among textbooks and oceanographic agencies.
+
+### Related benthic (seafloor) layers
+When describing the ocean floor, you’ll often see a parallel set of zones that correspond to the water zones above them:
+
+| Zone (benthic) | Typical depth range |
+|----------------|---------------------|
+| **Littoral / Intertidal** | 0 – ≈ 200 m (coastline to shelf edge) |
+| **Neritic (Continental shelf)** | 0 – ≈ 200 m |
+| **Bathyal (Continental slope)** | ≈ 200 – ≈ 4 000 m |
+| **Abyssal (Abyssal plain)** | ≈ 4 000 – ≈ 6 000 m |
+| **Hadopelagic (Oceanic trenches)** | ≈ 6 000 – ≈ 11 000 m |
+
+So, in the most common “pelagic” classification the shallow‑to‑deep order is:
+
+**Epipelagic → Mesopelagic → Bathypelagic → Abyssopelagic → Hadopelagic**.

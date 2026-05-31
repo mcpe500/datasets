@@ -1,0 +1,22 @@
+The visible spectrum that makes up a rainbow is a **continuous range of pure (single‑wavelength) hues** – roughly what we call the “spectral colors” (red → orange → yellow → green → blue → violet).  
+Because a rainbow contains only these pure spectral colors, any color that is created by **mixing two or more different wavelengths together** (or that exists only as a combination of light and the absence of light) does **not** appear in a rainbow.  
+
+Below is a fairly comprehensive list of common “non‑spectral” colors—colors you won’t see as distinct bands in a rainbow:
+
+| Category | Examples (non‑spectral colors) |
+|----------|--------------------------------|
+| **Mix‑of‑red‑and‑blue families** | **Magenta**, **Fuchsia**, **Raspberry**, **Burgundy**, **Maroon**, **Crimson**, **Wine**, **Plum**, **Mauve**, **Lavender**, **Lilac**, **Orchid** |
+| **Pink family** | **Pink**, **Rose**, **Blush**, **Salmon**, **Coral**, **Peach**, **Hot‑pink**, **Baby‑pink** |
+| **Brown/tan family** | **Brown**, **Chocolate**, **Coffee**, **Tan**, **Beige**, **Khaki**, **Camel**, **Taupe**, **Caramel**, **Umber**, **Sienna**, **Russet** |
+| **Olive & muted greens** | **Olive**, **Sage**, **Moss**, **Olive‑drab** |
+| **Warm neutrals & metallic‑looking** | **Gold** (metallic gold is a mix of wavelengths), **Bronze**, **Copper**, **Silver** (a metallic sheen is not a single‑wavelength color), **Champagne**, **Amber** (though amber is close to a yellow‑orange, it often includes a mixture of red & green) |
+| **Gray‑scale** | **White**, **Black**, **All shades of gray** (light gray, medium gray, charcoal, etc.) |
+| **Other non‑spectral hues** | **Purple** (the pure hue purple is not a single‑wavelength color; the rainbow only has violet), **Chartreuse** (a yellow‑green that is usually mixed), **Turquoise** (often a blend of cyan and a hint of blue/green), **Teal** (similar), **Aqua**, **Electric‑blue**, **Neon‑colors** (neon pink, neon green, etc.), **Pastel versions of spectral colors** (e.g., pastel yellow, pastel blue) are produced by adding white light, so they’re not pure spectral hues. |
+
+### Why these aren’t in a rainbow
+
+- **Non‑spectral colors** are produced by **adding or mixing** different parts of the spectrum together (or by removing parts, as in the case of black).  
+- The rainbow’s bands are formed by **dispersion** of light into its **component wavelengths**; each band corresponds to a specific wavelength (or a narrow range).  
+- Colors that require **multiple wavelengths** to be perceived (e.g., magenta, pink, brown) or that depend on **intensity/brightness** (white, gray, black) lie outside the set of wavelengths the rainbow can display.
+
+So, any color you see that isn’t a straightforward red‑orange‑yellow‑green‑blue‑indigo‑violet (or one of the exact pure‑spectral shades in between) falls into the list above and **does not appear in a rainbow**.

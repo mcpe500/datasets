@@ -1,0 +1,12 @@
+Here are the eight planets in our solar system, listed in order from the Sun:
+
+1. **Mercury**  
+2. **Venus**  
+3. **Earth**  
+4. **Mars**  
+5. **Jupiter**  
+6. **Saturn**  
+7. **Uranus**  
+8. **Neptune**  
+
+*(Pluto is considered a dwarf planet and isn’t included in this list.)*
