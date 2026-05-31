@@ -1,0 +1,18 @@
+A rainbow shows only the **pure spectral hues**—the colors you get when a single wavelength of visible light is isolated:
+
+**red → orange → yellow → green → blue → indigo → violet**
+
+Every other colour you can think of is either:
+
+| Category | Why it isn’t a rainbow colour | Example names |
+|----------|------------------------------|---------------|
+| **Achromatic (neutral) colours** | No hue – just varying amounts of white light (or none). | black, white, gray (light‑gray, dark‑gray, silver) |
+| **Earth‑tone & brown family** | Made by mixing a spectral hue with its complementary colour or with black/gray. | brown, tan, beige, khaki, olive, olive‑drab, maroon, rust, sienna |
+| **Pink‑magenta‑purple family** | These are **non‑spectral purples** (they’re the result of mixing red and blue wavelengths, not a single wavelength). | pink, magenta, fuchsia, lavender, lilac, mauve, plum |
+| **Warm and cool neutrals** | Combinations of spectral hues that fall outside the rainbow’s line of pure wavelengths. | coral, peach, salmon, teal (a blend of green & blue) |
+| **Pastel tints** | Spectral hue + white, so they’re lighter, not a pure wavelength. | baby‑blue, mint‑green, lemon‑chiffon, baby‑pink |
+| **Metallic & synthetic colours** | Created by adding metallic pigments or by special lighting effects (not a single wavelength). | gold, silver, bronze, copper, pewter |
+| **Other mixed‑hues** | Any colour that requires more than one wavelength to reproduce it. | turquoise, aqua, teal, chartreuse, amber, cerulean, indigo (deep violet‑blue) **Note:** While indigo appears in the classic rainbow, it is actually a deep, desaturated blue‑violet rather than a pure spectral line. |
+
+### Bottom line
+If a colour can’t be produced by a **single wavelength of light** (or is a mix of two or more wavelengths plus black, white, or gray), it **doesn’t appear in a rainbow**. The rainbow’s palette is limited to those seven pure hues; everything else—black, white, grays, browns, pinks, purples, metallics, pastels, and countless other tints and shades—lies outside the spectrum that a rainbow displays.

@@ -3,12 +3,25 @@ set -e
 
 REPO_DIR="/data/data/com.termux/files/home/datasets"
 LOG="$REPO_DIR/generator.log"
+LOCK="$REPO_DIR/.generate.lock"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 GH="/data/data/com.termux/files/usr/bin/gh"
 
-log() {
-    echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG"
+acquire_lock() {
+    if [ -f "$LOCK" ]; then
+        rm -f "$LOCK"
+    fi
+    if ! mkdir "$LOCK" 2>/dev/null; then
+        echo "[$(date '+%H:%M:%S')] ABORTED: another instance running" >> "$LOG"
+        exit 1
+    fi
 }
+
+log() {
+    echo "[$(date '+%H:%M:%S')] $1" >> "$LOG"
+}
+
+trap 'rm -f "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO_DIR"
 
@@ -142,18 +155,15 @@ gen_text() {
         safe=$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25)
         output="text/MiniMax_M27/text_${TIMESTAMP}_${safe}.txt"
         log "text/M2.7: $topic"
-        mmx text chat --message "$topic" --output json 2>/dev/null | python3 -c "
+        _raw=$(mmx text chat --message "$topic" --output json 2>/dev/null)
+        printf '%s' "$_raw" | python3 -c "
 import sys,json
 d=json.load(sys.stdin)
-content=d.get('content','')
-if isinstance(content,list):
-    for block in content:
-        if block.get('type')=='text':
-            txt=block.get('text','').strip()
-            if txt:
-                print(txt)
-elif isinstance(content,str) and content.strip():
-    print(content.strip())
+for block in d.get('content',[]):
+    if block.get('type')=='text':
+        txt=block.get('text','').strip()
+        if txt:
+            print(txt)
 " > "$output"
         if [ -s "$output" ]; then
             log "Saved: $output"
@@ -186,6 +196,7 @@ git_push() {
 
 # ==== MAIN ====
 main() {
+    acquire_lock
     log "=== Gen cycle started ==="
 
     gen_image_01

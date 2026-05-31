@@ -1,0 +1,19 @@
+There isn’t a “clock time” on the Sun the way we think of it on Earth. The Sun is a ball of hot plasma, and it doesn’t have time‑zones or a day‑night cycle that humans could set a watch by.
+
+What **does** define a “day” on the Sun is its rotation:
+
+| Parameter | Value (approx.) |
+|-----------|-----------------|
+| **Synodic rotation period** (relative to Earth) | **≈ 27 days** (27 Earth days) |
+| **Sidereal rotation period** (relative to the stars) | **≈ 25 days** |
+| **Rotation speed at equator** | ~ 2 km s⁻¹ (≈ 7,200 km h⁻¹) |
+| **Differential rotation** | Equator rotates faster than the poles (≈ 35 days at 75° latitude) |
+
+So if you were to stand on a fixed point on the Sun’s visible surface and watch the Sun rotate until that same point faces Earth again, you’d have to wait roughly **27 Earth days**. In other words, a “solar day” (sunrise‑to‑sunrise as seen from a point on Earth) is about **27 days** long.
+
+Because of this very long rotation period, the Sun’s surface temperature and magnetic activity can vary dramatically over a solar rotation, which is why scientists talk about “solar rotation” when they track sunspots and other features.
+
+**In short:**  
+- The Sun has no human‑defined time zone or local clock time.  
+- Its rotation defines a “day” of about 27 Earth days.  
+- Any “time” you might want to assign to the Sun would be referenced back to Earth‑based clocks (UTC, local time, etc.), but there’s no standard solar time.

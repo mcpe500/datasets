@@ -1,3 +1,4 @@
 .skynex/
 generator.log
 *.log
+.skynex/audit.log
