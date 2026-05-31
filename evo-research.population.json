@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generation": 3,
-  "active_candidate_id": "parallel-all-text",
-  "stagnation_runs": 0,
+  "generation": 4,
+  "active_candidate_id": "full-overlap",
+  "stagnation_runs": 1,
   "candidates": [
     {
       "id": "baseline-seq",
@@ -172,10 +172,10 @@
         "text_batches": 5,
         "batch_size": 10
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Text volume up from 20 to 50. Keep media same.5 batches of 10."
+      "notes": []
     },
     {
       "id": "full-overlap",
@@ -195,10 +195,20 @@
         "text_batches": 4,
         "media_text_overlap": true
       },
-      "status": "pending",
-      "fitness_history": [],
-      "last_result_ref": null,
-      "notes": "All generators (media + text) run in parallel from t=0. Text starts immediately."
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 4,
+          "status": "keep",
+          "metric": 26,
+          "direction": "higher",
+          "confidence": 2,
+          "timestamp": 1780215109696,
+          "description": "Full overlap (media + text t=0): 26 files in 233s. True concurrency \u2014 text starts with media, not after. Lock stale-clean fixed. 1.46x faster than parallel-all-text."
+        }
+      ],
+      "last_result_ref": 4,
+      "notes": []
     },
     {
       "id": "text-large-batch",
@@ -218,18 +228,90 @@
         "text_batches": 2,
         "batch_size": 10
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "text-heavy-50",
+      "family": "architecture",
+      "parent_id": "full-overlap",
+      "operator": "mutate",
+      "hypothesis": "Scale text from 20 to 50 topics. 5 batches of 10, same5-parallel concurrency. Budget ~190s+ still fits 300s timeout. +30 text files.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 50,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 5,
+        "batch_size": 10,
+        "media_text_overlap": true
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Fewer, larger batches.2 batches of 10 topics each."
+      "notes": "Text volume20\u219250. 5 batches of 10. Media unchanged."
+    },
+    {
+      "id": "retry-resilient-v2",
+      "family": "architecture",
+      "parent_id": "full-overlap",
+      "operator": "mutate",
+      "hypothesis": "Add3-retry with3s backoff on failed API calls. Full overlap parallelism + resilience. Reduces text failures to0.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 20,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 4,
+        "media_text_overlap": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Same as full-overlap + retry logic on each API call."
+    },
+    {
+      "id": "media-text-balanced",
+      "family": "architecture",
+      "parent_id": "full-overlap",
+      "operator": "mutate",
+      "hypothesis": "Scale ALL generators: 5 images + 3 speech + 2 music + 40 text. More content overall. Media has headroom (50/day img, 4000/day speech).",
+      "genome": {
+        "images": 5,
+        "speech": 3,
+        "music": 2,
+        "text": 40,
+        "parallel": true,
+        "retry": false,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 4,
+        "media_text_overlap": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Increased counts across all types. Text stays at 4 batches."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 3,
+      "attempts": 4,
       "failures": 1,
-      "keeps": 2,
+      "keeps": 3,
       "retired": false,
       "consecutive_failures": 0
     }

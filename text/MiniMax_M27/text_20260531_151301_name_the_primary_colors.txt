@@ -1,0 +1,11 @@
+The classic set of primary colors (used in subtractive color mixing, such as with paints and pigments) are:
+
+- **Red**
+- **Blue**
+- **Yellow**
+
+In additive color mixing (e.g., on screens and digital displays), the primary colors are:
+
+- **Red**
+- **Green**
+- **Blue**

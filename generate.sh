@@ -22,7 +22,7 @@ log() {
     echo "[$(date '+%H:%M:%S')] $1" >> "$LOG"
 }
 
-trap 'rm -f "$LOCK" 2>/dev/null' EXIT
+trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO_DIR"
 
@@ -122,11 +122,10 @@ gen_music_26() {
 
 # ==== music-cover ====
 gen_music_cover() {
-    # music-cover needs reference audio — skip in auto-generate
     log "music-cover: skipped (requires reference audio)"
 }
 
-# ==== MiniMax-M2.7 (text) — parallel batched ====
+# ==== MiniMax-M2.7 (text) — 50 topics, 5 parallel batches of 10 ====
 gen_text() {
     local topics=(
         "Write a haiku about mountains"
@@ -149,18 +148,49 @@ gen_text() {
         "Create an acronym and explain what it means"
         "Name the layers of the ocean from shallow to deep"
         "Write a one-sentence summary of the meaning of life"
+        "What is the capital of Australia"
+        "Describe the taste of an orange to someone who has never tasted one"
+        "Write a haiku about rain"
+        "Name five things you can see in the sky"
+        "What year did World War II end"
+        "Write a tongue twister about a sheep"
+        "Name three programming languages"
+        "What is the largest planet in our solar system"
+        "Write a fortune cookie message about the future"
+        "Name the primary colors"
+        "What is the square root of 144"
+        "Write a haiku about the ocean"
+        "Name five types of fruit"
+        "What is the chemical symbol for gold"
+        "Write a very short joke"
+        "Name three things that are round"
+        "What is the fastest land animal"
+        "Write a limerick about a dog"
+        "Name the days of the week"
+        "What is the boiling point of water in Celsius"
+        "Write a haiku about stars"
+        "Name three ocean animals"
+        "What is the largest ocean"
+        "Write a short riddle"
+        "Name five words that start with the letter S"
+        "What is the speed of light"
+        "Write a fortune cookie message about luck"
+        "Name three things you find in a kitchen"
+        "What is the tallest mountain in the world"
+        "Write a haiku about the moon"
+        "Name three types of music"
+        "What is the smallest country in the world"
     )
 
     mkdir -p "text/MiniMax_M27"
 
-    # Split topics into 4 parallel batches
-    local batch1=("${topics[0]}" "${topics[1]}" "${topics[2]}" "${topics[3]}" "${topics[4]}")
-    local batch2=("${topics[5]}" "${topics[6]}" "${topics[7]}" "${topics[8]}" "${topics[9]}")
-    local batch3=("${topics[10]}" "${topics[11]}" "${topics[12]}" "${topics[13]}" "${topics[14]}")
-    local batch4=("${topics[15]}" "${topics[16]}" "${topics[17]}" "${topics[18]}" "${topics[19]}")
+    # Split 50 topics into 5 parallel batches of 10
+    local batch1=("${topics[0]}" "${topics[1]}" "${topics[2]}" "${topics[3]}" "${topics[4]}" "${topics[5]}" "${topics[6]}" "${topics[7]}" "${topics[8]}" "${topics[9]}")
+    local batch2=("${topics[10]}" "${topics[11]}" "${topics[12]}" "${topics[13]}" "${topics[14]}" "${topics[15]}" "${topics[16]}" "${topics[17]}" "${topics[18]}" "${topics[19]}")
+    local batch3=("${topics[20]}" "${topics[21]}" "${topics[22]}" "${topics[23]}" "${topics[24]}" "${topics[25]}" "${topics[26]}" "${topics[27]}" "${topics[28]}" "${topics[29]}")
+    local batch4=("${topics[30]}" "${topics[31]}" "${topics[32]}" "${topics[33]}" "${topics[34]}" "${topics[35]}" "${topics[36]}" "${topics[37]}" "${topics[38]}" "${topics[39]}")
+    local batch5=("${topics[40]}" "${topics[41]}" "${topics[42]}" "${topics[43]}" "${topics[44]}" "${topics[45]}" "${topics[46]}" "${topics[47]}" "${topics[48]}" "${topics[49]}")
 
-
-    # Run each batch in parallel
     _text_batch "batch1" "${batch1[@]}" &
     local pid1=$!
     _text_batch "batch2" "${batch2[@]}" &
@@ -169,14 +199,15 @@ gen_text() {
     local pid3=$!
     _text_batch "batch4" "${batch4[@]}" &
     local pid4=$!
-
+    _text_batch "batch5" "${batch5[@]}" &
+    local pid5=$!
 
     wait $pid1 || log "text batch1 subshell exited non-zero"
     wait $pid2 || log "text batch2 subshell exited non-zero"
     wait $pid3 || log "text batch3 subshell exited non-zero"
     wait $pid4 || log "text batch4 subshell exited non-zero"
+    wait $pid5 || log "text batch5 subshell exited non-zero"
 }
-
 
 _text_batch() {
     local batch_name=$1
@@ -213,7 +244,7 @@ git_push() {
     else
         git commit -m "Auto-commit $(date '+%Y-%m-%d %H:%M')" 2>/dev/null
         TOKEN=$($GH auth token)
-        git push "https://${TOKEN}@github.com/mcpe500/datasets.git" HEAD:main 2>&1 | tee -a "$LOG" || log "Push failed (will retry next cycle)"
+        git push "https://${TOKEN}@github.com/mcpe500/datasets.git" HEAD:main >> "$LOG" 2>&1 || log "Push failed (will retry next cycle)"
         log "Git push complete"
     fi
 
@@ -228,7 +259,6 @@ git_push() {
 main() {
     acquire_lock
     log "=== Gen cycle started ==="
-
 
     # Full overlap: ALL generators start at t=0 simultaneously
     gen_image_01 &

@@ -1,0 +1,33 @@
+**Short answer:** In folklore a leprechaun’s pot of gold. In reality there’s nothing physical there at all—rainbows are just a visual effect, not a solid object you can reach.
+
+---
+
+### Why the myth?
+
+* **Leprechaun lore** – Irish folklore says that a mischievous leprechaun hides a chest of gold at the exact spot where a rainbow “touches” the ground. If you can catch the leprechaun, you can claim the treasure.
+* **Pot‑of‑gold image** – The image of a glittering pot at a rainbow’s tip is a cultural shorthand for “the ultimate prize” and shows up everywhere from cartoons to greeting cards.
+
+---
+
+### What physics actually tells us
+
+| Aspect | What it means |
+|--------|----------------|
+| **What a rainbow is** | A circular (or arc) pattern of light produced by **reflection, refraction, and dispersion** of sunlight inside countless water droplets. |
+| **Why it appears as an arc** | Light emerges from each droplet at a specific angle (~42° for the primary rainbow). All droplets that satisfy that angle form a cone around the antisolar point, which we see as a band of colors. |
+| **No fixed “end”** | The rainbow’s apparent “endpoint” moves as you move. It’s not a fixed place on the ground; it’s a line of sight effect. If you try to walk toward it, you’ll find the rainbow slipping away. |
+| **Color order** | Red on the outer edge, violet on the inner edge, with the other spectral colors in between. |
+| **Rare “double rainbows”** | A second, fainter arc appears at about 50–53°; its colors are reversed. |
+| **Supernumerary arcs** | Very faint pastel bands sometimes appear inside the primary arc when the droplets are especially uniform in size. |
+
+In short, a rainbow is a **shared visual phenomenon**—light from the sun reflecting off countless tiny mirrors (water droplets) in the atmosphere. There’s no solid surface or hidden treasure; it’s simply an optical illusion that follows the geometry of light.
+
+---
+
+### A poetic spin
+
+If you want to imagine something more whimsical, you could say that at the end of a rainbow you’ll find **the moment when light becomes color**, a fleeting reminder that beauty is often found not in a destination but in the journey of refraction and reflection.
+
+---
+
+**Want more?** If you’re curious about how rainbows form, the mathematics behind the 42° angle, or the folklore of leprechauns, just let me know and I can dive deeper!

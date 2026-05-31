@@ -1,0 +1,31 @@
+The colors you see in a rainbow are the pure **spectral** hues – each one corresponds to a single wavelength of visible light (roughly 380 nm – 700 nm). In everyday language we often talk about many other colors that are not found as a single wavelength. Those “non‑spectral” colors arise when the eye receives more than one wavelength at once, or when we adjust brightness/saturation in ways that don’t occur in a natural spectrum.
+
+Below is a handy list of common colors that **do not appear in a rainbow**, grouped by why they’re not spectral:
+
+| Category | Examples (non‑rainbow colors) | Why they’re not spectral |
+|----------|-----------------------------|--------------------------|
+| **Achromatic (no hue)** | **Black**, **White**, **Gray / Grey** | Black = absence of light; White = equal mix of all visible wavelengths; Gray = any unsaturated mixture of black and white. |
+| **Pastel or muted tints** | **Beige**, **Cream**, **Lavender**, **Mint**, **Peach**, **Powder Blue** | They are lightened (tinted) versions of spectral colors, mixed with white. |
+| **Earth & wood tones** | **Brown**, **Tan**, **Olive**, **Khaki**, **Rust**, **Burgundy**, **Maroon** | Usually a mix of red/orange with a large amount of darkness (black) or with green/blue, giving a low‑saturation, high‑lightness appearance that isn’t a single wavelength. |
+| **Pink / Magenta family** | **Pink**, **Hot‑Pink**, **Magenta**, **Fuchsia** | These are mixtures of red (≈ 650 nm) and violet/blue (≈ 400‑450 nm). No single wavelength produces pink. |
+| **Purple (vs. violet)** | **Purple**, **Violet** (rainbow) | Violet is a true spectral hue; purple is the *visual* result of mixing red + blue, which the rainbow does not produce. |
+| **Neon / fluorescent** | **Neon Green**, **Electric Blue**, **Fluorescent Orange** | These appear brighter than any pure spectral color because they emit additional light (e.g., from phosphors) and have exaggerated saturation. |
+| **Metallic & shimmering** | **Gold**, **Silver**, **Bronze**, **Copper**, **Champagne** | Their appearance depends on specular reflections and interference, not a single wavelength. |
+| **Cool “desaturated” tones** | **Teal**, **Turquoise**, **Sea‑foam**, **Aqua**, **Cyan** (rainbow) | Cyan is in the rainbow; teal/turquoise are darker, more saturated mixes of cyan with a hint of green or blue, giving a hue not found alone in the spectrum. |
+| **Fashion‑industry names** | **Mauve**, **Plum**, **Coral**, **Salmon**, **Lilac**, **Chartreuse** | These are creative names for mixed or heavily shifted hues that go beyond the six (or seven) basic rainbow colors. |
+| **Other neutrals & variations** | **Charcoal**, **Slate**, **Ivory**, **Onyx**, **Ochre**, **Sienna**, **Umber** | These are dark, muted, or warm‑tinted neutrals that again involve mixing many wavelengths or adding black/white. |
+
+### Quick Explanation
+
+1. **Spectral vs. non‑spectral:**  
+   - *Spectral colors* = red, orange, yellow, green, blue, indigo, violet. Each can be produced by a single wavelength of light.  
+   - *Non‑spectral colors* = any hue that requires **more than one wavelength** (e.g., magenta, pink) or that relies on **intensity/brightness** adjustments (e.g., brown, gray) rather than a pure wavelength.
+
+2. **Why the rainbow can’t show them:**  
+   - A rainbow forms when sunlight is dispersed by water droplets, spreading the light according to wavelength. Only the wavelengths present in sunlight appear; mixtures that our brain interprets as new colors are not isolated in the process.
+
+3. **How we still see those colors:**  
+   - **Additive mixing** (light screens, LEDs) can combine wavelengths (e.g., red + blue → magenta).  
+   - **Subtractive mixing** (pigments, paints) absorbs certain wavelengths and reflects the rest (e.g., mixing yellow + blue pigment gives green, while adding black makes brown).
+
+So, if you need a palette that includes everything *outside* the classic rainbow, the list above gives you a solid starting point!

@@ -1,0 +1,14 @@
+The Sun does not have a day‑night cycle the way Earth does, so there isn’t a single “clock time” that applies everywhere on the Sun. What scientists use instead is a **solar‑rotation based clock**:
+
+* **Rotation period** – The Sun’s surface rotates differentially: it spins once in about **27 days** as seen from Earth (the synodic rotation period) and in about **25 days** relative to the stars (the sidereal rotation period, measured at the equator).  
+* **Carrington rotation** – Solar physicists assign a **Carrington longitude** to a fixed point on the solar surface. One Carrington rotation is the time it takes for that fixed point to rotate once relative to the line joining the Sun and Earth, i.e., about **27 days**.  This gives a convenient way to label events on the Sun (e.g., “this sunspot appeared at Carrington longitude 45° on day 2108”).
+
+So if you asked, “What time is it on the Sun?” the most meaningful answer is: **“It’s day‑number X of Carrington rotation Y.”**  For any point on the Sun you could also talk about its **local solar time**—the angle between that point and the direction toward Earth, measured like a longitude on a planet.
+
+In short:
+
+* No universal clock like Earth time zones.  
+* Time on the Sun is defined by its rotation (≈27 days synodic, ≈25 days sidereal).  
+* Solar physics uses Carrington rotation numbers and longitudes to coordinate “when” something happens on the Sun.
+
+If you have a specific solar longitude or event you’re curious about, feel free to let me know and we can map it to a corresponding Carrington rotation date!

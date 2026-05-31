@@ -1,0 +1,16 @@
+Here are the classic pelagic (open‑ocean) zones listed from the shallowest to the deepest:
+
+| Zone (from shallow → deep) | Common name | Approx. depth range | Typical conditions |
+|----------------------------|-------------|----------------------|--------------------|
+| **Epipelagic** | Sunlight (or Photic) zone | **0 – 200 m** (0‑660 ft) | Plenty of sunlight → photosynthesis, warmest temperatures, high oxygen, abundant marine life. |
+| **Mesopelagic** | Twilight zone | **200 – 1 000 m** (660‑3 300 ft) | Light is dim but still detectable; temperature drops sharply; many migrants (animals that move up at night). |
+| **Bathypelagic** | Midnight zone | **1 000 – 4 000 m** (3 300‑13 100 ft) | No sunlight, cold (≈2‑4 °C), high pressure. Food mainly consists of sinking organic particles (“marine snow”). |
+| **Abyssopelagic** | Abyssal zone | **4 000 – 6 000 m** (13 100‑19 700 ft) | Near‑freezing temperatures, extreme pressure, soft sediments. Very sparse life; mostly small invertebrates and deep‑sea fish. |
+| **Hadopelagic** | Hadal zone | **6 000 – ~11 000 m** (19 700‑~36 000 ft) | Deep‑sea trenches and the ocean’s floor in the deepest spots. Pressure > 1 000 atm; temperatures just above freezing; specialized extremophiles (e.g., snailfish, amphipods). |
+
+### How the zones fit together
+- **Littoral (intertidal) / Neritic** – the shallow, nearshore waters that lie above the continental shelf (roughly 0‑200 m) and are often included in the shallow end of the ocean’s depth spectrum, but they’re usually treated separately from the open‑ocean pelagic zones.
+- **Photic zone** – comprises the epipelagic where light is sufficient for photosynthesis.
+- **Aphotic zone** – everything below the epipelagic, where little to no sunlight penetrates.
+
+So, from the surface down to the deepest ocean trenches, the ocean’s vertical structure is: **Epipelagic → Mesopelagic → Bathypelagic → Abyssopelagic → Hadopelagic**.
