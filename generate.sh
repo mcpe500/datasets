@@ -199,9 +199,21 @@ main() {
     acquire_lock
     log "=== Gen cycle started ==="
 
-    gen_image_01
-    gen_speech_hd
-    gen_music_26
+
+    # Parallelize media generators (images, speech, music run concurrently)
+    gen_image_01 &
+    local pid_img=$!
+    gen_speech_hd &
+    local pid_sp=$!
+    gen_music_26 &
+    local pid_mus=$!
+
+
+    # Wait for media — each has its own sleep delays baked in
+    wait $pid_img || log "image-01 subshell exited non-zero"
+    wait $pid_sp || log "speech-2.8-hd subshell exited non-zero"
+    wait $pid_mus || log "music-2.6 subshell exited non-zero"
+
     gen_music_cover
     gen_text
 

@@ -1,175 +1,104 @@
 {
   "schema_version": 1,
-  "generation": 0,
-  "active_candidate_id": null,
+  "generation": 1,
+  "active_candidate_id": "baseline-seq",
   "stagnation_runs": 0,
   "candidates": [
     {
-      "candidate_id": "baseline-seq",
+      "id": "baseline-seq",
       "family": "architecture",
+      "parent_id": null,
       "operator": "baseline",
-      "hypothesis": "Sequential generation: 3 images (15s each) + 2 speech (10s each) + 1 music (30s) + 20 text (5s each) = ~230s per cycle",
-      "genome": {
-        "images": 3,
-        "speech": 2,
-        "music": 1,
-        "text": 20,
-        "parallel": false,
-        "retry": false
-      },
-      "metrics": {}
+      "hypothesis": "Baseline sequential: 3 img + 2 speech + 1 music + 20 text = 25 files in ~600s. Text bottleneck (5s/item). Lock + trap working.",
+      "genome": null,
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 1,
+          "status": "keep",
+          "metric": 25,
+          "direction": "higher",
+          "confidence": null,
+          "timestamp": 1780209642699,
+          "description": "Baseline sequential: 3 img + 2 speech + 1 music + 20 text = 25 files in ~600s. Text bottleneck (5s/item). Lock + trap working."
+        }
+      ],
+      "last_result_ref": 1,
+      "notes": []
     },
     {
-      "candidate_id": "parallel-all",
+      "id": "parallel-all",
       "family": "architecture",
+      "parent_id": "baseline-seq",
       "operator": "parallelize",
-      "hypothesis": "Run all generators in parallel using background jobs. Images/speech/music run concurrently, text follows.",
+      "hypothesis": "Run image/speech/music in parallel background jobs. Text runs after media. Expected ~50% time reduction.",
       "genome": {
         "images": 3,
         "speech": 2,
         "music": 1,
         "text": 20,
         "parallel": true,
-        "retry": false
+        "retry": false,
+        "parallel_media": true
       },
-      "metrics": {}
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Parallelize image, speech, music generators using background jobs. Text runs sequentially after."
     },
     {
-      "candidate_id": "high-volume-seq",
-      "family": "volume",
-      "operator": "scale_up",
-      "hypothesis": "More items per cycle: 10 images + 5 speech + 2 music + 20 text. Trades overlap risk for dataset growth rate.",
-      "genome": {
-        "images": 10,
-        "speech": 5,
-        "music": 2,
-        "text": 20,
-        "parallel": false,
-        "retry": false
-      },
-      "metrics": {}
-    },
-    {
-      "candidate_id": "text-heavy",
-      "family": "volume",
-      "operator": "scale_up",
-      "hypothesis": "Focus on text (cheapest, fastest). 3 images + 2 speech + 1 music + 50 text per cycle.",
-      "genome": {
-        "images": 3,
-        "speech": 2,
-        "music": 1,
-        "text": 50,
-        "parallel": false,
-        "retry": false
-      },
-      "metrics": {}
-    },
-    {
-      "candidate_id": "retry-resilient",
-      "family": "reliability",
-      "operator": "retry",
-      "hypothesis": "Add retry logic (3 attempts with exponential backoff) for failed API calls. Improves completion rate.",
-      "genome": {
-        "images": 3,
-        "speech": 2,
-        "music": 1,
-        "text": 20,
-        "parallel": false,
-        "retry": true
-      },
-      "metrics": {}
-    },
-    {
-      "candidate_id": "parallel-highvol",
+      "id": "retry-resilient",
       "family": "architecture",
-      "operator": "combine",
-      "hypothesis": "Parallel + high volume: 10 images + 5 speech + 2 music + 30 text all running concurrently.",
-      "genome": {
-        "images": 10,
-        "speech": 5,
-        "music": 2,
-        "text": 30,
-        "parallel": true,
-        "retry": false
-      },
-      "metrics": {}
-    },
-    {
-      "candidate_id": "music-focus",
-      "family": "volume",
-      "operator": "scale_up",
-      "hypothesis": "Maximize music (highest quality audio dataset). 3 images + 2 speech + 5 music + 20 text.",
+      "parent_id": "baseline-seq",
+      "operator": "retry",
+      "hypothesis": "Add3-retry with5s backoff for failed API calls. Sequential baseline with resilience layer.",
       "genome": {
         "images": 3,
         "speech": 2,
-        "music": 5,
-        "text": 20,
-        "parallel": false,
-        "retry": false
-      },
-      "metrics": {}
-    },
-    {
-      "candidate_id": "speech-focus",
-      "family": "volume",
-      "operator": "scale_up",
-      "hypothesis": "Maximize speech (large quota: 4000/day). 3 images + 10 speech + 1 music + 20 text.",
-      "genome": {
-        "images": 3,
-        "speech": 10,
         "music": 1,
         "text": 20,
         "parallel": false,
-        "retry": false
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 5
       },
-      "metrics": {}
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Same as baseline but each API call retries up to 3 times on failure."
     },
     {
-      "candidate_id": "parallel-retry",
-      "family": "reliability",
+      "id": "parallel-retry",
+      "family": "architecture",
+      "parent_id": "baseline-seq",
       "operator": "combine",
-      "hypothesis": "Parallel + retry: all generators run concurrently with 3-retry logic for resilience.",
+      "hypothesis": "Parallel media + retry on text. Fastest potential: parallel media (~45s) + parallel text (~100s) + retry overhead.",
       "genome": {
         "images": 5,
         "speech": 3,
         "music": 2,
         "text": 25,
         "parallel": true,
-        "retry": true
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 5,
+        "parallel_media": true,
+        "parallel_text": true
       },
-      "metrics": {}
-    },
-    {
-      "candidate_id": "balanced-mid",
-      "family": "volume",
-      "operator": "scale_up",
-      "hypothesis": "Balanced mid-volume: 5 images + 5 speech + 2 music + 30 text per cycle.",
-      "genome": {
-        "images": 5,
-        "speech": 5,
-        "music": 2,
-        "text": 30,
-        "parallel": false,
-        "retry": false
-      },
-      "metrics": {}
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Parallel media + parallel text + retry. Highest throughput hypothesis."
     }
   ],
   "families": [
     {
-      "family_id": "architecture",
-      "operators": ["baseline", "parallelize", "combine"],
-      "active": true
-    },
-    {
-      "family_id": "volume",
-      "operators": ["scale_up"],
-      "active": true
-    },
-    {
-      "family_id": "reliability",
-      "operators": ["retry", "combine"],
-      "active": true
+      "name": "architecture",
+      "attempts": 1,
+      "failures": 0,
+      "keeps": 1,
+      "retired": false,
+      "consecutive_failures": 0
     }
   ],
   "scheduler": {

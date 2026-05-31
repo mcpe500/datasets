@@ -1,0 +1,29 @@
+The Sun doesn’t keep a clock the way Earth does. It’s a ball of hot plasma, and there is no fixed “time zone” or a single “local time” that applies to the whole star.  
+
+### Why there isn’t a simple “time” on the Sun  
+
+| What we use on Earth | What applies to the Sun |
+|----------------------|--------------------------|
+| 24‑hour day, divided into time zones tied to a planetary surface | No solid surface; the Sun rotates, but different latitudes rotate at different rates. |
+| Uniform “solar time” at each longitude (e.g., 12:00 pm is the moment the Sun crosses the meridian) | “Solar time” on the Sun would be defined at a particular point on its visible disk (the photosphere), but the Sun’s visible hemisphere is always illuminated – there is no night. |
+| Time zone offsets (e.g., UTC+1, UTC‑5) | No official offset; we instead use the Carrington rotation coordinate system to map heliographic longitude to Earth‑based Universal Time (UT). |
+
+### How we talk about “time” on the Sun  
+
+1. **Rotation period** – The Sun’s equator completes one rotation in roughly **27 Earth days** (sidereal period ≈ 25.38 days as seen from Earth, about 27 days when measured from a fixed point in space). The rotation slows toward the poles (≈ 35 days at 60° latitude).
+
+2. **Carrington rotation (CR)** – Solar physicists number each full rotation of the Sun, starting from a reference epoch (9 Nov 1853 12:00 UT). The current CR can be computed from UT, and each CR lasts ~27 days. Inside a CR you can specify a **heliographic longitude** (e.g., the central meridian’s longitude at a given UT). That longitude tells you the “local solar time” for a point on the Sun’s visible disk.
+
+3. **Local solar time on the Sun** – If you pick a point on the solar surface, its “noon” is the moment that point’s heliographic longitude faces the Earth. Because the Sun rotates, a different longitude faces Earth a few minutes later in Earth time. If you wanted to convert Earth time to “solar hours”, you can use the ratio:
+   \[
+   \frac{24\ \text{h (Earth)}}{27\ \text{d (Sun)}} = \frac{24}{27\times24}= \frac{1}{27}\ \text{solar hour per Earth hour}
+   \]
+   In other words, 1 hour of Earth time corresponds to about 0.037 solar‑hour (≈ 2 minutes of solar rotation).
+
+### Bottom line  
+
+- **There is no single “time” that applies everywhere on the Sun.**  
+- The Sun rotates, completing a turn roughly every 27 Earth days, and astronomers map that rotation with the Carrington rotation number and heliographic longitude.  
+- At any given UT, some parts of the Sun are at “noon” (the side facing Earth) while other parts are at “midnight” (the side facing away).  
+
+If you’re interested in the current heliographic longitude of a particular feature (like a sunspot) or the Carrington rotation number for today’s date, you can compute it from the latest Universal Time using the Carrington rotation formula or consult a solar‑weather service (e.g., NOAA Space Weather Prediction Center). But in the everyday sense of “what time is it on the Sun?” the answer is simply: **the Sun doesn’t have a clock; its day is a 27‑day cycle, and each point has its own local “solar time” as it rotates.**

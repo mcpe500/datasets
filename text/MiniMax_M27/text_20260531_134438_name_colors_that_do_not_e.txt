@@ -1,0 +1,24 @@
+Below are a few common colors that **don’t appear as a single, pure wavelength in a rainbow** (i.e., they’re not part of the visible spectrum you see when sunlight is split by a prism or raindrop).  
+
+| Color | Why it isn’t in a rainbow |
+|-------|---------------------------|
+| **Magenta** | Created by mixing red + blue light (or by the brain’s “extra‑spectral” processing). No single wavelength of light is magenta. |
+| **Pink / Rose** | A tint of red mixed with white; again a combination, not a spectral hue. |
+| **White** | The sum of all visible wavelengths at equal intensity. |
+| **Black** | Absence of visible light; not a wavelength. |
+| **Gray / Grey** | A desaturated version of white – a mixture of many wavelengths, not a single one. |
+| **Brown** | Typically a dark, desaturated orange/yellow produced by mixing red, orange, yellow, and a dash of black. |
+| **Tan / Beige** | Light brown with a hint of yellow; like brown, it’s a mixture of spectral colors. |
+| **Olive** | A muted yellow‑green with a grayish or brownish cast. |
+| **Gold** | A metallic shade that blends yellow with a trace of orange and a metallic sheen; not a pure wavelength. |
+| **Silver** | A metallic gray‑white that looks metallic due to specular reflection. |
+| **Bronze / Copper** | Metallic brown‑orange hues that depend on material properties, not a single spectral color. |
+| **Purple** (pure purple) | Though the rainbow has violet at the short‑wavelength end, “purple” as we see it (a mix of red + blue) isn’t a spectral hue. |
+| **Lavender / Lilac** | Light purples created by adding white to violet; again, mixtures. |
+| **Turquoise / Teal** | Both are close to cyan, which does appear in the spectrum, but the exact shades we label “turquoise” or “teal” are usually a blend of blue and green with a bit of white. |
+| **Pastel shades** (e.g., pastel pink, pastel mint) | All pastels are tints (color + white) of a spectral hue. |
+| **Iridescent / Fluorescent colors** | Depend on interference, scattering, or emission processes, not on a single wavelength. |
+| **Metallic paints** (e.g., “pearlescent white,” “sparkle blue”) | Use pigments, interference coatings, or glitter particles to produce the look; they’re not found in the spectrum. |
+
+### Quick takeaway
+A rainbow only displays **pure spectral colors**—the single wavelengths that the human eye can see from about 400 nm (violet) to 700 nm (red). All the colors listed above are **non‑spectral** (or “extra‑spectral”) because they’re produced by mixing multiple wavelengths, adding white/black, or relying on surface properties that the rainbow’s simple dispersion cannot capture.

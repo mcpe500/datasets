@@ -1,0 +1,11 @@
+Here are the classic **pelagic (water‑column) zones** of the ocean, listed from the shallowest to the deepest:
+
+| Depth range (approx.) | Zone name (common synonyms) | Key characteristics |
+|-----------------------|------------------------------|----------------------|
+| **0 – 200 m** | **Epipelagic** (Sunlight / Euphotic Zone) | Light is strong enough for photosynthesis; most marine life (plankton, fish, marine mammals). |
+| **200 – 1,000 m** | **Mesopelagic** (Twilight / Disphotic Zone) | Dim light; some photosynthesis possible; includes lanternfish, squid, and many deep‑diving mammals. |
+| **1,000 – 4,000 m** | **Bathypelagic** (Midnight Zone) | No sunlight; temperatures drop to ~2–4 °C; organisms often rely on bioluminescence (e.g., anglerfish, giant squid). |
+| **4,000 – 6,000 m** | **Abyssopelagic** (Abyssal Zone) | Near‑freezing temperatures, immense pressure; sparse fauna (e.g., sea cucumbers, certain fish). |
+| **> 6,000 m (including ocean trenches)** | **Hadopelagic** (Hadal Zone) | Deepest trenches (Mariana, Tonga, etc.); extreme pressure; specialized life such as snailfish, amphipods. |
+
+These zones are defined primarily by **light penetration** and **depth**, and they transition smoothly into one another. (If you also want to include the **benthic** (bottom) zones or the **littoral/neritic** coastal zones, they overlay these pelagic layers but are generally considered separate categories.)
