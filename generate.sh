@@ -212,7 +212,7 @@ _text_batch() {
     local batch_name=$1
     shift
     for topic in "$@"; do
-        safe=$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25)
+        safe=$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-40)
         output="text/MiniMax_M27/text_${TIMESTAMP}_${safe}.txt"
         log "text/M2.7 [$batch_name]: $topic"
 

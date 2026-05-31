@@ -1,0 +1,9 @@
+The term “tallest mountain” can be interpreted a couple of ways, so the answer depends on which measurement you use:
+
+| Measure | Mountain | Height |
+|--------|----------|--------|
+| **Elevation above sea level** (the most common meaning) | **Mount Everest** (Sagarmatha in Nepali; Qomolangma in Tibetan) | 8,848 m (29,029 ft) |
+| **Total height from base to summit** (including the portion that lies underwater) | **Mauna Kea** (Hawaii, USA) | ~10,203 m (33,474 ft) from its base on the Pacific Ocean floor to its summit. |
+| **Distance from the Earth’s center** (because Earth bulges at the equator) | **Chimborazo** (Ecuador) | Its summit is the farthest point on the planet’s surface from the planet’s center (≈6,384 km). |
+
+**In everyday usage**, “the tallest mountain in the world” almost always refers to Mount Everest, which stands 8,848 m above sea level. If you’re interested in the full vertical span from the ocean floor, Mauna Kea takes the prize, and if you’re looking for the point farthest from Earth’s center, Chimborazo wins.

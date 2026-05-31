@@ -1,0 +1,23 @@
+Below is a handy “cheat‑sheet” of colors that **don’t appear in a rainbow** – i.e., they cannot be produced by a single wavelength of light.  
+(They’re sometimes called **non‑spectral** or **metameric** colors.)
+
+| Category | Example colors (just a few) | Why they’re not in a rainbow |
+|----------|-----------------------------|------------------------------|
+| **Neutrals** | **White**, **Black**, **Gray** (all shades) | White = all visible wavelengths combined; Black = no light; Gray = a dim mixture of white and black. |
+| **Pastels / Soft tints** | **Pink**, **Lavender**, **Baby‑blue**, **Peach**, **Mint**, **Lilac** | These are created by mixing a spectral hue with white (or with another spectral hue). A single wavelength can’t give them. |
+| **Magenta / Fuchsia family** | **Magenta**, **Fuchsia**, **Raspberry**, **Burgundy** | Magenta sits between red and violet on the color wheel, but no single wavelength lands there; it’s a mix of red + blue (or red + violet). |
+| **Browns & Earth tones** | **Brown**, **Tan**, **Beige**, **Camel**, **Sienna**, **Umber**, **Olive**, **Khaki** | Brown is basically a dark, desaturated orange (or a dark yellow‑red). It’s produced by mixing a spectral orange with black or by absorbing part of the spectrum. |
+| **Metallic & Iridescent shades** | **Gold**, **Silver**, **Bronze**, **Copper**, **Champagne**, **Gunmetal** | These rely on specular reflection and surface texture rather than a pure wavelength; they’re perceived by the eye as a mix of many wavelengths plus environmental lighting. |
+| **Neon / Vivid artificial colors** | **Neon green**, **Electric blue**, **Fluorescent orange**, **Acid yellow**, **Laser pink** | Created by very narrow‑band light sources (LEDs, lasers) mixed with additional filters or phosphors; not a single natural wavelength. |
+| **Other common non‑spectral names** | **Turquoise**, **Teal**, **Aqua**, **Mauve**, **Sage**, **Charcoal**, **Coral**, **Burgundy**, **Amber** (the color, not the material) | While the base hues (blue‑green, blue‑violet, etc.) exist as spectral colors, the exact “named” shades are blends of several wavelengths (often with added white or black). |
+
+### Quick cheat‑sheet (one‑liner per group)
+
+- **White, black, and gray** → all‑wavelength mixture or no‑light.  
+- **Pink, lavender, peach, mint** → a spectral hue + white.  
+- **Magenta, fuchsia** → red + violet (or blue) mixture.  
+- **Brown, tan, olive, khaki** → dark, desaturated orange/yellow/green.  
+- **Gold, silver, bronze** → metallic reflections, not a single wavelength.  
+- **Neon‑type colors** → narrow‑band light mixed with filters or phosphors.  
+
+So whenever you see a color that can’t be matched by a single line of the rainbow, you’re looking at one of the many **non‑spectral colors** above. Happy coloring!

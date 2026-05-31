@@ -1,0 +1,8 @@
+The largest planet in our solar system is **Jupiter**.  
+
+- **Diameter:** about 139,820 km (about 11 times the diameter of Earth)  
+- **Mass:** roughly 1.898 × 10²⁷ kg, which is more than twice the combined mass of all the other planets, moons, asteroids, and comets in the solar system.  
+- **Composition:** primarily hydrogen and helium, with a small fraction of heavier elements; it has a dense core of rock and ice beneath layers of metallic hydrogen.  
+- **Notable features:** the Great Red Spot (a massive storm), a faint ring system, and at least 95 known moons (including the four large Galilean moons: Io, Europa, Ganymede, and Callisto).  
+
+Jupiter’s immense size and mass dominate the gravitational dynamics of the solar system, influencing the orbits of neighboring planets and clearing a large region of space around it.

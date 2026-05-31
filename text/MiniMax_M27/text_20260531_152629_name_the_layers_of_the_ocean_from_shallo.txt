@@ -1,0 +1,17 @@
+The ocean is divided into a series of **pelagic (open‑water) zones** that are stacked from the surface down to the deepest trenches.  From shallowest to deepest they are:
+
+| Zone (shallow → deep) | Typical depth range | Typical conditions |
+|-----------------------|----------------------|--------------------|
+| **Epipelagic (Sunlight Zone)** | 0 – ≈200 m (0 – ≈656 ft) | Sunlit, warm, high oxygen, abundant photosynthesis. |
+| **Mesopelagic (Twilight Zone)** | ≈200 – ≈1,000 m (≈656 – ≈3,280 ft) | Dim light, temperatures drop sharply, decreasing oxygen. |
+| **Bathypelagic (Midnight Zone)** | ≈1,000 – ≈4,000 m (≈3,280 – ≈13,123 ft) | No sunlight, cold (≈2–4 °C), low oxygen, high pressure. |
+| **Abyssopelagic (Abyssal Zone)** | ≈4,000 – ≈6,000 m (≈13,123 – ≈19,685 ft) | Near‑freezing temperatures, extreme pressure, very low oxygen. |
+| **Hadopelagic (Hadal Zone)** | ≈6,000 – ≈11,000 m (≈19,685 – ≈36,089 ft) | Found only in deep ocean trenches (e.g., Mariana Trench). Temperatures near 1 °C, pressure > 1,000 atm. |
+
+These zones are often used together with the **benthic layers** (the ocean floor and the sediment‑water interface), which are referred to as:
+
+- **Suprabenthic** (just above the seafloor)
+- **Benthic** (the bottom itself)
+- **Sub‑benthic** (sediments below the surface)
+
+But the five pelagic zones listed above are the classic “shallow‑to‑deep” sequence most commonly referenced in oceanography.
