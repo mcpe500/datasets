@@ -1,0 +1,15 @@
+The speed of light in a vacuum is a fundamental constant of nature. Its exact value is
+
+\[
+c = 299\,792\,458\ \text{meters per second}
+\]
+
+Because the meter is defined by the distance light travels in a given time, this value is exact by definition.
+
+**Typical rounded forms**
+
+- **≈ 3.00 × 10⁸ m/s** (often used in everyday calculations)  
+- **≈ 1.079 × 10⁹ km/h**  
+- **≈ 670,616,629 mph**  
+
+In other media (e.g., air, water, glass) light travels more slowly; for example, in water it’s about 225,000 km/s (≈ 2.25 × 10⁸ m/s). But the quoted “speed of light” usually refers to the vacuum value.

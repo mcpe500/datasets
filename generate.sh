@@ -8,7 +8,6 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 GH="/data/data/com.termux/files/usr/bin/gh"
 
 acquire_lock() {
-    # Clean stale lock (file or directory leftover from crashed run)
     if [ -e "$LOCK" ]; then
         rm -rf "$LOCK"
     fi
@@ -125,7 +124,7 @@ gen_music_cover() {
     log "music-cover: skipped (requires reference audio)"
 }
 
-# ==== MiniMax-M2.7 (text) — 50 topics, 5 parallel batches of 10 ====
+# ==== MiniMax-M2.7 (text) — 50 topics, 5 parallel batches, retry ====
 gen_text() {
     local topics=(
         "Write a haiku about mountains"
@@ -184,7 +183,6 @@ gen_text() {
 
     mkdir -p "text/MiniMax_M27"
 
-    # Split 50 topics into 5 parallel batches of 10
     local batch1=("${topics[0]}" "${topics[1]}" "${topics[2]}" "${topics[3]}" "${topics[4]}" "${topics[5]}" "${topics[6]}" "${topics[7]}" "${topics[8]}" "${topics[9]}")
     local batch2=("${topics[10]}" "${topics[11]}" "${topics[12]}" "${topics[13]}" "${topics[14]}" "${topics[15]}" "${topics[16]}" "${topics[17]}" "${topics[18]}" "${topics[19]}")
     local batch3=("${topics[20]}" "${topics[21]}" "${topics[22]}" "${topics[23]}" "${topics[24]}" "${topics[25]}" "${topics[26]}" "${topics[27]}" "${topics[28]}" "${topics[29]}")
@@ -209,6 +207,7 @@ gen_text() {
     wait $pid5 || log "text batch5 subshell exited non-zero"
 }
 
+# _text_batch: handles one batch of topics with 3-retry on failure
 _text_batch() {
     local batch_name=$1
     shift
@@ -216,8 +215,12 @@ _text_batch() {
         safe=$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25)
         output="text/MiniMax_M27/text_${TIMESTAMP}_${safe}.txt"
         log "text/M2.7 [$batch_name]: $topic"
-        _raw=$(mmx text chat --message "$topic" --output json 2>/dev/null)
-        printf '%s' "$_raw" | python3 -c "
+
+        # Retry: up to 3 attempts with 3s backoff
+        success=0
+        for attempt in 1 2 3; do
+            _raw=$(mmx text chat --message "$topic" --output json 2>/dev/null)
+            if printf '%s' "$_raw" | python3 -c "
 import sys,json
 d=json.load(sys.stdin)
 for block in d.get('content',[]):
@@ -225,11 +228,19 @@ for block in d.get('content',[]):
         txt=block.get('text','').strip()
         if txt:
             print(txt)
-" > "$output"
-        if [ -s "$output" ]; then
+" > "$output" 2>/dev/null && [ -s "$output" ]; then
+                success=1
+                break
+            fi
+            if [ $attempt -lt 3 ]; then
+                log "text [$batch_name] retry $attempt failed, waiting 3s..."
+                sleep 3
+            fi
+        done
+        if [ $success -eq 1 ]; then
             log "Saved: $output"
         else
-            log "FAILED: text for $topic"
+            log "FAILED: text for $topic (3 attempts)"
         fi
         sleep 5
     done
@@ -271,7 +282,6 @@ main() {
     gen_text &
     local pid_txt=$!
 
-    # Wait for media (text runs in parallel, doesn't block)
     wait $pid_img || log "image-01 subshell exited non-zero"
     wait $pid_sp || log "speech-2.8-hd subshell exited non-zero"
     wait $pid_mus || log "music-2.6 subshell exited non-zero"

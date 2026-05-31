@@ -1,0 +1,24 @@
+Here’s a quick‑reference guide to the main **open‑ocean layers (pelagic zones)** listed from the shallowest to the deepest, together with the typical depth ranges and a one‑sentence description of each.
+
+| Order (shallow → deep) | Zone name | Approx. depth range | What it’s like |
+|------------------------|-----------|----------------------|----------------|
+| 1 | **Epipelagic (Sunlight) Zone** | **0 – ≈200 m** (0 – ≈660 ft) | Sun‑lit; photosynthetic life (phytoplankton, fish, marine mammals) thrives here. |
+| 2 | **Mesopelagic (Twilight) Zone** | **≈200 m – ≈1 km** (≈660 ft – ≈3,300 ft) | Dim light; many bioluminescent organisms; transition to the deep sea. |
+| 3 | **Bathypelagic (Midnight) Zone** | **≈1 km – ≈4 km** (≈3,300 ft – ≈13,100 ft) | No sunlight; pressure high; organisms are sparse but include deep‑sea fish, squid, and gelatinous zooplankton. |
+| 4 | **Abyssopelagic (Abyssal) Zone** | **≈4 km – ≈6 km** (≈13,100 ft – ≈19,700 ft) | Near‑freezing temperatures, extreme pressure; seafloor is the abyssal plains, hydrothermal vents may occur. |
+| 5 | **Hadopelagic (Hadal) Zone** | **≈6 km +** (≈19,700 ft +) | Includes ocean trenches (e.g., Mariana Trench); highest pressures; specialized life such as snailfish and extremophile microbes. |
+
+### Optional “coastal” layer (often listed before the open‑ocean zones)
+
+| Zone | Approx. depth range | Typical environment |
+|------|----------------------|----------------------|
+| **Neritic (Continental‑shelf) Zone** | 0 – ≈200 m (over the continental shelf) | Warm, well‑lit, productive; supports most nearshore fisheries and coral reefs. |
+| **Intertidal (Littoral) Zone** | Between high‑ and low‑tide marks (a few centimeters to a few meters) | Exposed to air at low tide, submerged at high tide; home to mussels, barnacles, seaweeds, etc. |
+
+---
+
+#### Quick mnemonic tip  
+**“Every** **M**ighty **B**oat **A**ll **H**ands **S**hould **N**avigate **U**nder **P**ressure”  
+- **E**pipelagic → **M**esopelagic → **B**athypelagic → **A**byssal → **H**adopelagic → **S**urface (Neritic) → **U**p (Intertidal) → **P**hotic.
+
+Feel free to ask if you’d like more detail on any specific zone (e.g., typical organisms, physical characteristics, or how these layers affect ocean circulation).

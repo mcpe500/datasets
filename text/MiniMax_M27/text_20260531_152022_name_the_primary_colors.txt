@@ -1,0 +1,7 @@
+The classic three primary colors are:
+
+- **Red**
+- **Yellow**
+- **Blue**
+
+*(In the additive (light) model the primaries are red, green, and blue, while in the subtractive (pigment) model they are cyan, magenta, and yellow.)*

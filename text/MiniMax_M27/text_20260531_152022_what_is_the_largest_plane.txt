@@ -1,0 +1,8 @@
+The largest planet in our solar system is **Jupiter**.
+
+- **Size**: With a mean radius of about 69,911 km (about 11 times the Earth’s radius), Jupiter is the biggest planet.
+- **Mass**: Its mass is roughly 1.90 × 10²⁷ kg, which is more than twice the combined mass of all the other planets, moons, asteroids, and comets in the solar system.
+- **Type**: It’s a gas giant, composed mainly of hydrogen and helium, with no solid surface.
+- **Notable features**: The Great Red Spot (a massive storm), a faint ring system, and at least 95 known moons—including the four large Galilean moons (Io, Europa, Ganymede, and Callisto).
+
+So, if you’re looking for the “biggest” world orbiting the Sun, that’s Jupiter.

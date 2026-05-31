@@ -1,0 +1,29 @@
+The rainbow shows the **pure spectral colors** that correspond to individual wavelengths of visible light (roughly 380 nm – 700 nm). Anything that isn’t produced by a single wavelength of light—i.e., colors that arise from mixing, from very low or very high lightness, or that lie outside the visible range—doesn’t appear in a rainbow.  
+
+Below are some common colors that **do not appear in a rainbow**, grouped by why they’re missing:
+
+| Color | Why it isn’t in the rainbow |
+|-------|-----------------------------|
+| **Black** | Represents the absence of light; there’s no wavelength that produces pure black. |
+| **White** | The additive combination of all visible wavelengths; a single‑wavelength color can’t be white. |
+| **Gray / Grey** | A mixture of white and black (or a low‑intensity version of white); not a single wavelength. |
+| **Brown** | Typically a low‑intensity orange/yellow; it needs a combination of several spectral hues and a dark background. |
+| **Pink / Magenta** | Created by mixing red and violet (or blue) light, i.e., two ends of the spectrum that are not adjacent. |
+| **Purple** | Like pink, purple is a non‑spectral hue produced by mixing red and blue. |
+| **Cyan** (when referring to *pure* cyan) | The rainbow already contains a green‑blue region, but the specific, vivid cyan that you see in printing or on screens is an additive mix of green and blue, not a single wavelength. |
+| **Neon or “Electric” colors** (e.g., electric blue, neon green) | These are highly saturated versions of spectral colors, achieved by very high‑intensity narrow‑band light sources or by mixing pigments; a rainbow shows the natural, less intense version of those hues. |
+| **Ultraviolet / Infrared** | These lie outside the visible range (shorter than ~380 nm or longer than ~700 nm). |
+| **Metallic shades** (gold, silver, bronze, copper, etc.) | They depend on reflective and metallic pigments; no single wavelength produces a metallic look. |
+| **Pastel or muted tones** (e.g., pastel lavender, baby blue, mint) | These are low‑saturation versions of spectral colors; the rainbow shows the pure, fully saturated hues. |
+| **“Earth” tones** (olive, tan, khaki, maroon) | These are mixtures of many colors or very low‑intensity versions of spectral hues. |
+| **Flesh / skin tones** | Complex mixtures of red, yellow, brown, and black that can’t be reproduced by a single wavelength. |
+| **Fluorescent colors** (e.g., fluorescent orange) | Appear brighter than any natural spectral color because they emit extra energy (fluorescence) and are often mixed with pigments. |
+| **“Neon” pastels** (e.g., neon pink) | Created by extremely saturated, high‑intensity pigments or dyes, not by a single wavelength of light. |
+
+### Quick way to remember
+
+- **All colors that are the result of mixing (additive, subtractive, or low‑intensity) are absent** from the rainbow.  
+- **Colors that lie outside the visible spectrum** (UV, IR) also don’t appear.  
+- **Pure spectral hues** (red, orange, yellow, green, blue, indigo, violet) *are* in the rainbow.
+
+So any color you can’t describe as a single wavelength of visible light—like the ones listed above—doesn’t exist in a rainbow.

@@ -1,0 +1,8 @@
+There isn’t a single “clock time” for the Sun the way we have time zones on Earth. The Sun is a ball of plasma, and any point on its surface is constantly rotating around the Sun’s axis.
+
+- **Solar rotation period:** The Sun’s equator rotates once roughly every **25 days** (sidereal rotation) when measured against the fixed stars. From our vantage point on Earth, the Sun’s rotation appears a little slower because Earth is also orbiting the Sun; the synodic (Earth‑view) rotation period is about **27 days**.  
+- **“Solar day” on the Sun:** If you tried to define a “day” as the interval between two successive passages of the same solar meridian across the line that joins the Sun and Earth, you’d get about **27 Earth days**. In other words, a “noon” on the Sun (as seen from Earth) would occur roughly every 27 days.
+
+Because the Sun has no solid surface or fixed longitudes, there is no official time zone or clock time for it. Scientists sometimes use a **Carrington rotation** (≈ 27 days) to schedule observations and label solar features, but that is a convenience, not a universal “time”.  
+
+So, in short: the Sun does not have a standard time, but its rotation gives a “solar day” of roughly **27 Earth days** as seen from Earth. If you need to schedule something according to solar rotation, you can use Carrington rotations or any arbitrary reference you choose—there’s no single, official clock for the Sun.

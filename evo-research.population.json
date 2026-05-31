@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generation": 4,
-  "active_candidate_id": "full-overlap",
-  "stagnation_runs": 1,
+  "generation": 5,
+  "active_candidate_id": "text-heavy-50",
+  "stagnation_runs": 0,
   "candidates": [
     {
       "id": "baseline-seq",
@@ -172,9 +172,19 @@
         "text_batches": 5,
         "batch_size": 10
       },
-      "status": "active",
-      "fitness_history": [],
-      "last_result_ref": null,
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 5,
+          "status": "keep",
+          "metric": 53,
+          "direction": "higher",
+          "confidence": 28,
+          "timestamp": 1780215479376,
+          "description": "text-heavy-50: 50 topics (5 batches of 10) + full overlap. 53 files in 279s vs full-overlap 26/233s. 2x more files, 46s longer.3 text failures (6%) from rate limiting."
+        }
+      ],
+      "last_result_ref": 5,
       "notes": []
     },
     {
@@ -252,10 +262,10 @@
         "batch_size": 10,
         "media_text_overlap": true
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Text volume20\u219250. 5 batches of 10. Media unchanged."
+      "notes": []
     },
     {
       "id": "retry-resilient-v2",
@@ -277,10 +287,10 @@
         "text_batches": 4,
         "media_text_overlap": true
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Same as full-overlap + retry logic on each API call."
+      "notes": []
     },
     {
       "id": "media-text-balanced",
@@ -300,18 +310,96 @@
         "text_batches": 4,
         "media_text_overlap": true
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "retry-resilient-v2",
+      "family": "architecture",
+      "parent_id": "text-heavy-50",
+      "operator": "mutate",
+      "hypothesis": "Add 3-retry with 3s backoff on failed text API calls. Rate limiting causes6% failure (3/50). Retry recovers those files.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 50,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 5,
+        "batch_size": 10,
+        "media_text_overlap": true
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Increased counts across all types. Text stays at 4 batches."
+      "notes": "Same as text-heavy-50 + retry logic on _text_batch. Expect 0 failures."
+    },
+    {
+      "id": "text-ultra-100",
+      "family": "architecture",
+      "parent_id": "text-heavy-50",
+      "operator": "mutate",
+      "hypothesis": "Double text to 100 topics (10 batches of 10). With retry, 100 text files in ~300s budget.2x more content.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 10,
+        "batch_size": 10,
+        "media_text_overlap": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "100 text topics, 10 batches. Needs retry to handle rate limiting."
+    },
+    {
+      "id": "balanced-scale",
+      "family": "architecture",
+      "parent_id": "text-heavy-50",
+      "operator": "mutate",
+      "hypothesis": "Scale all:5 images + 3 speech + 2 music + 60 text. Balanced content mix with retry for reliability.",
+      "genome": {
+        "images": 5,
+        "speech": 3,
+        "music": 2,
+        "text": 60,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 6,
+        "batch_size": 10,
+        "media_text_overlap": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "More media + more text, balanced. Retry for resilience."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 4,
+      "attempts": 5,
       "failures": 1,
-      "keeps": 3,
+      "keeps": 4,
       "retired": false,
       "consecutive_failures": 0
     }
