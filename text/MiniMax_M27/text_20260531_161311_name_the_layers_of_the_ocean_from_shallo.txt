@@ -1,0 +1,11 @@
+The ocean is typically divided into **pelagic (open‑water) zones** based on depth and the amount of light that reaches them. From the shallowest to the deepest, they are:
+
+| Zone (English) | Approx. Depth Range | Typical Characteristics |
+|----------------|--------------------|--------------------------|
+| **Epipelagic Zone** – “Sunlight Zone” | 0 – 200 m (0 – ~650 ft) | Light penetrates, photosynthesis occurs; temperature relatively warm; most marine life is concentrated here. |
+| **Mesopelagic Zone** – “Twilight Zone” | 200 – 1,000 m (650 – ~3,300 ft) | Dim light; temperature drops sharply; many bioluminescent organisms; some vertical migrators (e.g., squid, lanternfish). |
+| **Bathypelagic Zone** – “Midnight Zone” | 1,000 – 4,000 m (3,300 – ~13,100 ft) | No sunlight; temperature near freezing (≈2–4 °C); pressure is high; organisms are sparse, often small, transparent, or rely on detritus and carcasses. |
+| **Abyssopelagic Zone** – “Abyssal Zone” | 4,000 – 6,000 m (13,100 – ~19,700 ft) | Near‑freezing temperatures, extreme pressure; sediments dominate; deep‑sea fish, echinoderms, and occasional giant amphipods. |
+| **Hadopelagic Zone** – “Hadal Zone” (trenches) | 6,000 – ~11,000 m (19,700 – ~36,000 ft) | Found only in the deepest ocean trenches (e.g., Mariana Trench); extremely high pressure, near‑zero temperature; specialized life such as snailfish, polychaete worms, and microbial communities. |
+
+These zones together describe the **vertical stratification** of the open ocean from the surface down to the deepest seafloor trenches. (If you’re also interested in the bottom‑oriented (benthic) subdivisions—continental shelf, slope, rise, abyssal plain, and trench—they sit beneath the corresponding pelagic zones but are often discussed separately.)

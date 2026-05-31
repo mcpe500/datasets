@@ -1,0 +1,9 @@
+Here are five common cloud types (the main genera in the standard classification):
+
+1. **Cirrus** – Thin, wispy strands of ice crystals found at high altitudes.  
+2. **Cumulus** – Puffy, white “cotton‑ball” clouds that often have flat bases and develop vertically.  
+3. **Stratus** – Flat, gray, sheet‑like layers that can cover the whole sky, sometimes producing light drizzle.  
+4. **Cumulonimbus** – Towering, dense clouds associated with thunderstorms, heavy rain, hail, and sometimes lightning.  
+5. **Nimbostratus** – Thick, dark, low‑to‑mid‑level layers that bring continuous, steady precipitation.  
+
+These five cover a range of shapes, altitudes, and weather implications.

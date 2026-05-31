@@ -1,0 +1,98 @@
+A rainbow contains only the *spectral* hues—red, orange, yellow, green, blue, indigo, and violet (sometimes listed with a few extra shades such as cyan). All other colors you can think of are either blends of those wavelengths, have no place on the pure‑wavelength spectrum, or are created by our visual system rather than a single wavelength of light.  
+
+Below is a (very) long list of colors that do **not** appear as a separate band in a rainbow. I’ve grouped them loosely by type so you can see how many different families of “non‑rainbow” colors exist.
+
+---
+
+## 1. Neutral / Achromatic Colors  
+- **Black**  
+- **White**  
+- **Gray** (all shades: light gray, medium gray, dark gray, slate, charcoal)  
+- **Silver**  
+
+## 2. Warm Earth‑Tone Colors  
+- **Brown** (all shades: chocolate, cocoa, sienna, umber, tan, beige)  
+- **Rust**  
+- **Terracotta**  
+- **Maroon** (deep reddish‑brown)  
+- **Burnt orange** (a muted orange, not a pure spectral orange)  
+- **Camel**  
+- **Khaki**  
+
+## 3. Cool Earth‑Tone Colors  
+- **Olive**  
+- **Sage**  
+- **Moss**  
+
+## 4. Pastel & Light Tints  
+- **Cream**  
+- **Ivory**  
+- **Peach**  
+- **Salmon**  
+- **Coral**  
+- **Blush**  
+- **Mint** (light green‑blue)  
+- **Baby blue** (a very light, desaturated blue)  
+- **Lavender** (a soft violet‑pink)  
+- **Lilac**  
+- **Powder blue**  
+- **Champagne**  
+
+## 5. Vivid Non‑Spectral Hues  
+- **Magenta** (a mix of red + blue wavelengths, not a single spectral line)  
+- **Fuchsia**  
+- **Pink** (a tint of red)  
+- **Hot pink**  
+- **Cyan** (sometimes approximated in rainbows as part of blue‑green, but it isn’t a separate band)  
+- **Aqua** (a bright cyan‑green)  
+- **Turquoise** (mix of cyan and green)  
+- **Teal** (a dark cyan‑green)  
+
+## 6. Vivid “Metallic” & Reflective‑looking Colors  
+- **Gold**  
+- **Silver** (already listed under neutrals)  
+- **Bronze**  
+- **Copper**  
+
+## 7. Deep / Dark Variants of Rainbow Colors  
+- **Dark red** (not the pure red of a rainbow)  
+- **Deep orange** (a more saturated, browner orange)  
+- **Indigo** is actually in the rainbow, but the deeper “navy” and “midnight blue” are not.  
+- **Midnight blue**  
+- **Navy**  
+- **Deep violet** (a more muted purple, not the pure violet of a rainbow)  
+
+## 8. “Unusual” / Specialty Names  
+- **Chartreuse** (a yellow‑green that isn’t a single spectral hue)  
+- **Mauve** (a muted purple‑pink)  
+- **Plum** (deep purplish‑red)  
+- **Olive‑drab**  
+- **Gunmetal** (a dark gray‑blue)  
+- **Slate gray** (a blue‑gray)  
+- **Taupe** (a gray‑brown)  
+- **Ochre** (a muted yellow‑brown)  
+- **Burgundy** (deep reddish‑purple)  
+- **Carmine** (a deeper, more saturated red)  
+- **Scarlet** (a bright red‑orange, but still not a pure rainbow red)  
+
+## 9. “Artificial” / Synthetic‑feeling Colors  
+- **Neon green** (an extremely bright, high‑saturation green)  
+- **Neon pink** (very bright pink)  
+- **Electric blue** (ultra‑bright blue)  
+- **Fluorescent yellow** (hyper‑saturated yellow)  
+
+---
+
+### Why these colors aren’t in a rainbow
+
+A rainbow is produced when sunlight (white light) is **refracted** and **reflected** inside millions of droplets. The separation that occurs is based on *wavelength*—each wavelength corresponds to a single, pure color on the visible spectrum.  
+
+- **Spectral (rainbow) colors** are those pure wavelengths: roughly 380 nm (violet) to about 700 nm (red).  
+- **Non‑spectral colors** arise when our eyes receive **more than one wavelength** at the same time, or when the light is **reflected** in ways that suppress certain wavelengths (like brown or gray).  
+- Some colors (e.g., magenta, pink) are *psychological* mixes produced by the brain when it sees both red‑ and blue‑wavelength signals together, even though those wavelengths never appear side‑by‑side in a rainbow.
+
+Because of that physics, any hue you encounter that is a combination, a tint, a shade, or a “named” color that the eye perceives but doesn’t correspond to a single wavelength will be absent from the rainbow’s bands.
+
+---
+
+**In short:** The rainbow’s palette is limited to the seven (or eight) spectral hues, while the vast majority of colors you can think of—neutrals, earth tones, pastels, metallic‑shiny shades, and many bright “neon” tones—are not found in it. Feel free to use any of the names above when you need a color that lives **outside** the rainbow!

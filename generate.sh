@@ -25,7 +25,7 @@ trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO_DIR"
 
-# ==== lyrics (100 quota available — fast generator) ====
+# ==== lyrics (100 topics, 10 parallel batches of 10) ====
 gen_lyrics() {
     local themes=(
         "Love and heartbreak"
@@ -42,26 +42,121 @@ gen_lyrics() {
         "Time and memory"
         "Stars and the cosmos"
         "Rain and renewal"
-        "Strength and resilience"
- "Music and rhythm"
+        "Music and rhythm"
         "Stories we tell"
         "Light and darkness"
         "Birds and flight"
         "Mountains and peaks"
+        "Ocean tides"
+        "Fire and passion"
+        "Silence and peace"
+        "Winds of change"
+        "Golden horizons"
+        "Midnight dreams"
+        "Morning light"
+        "Ancient wisdom"
+        "Youth and wonder"
+        "Faith and trust"
+        "Courage and heart"
+        "Laughter and joy"
+        "Shadows and truth"
+        "Rivers flowing"
+        "Forests breathing"
+        "Desert stars"
+        "City lights"
+        "Country roads"
+        "Sea voyages"
+        "Mountain trails"
+        "Desert sands"
+        "Arctic winds"
+        "Tropical shores"
+        "Autumn colors"
+        "Spring blossoms"
+        "Summer heat"
+        "Winter frost"
+        "Moonlit nights"
+        "Sunrise glow"
+        "Twilight skies"
+        "Storm and calm"
+        "Heartbeats"
+        "Dance and rhythm"
+        "Words unspoken"
+        "Whispers in wind"
+        "Echoes of time"
+        "Gardens of thought"
+        "Paths unwalked"
+        "Bridges built"
+        "Waves of emotion"
+        "Tides of fate"
+        "Sands of time"
+        "Flames of desire"
+        "Shores of wonder"
+        "Dreams deferred"
+        "Moments captured"
+        "Journeys shared"
+        "Voices calling"
+        "Songs unsung"
+        "Stories untold"
+        "Memories preserved"
+        "Hopes rekindled"
+        "Wounds healing"
+        "Strength renewed"
+        "Spirit lifted"
+        "Soul restored"
+        "Heart expanded"
+        "Mind opened"
+        "Eyes enlightened"
+        "Hands extended"
+        "Voices heard"
+        "Footsteps guided"
+        "Winds aligned"
+        "Stars aligned"
+        "Hearts connected"
+        "Lives intertwined"
+        "Dreams realized"
+        "Fears conquered"
+        "Battles won"
+        "Lessons learned"
+        "Wisdom gained"
+        "Grace found"
+        "Peace restored"
+        "Love reborn"
+        "Hope revived"
+        "Life embraced"
+        "Purpose found"
+        "Moments of stillness"
+        "Waves of possibility"
+        "Echoes of laughter"
+        "Silences that speak"
     )
 
     mkdir -p "lyrics"
 
     local batch1=("${themes[0]}" "${themes[1]}" "${themes[2]}" "${themes[3]}" "${themes[4]}" "${themes[5]}" "${themes[6]}" "${themes[7]}" "${themes[8]}" "${themes[9]}")
     local batch2=("${themes[10]}" "${themes[11]}" "${themes[12]}" "${themes[13]}" "${themes[14]}" "${themes[15]}" "${themes[16]}" "${themes[17]}" "${themes[18]}" "${themes[19]}")
+    local batch3=("${themes[20]}" "${themes[21]}" "${themes[22]}" "${themes[23]}" "${themes[24]}" "${themes[25]}" "${themes[26]}" "${themes[27]}" "${themes[28]}" "${themes[29]}")
+    local batch4=("${themes[30]}" "${themes[31]}" "${themes[32]}" "${themes[33]}" "${themes[34]}" "${themes[35]}" "${themes[36]}" "${themes[37]}" "${themes[38]}" "${themes[39]}")
+    local batch5=("${themes[40]}" "${themes[41]}" "${themes[42]}" "${themes[43]}" "${themes[44]}" "${themes[45]}" "${themes[46]}" "${themes[47]}" "${themes[48]}" "${themes[49]}")
+    local batch6=("${themes[50]}" "${themes[51]}" "${themes[52]}" "${themes[53]}" "${themes[54]}" "${themes[55]}" "${themes[56]}" "${themes[57]}" "${themes[58]}" "${themes[59]}")
+    local batch7=("${themes[60]}" "${themes[61]}" "${themes[62]}" "${themes[63]}" "${themes[64]}" "${themes[65]}" "${themes[66]}" "${themes[67]}" "${themes[68]}" "${themes[69]}")
+    local batch8=("${themes[70]}" "${themes[71]}" "${themes[72]}" "${themes[73]}" "${themes[74]}" "${themes[75]}" "${themes[76]}" "${themes[77]}" "${themes[78]}" "${themes[79]}")
+    local batch9=("${themes[80]}" "${themes[81]}" "${themes[82]}" "${themes[83]}" "${themes[84]}" "${themes[85]}" "${themes[86]}" "${themes[87]}" "${themes[88]}" "${themes[89]}")
+    local batch10=("${themes[90]}" "${themes[91]}" "${themes[92]}" "${themes[93]}" "${themes[94]}" "${themes[95]}" "${themes[96]}" "${themes[97]}" "${themes[98]}" "${themes[99]}")
 
     _lyrics_batch "batch1" "${batch1[@]}" &
-    local pid1=$!
     _lyrics_batch "batch2" "${batch2[@]}" &
-    local pid2=$!
+    _lyrics_batch "batch3" "${batch3[@]}" &
+    _lyrics_batch "batch4" "${batch4[@]}" &
+    _lyrics_batch "batch5" "${batch5[@]}" &
+    _lyrics_batch "batch6" "${batch6[@]}" &
+    _lyrics_batch "batch7" "${batch7[@]}" &
+    _lyrics_batch "batch8" "${batch8[@]}" &
+    _lyrics_batch "batch9" "${batch9[@]}" &
+    _lyrics_batch "batch10" "${batch10[@]}" &
 
-    wait $pid1 || log "lyrics batch1 subshell exited non-zero"
-    wait $pid2 || log "lyrics batch2 subshell exited non-zero"
+    for pid in $(jobs -p); do
+        wait $pid || log "lyrics batch subshell exited non-zero"
+    done
 }
 
 _lyrics_batch() {
@@ -101,7 +196,7 @@ for block in d.get('content',[]):
     done
 }
 
-# ==== MiniMax-M2.7 (text) — 150 topics, 15 parallel batches, 1 retry ====
+# ==== MiniMax-M2.7 (text) — 200 topics, 20 parallel batches of 10 ====
 gen_text() {
     local topics=(
         "Write a haiku about mountains"
@@ -268,6 +363,229 @@ gen_text() {
         "Name three things that are tall"
         "Write a haiku about a river"
         "What is the most populated city in the world"
+        "Name the largest country by area"
+        "Write a haiku about a waterfall"
+        "What is the hardest rock"
+        "Name three things that vibrate"
+        "Write a limerick about a horse"
+        "What is the capital of Mexico"
+        "Name five types of clouds"
+        "Write a fortune cookie message about change"
+        "What is the oldest living organism"
+        "Name three things that glow"
+ "Write a haiku about a canyon"
+        "What is the tallest building in Asia"
+        "Name four types of minerals"
+        "Write a short riddle with a clock as the answer"
+        "What is the longest mountain range"
+        "Name three things that are sour"
+        "Write a tongue twister about a whale"
+        "What is the capital of Egypt"
+        "Name five types of vegetables"
+        "Write a fortune cookie message about growth"
+        "What is the fastest insect"
+        "Name three things that melt"
+        "Write a haiku about a glacier"
+        "What is the capital of South Korea"
+        "Name four types of precipitation"
+        "Write a limerick about a frog"
+        "What is the largest rainforest"
+        "Name three things that are yellow"
+        "Write a fortune cookie message about time"
+        "What is the brightest planet"
+        "Name three things that freeze"
+        "Write a haiku about a volcano"
+        "What is the tallest mountain in North America"
+        "Name four types of natural disasters"
+        "Write a short riddle with a mirror as the answer"
+        "What is the longest coastline"
+        "Name three things that are blue"
+        "Write a tongue twister about a snail"
+        "What is the capital of Argentina"
+        "Name five types of sports"
+        "Write a fortune cookie message about adventure"
+        "What is the deepest cave"
+        "Name three things that are square"
+        "Write a haiku about a lighthouse"
+        "What is the capital of Turkey"
+        "Name four types of ecosystems"
+        "Write a limerick about a whale"
+        "What is the largest glacier"
+        "Name three things that are green"
+        "Write a fortune cookie message about tomorrow"
+        "What is the highest waterfall"
+        "Name three things that are dry"
+        "Write a haiku about a thunderstorm"
+        "What is the capital of Thailand"
+        "Name four types of forests"
+        "Write a short riddle with a shadow as the answer"
+        "What is the longest rail tunnel"
+        "Name three things that are red"
+        "Write a tongue twister about a snail"
+        "What is the capital of Indonesia"
+        "Name five types of dogs"
+        "Write a fortune cookie message about the unknown"
+        "What is the oldest city"
+        "Name three things that are white"
+        "Write a haiku about a desert"
+ "What is the capital of Morocco"
+        "Name four types of deserts"
+        "Write a limerick about a whale"
+        "What is the largest coral reef"
+        "Name three things that are grey"
+        "Write a fortune cookie message about beginnings"
+        "What is the tallest saguaro cactus"
+        "Name three things that bounce"
+        "Write a haiku about a meadow"
+        "What is the capital of Vietnam"
+        "Name four types of mountains"
+        "Write a short riddle with a compass as the answer"
+        "What is the longest road tunnel"
+        "Name three things that are sharp"
+        "Write a tongue twister about a beetle"
+        "What is the capital of Poland"
+        "Name five types of fish"
+        "Write a fortune cookie message about trust"
+        "What is the largest canyon"
+        "Name three things that are loud"
+        "Write a haiku about a snowflake"
+        "What is the capital of Greece"
+        "Name four types of grasslands"
+        "Write a limerick about a bee"
+        "What is the oldest tree species"
+        "Name three things that are sweet"
+        "Write a fortune cookie message about balance"
+        "What is the tallest bamboo"
+        "Name three things that are bitter"
+        "Write a haiku about a horizon"
+        "What is the capital of Sweden"
+        "Name four types of wetlands"
+        "Write a short riddle with a door as the answer"
+        "What is the longest river in Asia"
+        "Name three things that are flat"
+        "Write a tongue twister about a mouse"
+        "What is the capital of Norway"
+        "Name five types of weather"
+        "Write a fortune cookie message about journeys"
+        "What is the largest island in the world"
+        "Name three things that are thin"
+        "Write a haiku about a seed"
+        "What is the capital of Finland"
+        "Name four types of soil"
+        "Write a limerick about a bee"
+        "What is the deepest lake"
+        "Name three things that are thick"
+        "Write a fortune cookie message about peace"
+        "What is the tallest mountain in Europe"
+        "Name three things that are wide"
+        "Write a haiku about a sunrise"
+        "What is the capital of Portugal"
+        "Name four types of habitats"
+        "Write a short riddle with a window as the answer"
+        "What is the longest ocean voyage"
+        "Name three things that are narrow"
+        "Write a tongue twister about a crab"
+        "What is the capital of Chile"
+        "Name five types of mammals"
+        "Write a fortune cookie message about wonder"
+        "What is the largest peninsula"
+        "Name three things that are bright"
+        "Write a haiku about a comet"
+        "What is the capital of Peru"
+        "Name four types of islands"
+        "Write a limerick about a crab"
+        "What is the largest bay"
+        "Name three things that are dark"
+        "Write a fortune cookie message about curiosity"
+        "What is the tallest building in Europe"
+        "Name three things that are light"
+        "Write a haiku about a nebula"
+        "What is the capital of Colombia"
+        "Name four types of reefs"
+        "Write a short riddle with a flag as the answer"
+        "What is the longest strait"
+        "Name three things that are rough"
+        "Write a tongue twister about a crab"
+        "What is the capital of Nigeria"
+        "Name five types of reptiles"
+        "Write a fortune cookie message about possibility"
+        "What is the largest gulf"
+        "Name three things that are smooth"
+        "Write a haiku about a satellite"
+        "What is the capital of Kenya"
+        "Name four types of caves"
+        "Write a limerick about a crab"
+        "What is the largest strait"
+        "Name three things that are tall"
+        "Write a fortune cookie message about dreams"
+        "What is the tallest mountain in Australia"
+        "Name three things that are short"
+        "Write a haiku about a planet"
+        "What is the capital of New Zealand"
+        "Name four types of beaches"
+        "Write a short riddle with a map as the answer"
+        "What is the longest border"
+        "Name three things that are big"
+        "Write a tongue twister about a crab"
+        "What is the capital of Switzerland"
+        "Name five types of amphibians"
+        "Write a fortune cookie message about discovery"
+        "What is the largest bay in the world"
+        "Name three things that are small"
+        "Write a haiku about a galaxy"
+        "What is the capital of Austria"
+        "Name four types of valleys"
+        "Write a limerick about a crab"
+        "What is the largest archipelago"
+        "Name three things that are long"
+        "What is the tallest waterfall in the world"
+        "Name three things that are transparent"
+        "Write a haiku about a cave"
+        "What is the capital of Ireland"
+        "Name four types of dunes"
+        "Write a fortune cookie message about gratitude"
+        "What is the largest plateau"
+        "Name three things that are sticky"
+        "Write a limerick about a horse"
+        "What is the capital of Cuba"
+        "Name five types of art"
+        "Write a haiku about a comet"
+        "What is the largest gulf in the world"
+        "Name three things that are cold"
+        "Write a fortune cookie message about harmony"
+        "What is the tallest mountain in Antarctica"
+        "Name four types of erosion"
+        "Write a short riddle with a seed as the answer"
+        "What is the longest glacier in the world"
+        "Name three things that are hot"
+        "Write a tongue twister about a penguin"
+        "What is the capital of Peru"
+        "Name five types of minerals"
+        "Write a haiku about a satellite"
+        "What is the largest island in Europe"
+        "Name three things that are heavy"
+        "Write a fortune cookie message about courage"
+        "What is the tallest volcano in the world"
+        "Name four types of tides"
+        "Write a limerick about a whale"
+        "What is the capital of Malaysia"
+        "Name five types of birds"
+        "Write a haiku about a lighthouse"
+        "What is the largest bay in the world"
+        "Name three things that are light"
+        "Write a fortune cookie message about resilience"
+        "What is the longest rail tunnel in the world"
+        "Name four types of clouds"
+        "Write a short riddle with a lantern as the answer"
+        "What is the largest peninsula in the world"
+        "Name three things that are round"
+        "Write a tongue twister about a koala"
+        "What is the capital of Chile"
+        "Name five types of cuisine"
+        "Write a haiku about a sunrise"
+        "What is the largest reef in the world"
+        "Name three things that are flat"
+        "Write a fortune cookie message about wonder"
     )
 
     mkdir -p "text/MiniMax_M27"
@@ -287,6 +605,11 @@ gen_text() {
     local batch13=("${topics[120]}" "${topics[121]}" "${topics[122]}" "${topics[123]}" "${topics[124]}" "${topics[125]}" "${topics[126]}" "${topics[127]}" "${topics[128]}" "${topics[129]}")
     local batch14=("${topics[130]}" "${topics[131]}" "${topics[132]}" "${topics[133]}" "${topics[134]}" "${topics[135]}" "${topics[136]}" "${topics[137]}" "${topics[138]}" "${topics[139]}")
     local batch15=("${topics[140]}" "${topics[141]}" "${topics[142]}" "${topics[143]}" "${topics[144]}" "${topics[145]}" "${topics[146]}" "${topics[147]}" "${topics[148]}" "${topics[149]}")
+    local batch16=("${topics[150]}" "${topics[151]}" "${topics[152]}" "${topics[153]}" "${topics[154]}" "${topics[155]}" "${topics[156]}" "${topics[157]}" "${topics[158]}" "${topics[159]}")
+    local batch17=("${topics[160]}" "${topics[161]}" "${topics[162]}" "${topics[163]}" "${topics[164]}" "${topics[165]}" "${topics[166]}" "${topics[167]}" "${topics[168]}" "${topics[169]}")
+    local batch18=("${topics[170]}" "${topics[171]}" "${topics[172]}" "${topics[173]}" "${topics[174]}" "${topics[175]}" "${topics[176]}" "${topics[177]}" "${topics[178]}" "${topics[179]}")
+    local batch19=("${topics[180]}" "${topics[181]}" "${topics[182]}" "${topics[183]}" "${topics[184]}" "${topics[185]}" "${topics[186]}" "${topics[187]}" "${topics[188]}" "${topics[189]}")
+    local batch20=("${topics[190]}" "${topics[191]}" "${topics[192]}" "${topics[193]}" "${topics[194]}" "${topics[195]}" "${topics[196]}" "${topics[197]}" "${topics[198]}" "${topics[199]}")
 
     _text_batch "batch1" "${batch1[@]}" &
     _text_batch "batch2" "${batch2[@]}" &
@@ -303,6 +626,11 @@ gen_text() {
     _text_batch "batch13" "${batch13[@]}" &
     _text_batch "batch14" "${batch14[@]}" &
     _text_batch "batch15" "${batch15[@]}" &
+    _text_batch "batch16" "${batch16[@]}" &
+    _text_batch "batch17" "${batch17[@]}" &
+    _text_batch "batch18" "${batch18[@]}" &
+    _text_batch "batch19" "${batch19[@]}" &
+    _text_batch "batch20" "${batch20[@]}" &
 
     for pid in $(jobs -p); do
         wait $pid || log "text batch subshell exited non-zero"
@@ -372,7 +700,6 @@ main() {
     acquire_lock
     log "=== Gen cycle started ==="
 
-    # Full overlap: lyrics + text start simultaneously
     gen_lyrics &
     local pid_lyr=$!
     gen_text &

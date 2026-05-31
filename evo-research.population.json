@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generation": 9,
-  "active_candidate_id": "text-ultra-100-retry",
+  "generation": 10,
+  "active_candidate_id": "text-150-safe",
   "stagnation_runs": 0,
   "candidates": [
     {
@@ -611,10 +611,10 @@
         "media_text_overlap": true,
         "media_retry": false
       },
-      "status": "explored",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "200 text topics, 20 batches. ~380s budget. Text dominates count."
+      "notes": []
     },
     {
       "id": "text-150-balanced",
@@ -638,10 +638,10 @@
         "media_text_overlap": true,
         "media_retry": false
       },
-      "status": "explored",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "150 text topics, 15 batches. Comfortable middle ground."
+      "notes": []
     },
     {
       "id": "text-100-no-media",
@@ -665,10 +665,10 @@
         "media_text_overlap": true,
         "media_retry": false
       },
-      "status": "explored",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "0 images + 100 text. Drop failing images, free budget. ~260s expected."
+      "notes": []
     },
     {
       "id": "text-150-safe",
@@ -690,10 +690,20 @@
         "batch_size": 10,
         "media_text_overlap": false
       },
-      "status": "pending",
-      "fitness_history": [],
-      "last_result_ref": null,
-      "notes": "150 text + lyrics (10). No slow media. Single retry only."
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 9,
+          "status": "keep",
+          "metric": 169,
+          "direction": "higher",
+          "confidence": 5.333333333333333,
+          "timestamp": 1780218501000,
+          "description": "text-150-safe: quota-safe \u2014 150 text + 20 lyrics (text API), no slow media. 169 files in 366s vs 102/288s. +66% files. 0 failures. Dropped music (150s each) and MiniMax text (quota). Lyrics fast/free."
+        }
+      ],
+      "last_result_ref": 9,
+      "notes": []
     },
     {
       "id": "lyrics-heavy",
@@ -716,18 +726,71 @@
         "lyrics_batches": 5,
         "media_text_overlap": false
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "text-200-lyrics-100",
+      "family": "architecture",
+      "parent_id": "text-150-safe",
+      "operator": "mutate",
+      "hypothesis": "Scale up: 200 text + 100 lyrics. Both use text API. Lyrics80 remaining quota, text ~1400 remaining. Both fast (~3-5s/call). 300 files expected in ~250s.",
+      "genome": {
+        "images": 0,
+        "speech": 0,
+        "music": 0,
+        "text": 200,
+        "lyrics": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 1,
+        "retry_delay": 3,
+        "parallel_text": true,
+        "text_batches": 20,
+        "lyrics_batches": 10,
+        "media_text_overlap": false
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "100 text + 50 lyrics. Both fast. Full quota available."
+      "notes": "200 text + 100 lyrics. Both fast. 20 text batches + 10 lyrics batches. ~250s expected."
+    },
+    {
+      "id": "text-500-lyrics-100",
+      "family": "architecture",
+      "parent_id": "text-150-safe",
+      "operator": "mutate",
+      "hypothesis": "Max scale: 500 text + 100 lyrics. Text has ~1400 remaining quota in 5h window. 500 text in 20 batches of 25 + 100 lyrics in 10 batches of 10. 600 files expected in ~350s.",
+      "genome": {
+        "images": 0,
+        "speech": 0,
+        "music": 0,
+        "text": 500,
+        "lyrics": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 1,
+        "retry_delay": 3,
+        "parallel_text": true,
+        "text_batches": 20,
+        "text_batch_size": 25,
+        "lyrics_batches": 10,
+        "media_text_overlap": false
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "500 text + 100 lyrics. More aggressive. 20 batches of 25 text each."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 8,
+      "attempts": 9,
       "failures": 2,
-      "keeps": 6,
+      "keeps": 7,
       "retired": false,
       "consecutive_failures": 0
     }

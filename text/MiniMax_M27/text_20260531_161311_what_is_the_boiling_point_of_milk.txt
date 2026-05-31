@@ -1,0 +1,10 @@
+The boiling point of milk is a little higher than that of pure water because the water in milk contains dissolved proteins, sugars, fats, and minerals. At standard atmospheric pressure (1 atm, sea‑level) milk typically boils at:
+
+**≈ 100.5 °C (≈ 212.9 °F)**  
+
+The exact temperature can vary slightly (often between **100.2 °C and 100.6 °C**) depending on the milk’s fat content, protein level, and any added solids.  
+
+- **At higher altitudes** (lower atmospheric pressure) the boiling point drops, so milk will boil at a lower temperature (e.g., ~95 °C at 3,000 m).  
+- **Under pressure** (e.g., in a pressure cooker) the boiling point rises, so milk can be heated above 100 °C without boiling over.
+
+So, in everyday cooking you can treat milk as boiling at just over 100 °C (about 212 °F) at normal sea‑level conditions.

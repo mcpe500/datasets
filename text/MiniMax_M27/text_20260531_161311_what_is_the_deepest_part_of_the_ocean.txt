@@ -1,0 +1,28 @@
+The deepest known point in the ocean is **the Challenger Deep**, which lies at the southern end of the **Mariana Trench** in the western Pacific Ocean.
+
+| Feature | Details |
+|---------|---------|
+| **Location** | Mariana Trench, about 300 km (190 mi) southwest of Guam |
+| **Depth** | Approximately **10,984 meters (36,070 feet)** (most recent measurements) |
+| **Pressure** | >1,000 times atmospheric pressure at sea level (≈108 MPa) |
+| **Temperature** | A few degrees above freezing (≈1–4 °C) |
+| **First human visit** | Jacques Piccard and Don Walsh in the bathyscaphe *Trieste* (1960) |
+| **Recent solo descent** | Film‑director James Cameron in the Deepsea Challenger (2012) |
+| **Robotic survey** | The Five Deeps Expedition (2020) used an autonomous submersible to confirm the depth with high‑resolution multibeam sonar |
+
+### Why it’s the deepest
+
+- The **Mariana Trench** is a subduction zone where the Pacific Plate slides beneath the smaller Mariana Plate, creating a narrow, extremely deep trench.
+- The **Challenger Deep** sits at the southernmost tip of this trench, where the ocean floor reaches its maximum depth.
+
+### How the depth is measured
+
+Modern depth measurements rely on **multibeam sonar** and **autonomous underwater vehicles (AUVs)** that emit sound pulses and record the time it takes for the echo to return. Recent expeditions have refined the earlier estimate of ~11,000 m to the more precise figure of ~10,984 m (± a few meters).
+
+### Quick facts for context
+
+- **Depth in miles:** ≈ 6.83 mi (about 11 km).
+- **Comparable height:** If Mount Everest (8,849 m) were placed into the Challenger Deep, its summit would still be about **2,135 m (7,000 ft)** below the surface.
+- **Exploration:** Only a handful of crewed and uncrewed vehicles have reached the bottom, making it one of the least‑explored environments on Earth.
+
+So, when someone asks “What is the deepest part of the ocean?” the answer is **the Challenger Deep in the Mariana Trench**, with a depth of roughly **11 km (36,000 ft)**.

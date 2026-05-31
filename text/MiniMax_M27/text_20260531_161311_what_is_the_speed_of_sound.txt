@@ -1,0 +1,32 @@
+The speed of sound is the distance that a sound wave travels per unit of time. In dry air at 20 °C (68 °F) the speed is about **343 meters per second (≈ 1,125 ft/s)**, which is roughly **1,235 km/h** or **767 mph**.
+
+It varies with the medium and temperature:
+
+| Medium | Typical temperature | Approx. speed |
+|--------|---------------------|----------------|
+| Air (sea‑level, 20 °C) | 20 °C | 343 m/s |
+| Air (0 °C) | 0 °C | 331 m/s |
+| Fresh water (20 °C) | 20 °C | ~1,480 m/s |
+| Seawater (20 °C, average salinity) | 20 °C | ~1,530 m/s |
+| Steel (solid) | room temp. | ~5,960 m/s |
+
+**Key factors**
+
+- **Temperature**: In gases, speed increases roughly with the square root of temperature (in Kelvin). For each degree Celsius increase, the speed in air rises about 0.6 m/s.
+- **Medium**: Sound travels faster in liquids and solids than in gases because the particles are closer together, allowing quicker transmission of the pressure wave.
+- **Humidity**: Humid air is less dense than dry air, so sound travels slightly faster in moist air (the effect is small, about 0.1 % at typical conditions).
+- **Altitude/pressure**: At high altitudes the lower pressure reduces the speed slightly, but temperature effects dominate.
+
+If you need the speed for a specific situation (e.g., a particular altitude or temperature), you can use the formula for an ideal gas:
+
+\[
+c = \sqrt{\gamma \cdot R \cdot T}
+\]
+
+where  
+- \(c\) = speed of sound,  
+- \(\gamma\) (gamma) = ratio of specific heats (≈ 1.40 for dry air),  
+- \(R\) = specific gas constant (≈ 287 J/(kg·K) for air),  
+- \(T\) = absolute temperature in Kelvin.
+
+Feel free to ask if you need a calculation for a specific temperature or medium!

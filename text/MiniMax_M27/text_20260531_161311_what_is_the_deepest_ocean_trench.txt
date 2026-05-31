@@ -1,0 +1,18 @@
+The deepest known part of the world’s ocean is the **Mariana Trench**, which lies in the western Pacific Ocean east of the Mariana Islands.
+
+- **Deepest point:** *Challenger Deep*  
+- **Depth:** ≈ 10,925 m (35,843 ft) below sea level (the most recent precise measurements give values around 10,925 – 10,984 m, depending on the method and reference datum).
+
+**Key facts**
+
+| Feature | Details |
+|---|---|
+| **Location** | Western Pacific, east of the Mariana Islands, between Guam and the Philippines |
+| **Length** | About 2,500 km (1,550 mi) |
+| **Width** | Roughly 69 km (43 mi) |
+| **Max depth (Challenger Deep) | ~10,925 m (35,843 ft) |
+| **First descent** | 1960, USS Trieste with Jacques Piccard and Don Walsh |
+| **Recent solo dive** | 2012, James Cameron’s Deepsea Challenger |
+| **Uncrewed record** | 2019, the submersible *Limiting Factor* (by OceanGate / Caladan Oceanic) reached the bottom, confirming the depth with sonar and pressure sensors |
+
+The Mariana Trench is a classic subduction zone where the Pacific Plate slides beneath the smaller Philippine Sea Plate, creating an extremely deep oceanic trench. The extreme depth makes the environment harsh—crushing pressure (≈1,080 bars), near‑freezing temperatures, and complete darkness—yet diverse microbial life and exotic organisms have been discovered there.

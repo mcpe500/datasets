@@ -1,0 +1,10 @@
+Here are four commonly‑cited ocean zones, often described by depth (from the surface down):
+
+| Zone | Approximate Depth | Typical Conditions |
+|------|-------------------|--------------------|
+| **Epipelagic (Sunlight Zone)** | 0 – 200 m | Plenty of light; photosynthesis occurs; most marine life lives here. |
+| **Mesopelagic (Twilight Zone)** | 200 – 1,000 m | Dim, blue‑light only; temperature drops sharply; many animals migrate vertically. |
+| **Bathypelagic (Midnight Zone)** | 1,000 – 4,000 m | Near‑total darkness; cold (≈2–4 °C); pressure is high. |
+| **Abyssopelagic (Abyssal Zone)** | 4,000 – 6,000 m | Complete darkness; temperature close to freezing; high pressure; low biomass. |
+
+These zones can also be grouped with the “hadopelagic” (trench) zone for the deepest ocean areas, but the four above give a clear picture of the major depth‑based divisions of the ocean.
