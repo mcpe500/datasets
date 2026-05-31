@@ -1,0 +1,3 @@
+Bug hides in the dark.  
+Compiler sighs, prints error.  
+Fix with one keystroke.

@@ -1,0 +1,7 @@
+The speed of light in a vacuum is a fundamental constant:
+
+- **≈ 299,792,458 meters per second (m/s)**
+- ≈ 300,000 kilometers per second (km/s)
+- ≈ 186,282 miles per second (mi/s)
+
+This value, usually denoted by **c**, is the maximum speed at which all massless particles (including light) can travel through empty space.

@@ -1,0 +1,7 @@
+The principal (positive) square root of 144 is  
+
+\[
+\sqrt{144}=12.
+\]
+
+If you’re solving the equation \(x^{2}=144\), the two solutions are \(x=\pm12\).

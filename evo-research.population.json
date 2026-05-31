@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generation": 5,
-  "active_candidate_id": "text-heavy-50",
+  "generation": 6,
+  "active_candidate_id": "retry-resilient-v2",
   "stagnation_runs": 0,
   "candidates": [
     {
@@ -287,9 +287,19 @@
         "text_batches": 4,
         "media_text_overlap": true
       },
-      "status": "active",
-      "fitness_history": [],
-      "last_result_ref": null,
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 6,
+          "status": "keep",
+          "metric": 54,
+          "direction": "higher",
+          "confidence": 9.666666666666666,
+          "timestamp": 1780216291523,
+          "description": "retry-resilient-v2: text 3-retry on text-heavy-50. 50/50 text (0 failures) but 2 image rate-limit failures (1/3 img). 54 files in 270s vs text-heavy-50 53/279s. Trade-off: text retry recovers3 but no media retry loses 2. Net +1."
+        }
+      ],
+      "last_result_ref": 6,
       "notes": []
     },
     {
@@ -336,10 +346,10 @@
         "batch_size": 10,
         "media_text_overlap": true
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Same as text-heavy-50 + retry logic on _text_batch. Expect 0 failures."
+      "notes": []
     },
     {
       "id": "text-ultra-100",
@@ -362,10 +372,10 @@
         "batch_size": 10,
         "media_text_overlap": true
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "100 text topics, 10 batches. Needs retry to handle rate limiting."
+      "notes": []
     },
     {
       "id": "balanced-scale",
@@ -388,18 +398,99 @@
         "batch_size": 10,
         "media_text_overlap": true
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "media-retry-v3",
+      "family": "architecture",
+      "parent_id": "retry-resilient-v2",
+      "operator": "mutate",
+      "hypothesis": "Add 3-retry with 3s backoff to ALL generators (images, speech, music). Last run: 2/3 images failed from rate limit. Retry recovers them.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 50,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 5,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": true
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "More media + more text, balanced. Retry for resilience."
+      "notes": "Full retry on all generators. Expected: 3 img + 2 speech + 1 music + 50 text = 56 files."
+    },
+    {
+      "id": "balanced-retry-scale",
+      "family": "architecture",
+      "parent_id": "retry-resilient-v2",
+      "operator": "mutate",
+      "hypothesis": "Add media retry + scale media counts: 5 img + 3 speech + 2 music + 50 text. More content variety. All with retry.",
+      "genome": {
+        "images": 5,
+        "speech": 3,
+        "music": 2,
+        "text": 50,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 5,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "Scale media + full retry. Expected:5+3+2+50 = 60 files."
+    },
+    {
+      "id": "text-ultra-100-retry",
+      "family": "architecture",
+      "parent_id": "retry-resilient-v2",
+      "operator": "mutate",
+      "hypothesis": "Double text to 100 topics (10 batches of 10) with retry. Media retry added. 100 text files dominates the count.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 10,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": true
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "100 text + all retry. 100 text items in10 batches. Budget ~350s."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 5,
+      "attempts": 6,
       "failures": 1,
-      "keeps": 4,
+      "keeps": 5,
       "retired": false,
       "consecutive_failures": 0
     }

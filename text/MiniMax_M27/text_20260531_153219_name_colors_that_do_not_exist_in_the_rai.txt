@@ -1,0 +1,112 @@
+A rainbow shows **only the pure, single‑wavelength (spectral) colors** that the human eye can see – essentially the continuous band of hues that runs from about 380 nm (violet) to about 700 nm (red).  
+
+All of the colours we give names to that are **not produced by a single wavelength** are therefore “missing” from a rainbow.  In colour‑science terms these are called **non‑spectral colours** (or “metameric” colours) because they must be created by mixing two or more spectral components (or by adding white/black to a hue).
+
+Below is a practical list of the most common colour names that fall outside the rainbow’s spectrum.  I’ve grouped them loosely by the way they are made so you can see why they don’t appear as a pure band of light.
+
+---
+
+## 1. Pure‑Hue Mixes (Red + Blue)
+
+| Colour | Why it’s not in a rainbow |
+|--------|---------------------------|
+| **Magenta** | Created by mixing red + violet (or red + blue); no single wavelength corresponds to magenta. |
+| **Purple** | Same reason as magenta – a blend of red and blue/violet. |
+| **Fuchsia** | A bright magenta‑pink shade; also a non‑spectral mix. |
+| **Lilac / Lavender** | Light magenta‑violet; mixes of red and blue with white. |
+| **Violet (when used to mean a deep purple rather than the violet at the short‑wave end of the spectrum)** | Often a blue‑red blend rather than a single wavelength. |
+| **Mauve** | A muted purple—again, a red‑blue mixture. |
+| **Orchid** | Light magenta‑purple blend. |
+
+---
+
+## 2. Light‑ened (tinted) Hues
+
+These are spectral hues **diluted with white** (i.e., adding equal‑intensity light across the whole visible range).
+
+| Colour | What it really is |
+|--------|-------------------|
+| **Pink** | Red + white; not a single wavelength. |
+| **Peach** | Orange + white (or a very light orange). |
+| **Lemon** (light yellow) | Yellow + white. |
+| **Sky‑blue / Cyan‑ish light** (e.g., “baby blue”) | Blue + white. |
+| **Mint / Pastel Green** | Green + white. |
+| **Lavender‑ish (light violet)** | Violet + white. |
+| **Pastel** versions of any of the rainbow colours (pastel orange, pastel teal, etc.) | Spectral hue + white. |
+
+---
+
+## 3. Dark‑ened (shaded) Hues
+
+These are spectral hues **mixed with black** (i.e., reducing overall intensity).
+
+| Colour | What it really is |
+|--------|-------------------|
+| **Brown** | Dark orange (or a very dark yellow‑orange). |
+| **Dark Red / Maroon** | Red + black. |
+| **Dark Green / Forest Green** | Green + black. |
+| **Navy / Midnight Blue** | Blue + black. |
+| **Olive** | Yellow‑green + black. |
+| **Chocolate** | Very dark orange‑brown. |
+| **Charcoal** | Grey + black (essentially dark grey). |
+
+---
+
+## 4. Neutral (Achromatic) Colours
+
+These contain **no dominant wavelength** at all; they are produced by mixing all visible wavelengths roughly equally (white) or by removing all light (black) or by mixing black and white in various proportions.
+
+| Colour | How it’s made |
+|--------|---------------|
+| **White** | All visible wavelengths at roughly equal intensity (or the sum of all spectral colours). |
+| **Black** | Absence of visible light. |
+| **Grey / Gray** | A mixture of white and black (i.e., equal intensity of all wavelengths but at a reduced level). |
+| **Silver** | Grey with a metallic sheen (still a neutral tone). |
+| **Bronze / Copper** | Neutral‑toned brown‑grey with metallic reflections. |
+| **Gold** | Yellow‑orange mixed with grey (or with a metallic overlay) – not a single wavelength. |
+
+---
+
+## 5. “Engineered” or Special‑Effect Colours
+
+Many modern colour names owe their appearance to **additive or subtractive mixing techniques**, not to a single wavelength.
+
+| Colour | Why it’s missing from a rainbow |
+|--------|----------------------------------|
+| **Neon Green / Electric Blue** | Very intense, saturated versions of spectral hues, but the appearance is boosted by fluorescence or high‑energy illumination, not by a pure wavelength. |
+| **Fluorescent Pink** | Pink with added luminescence; relies on special pigments/dyes. |
+| **Metallic (Gold, Silver, Bronze, Copper, Pewter)** | Their look depends on a metallic sheen, not on a single wavelength. |
+| **Iridescent / Pearlescent Colours** | Depend on interference and angle‑dependent scattering, not a static spectral band. |
+| **Earth‑tone (Khaki, Tan, Beige, Taupe)** | Mixtures of many hues (often brown‑olive‑grey) with added white or black. |
+| **Pastel‑Neon / Vivid Pastel** | Very bright, slightly desaturated hues (e.g., “pastel neon”) – they’re still mixes, not pure spectral colors. |
+
+---
+
+## 6. Colours Often Mistaken for Rainbow Hues (but actually non‑spectral)
+
+| Colour | Common misconception |
+|--------|-----------------------|
+| **Indigo** | Historically placed between blue and violet, but modern spectra rarely treat it as a distinct wavelength; it’s essentially a deep blue‑violet blend. |
+| **Cyan** | Some rainbows do show a cyan band; however, pure cyan (~490 nm) is a spectral hue. The term “cyan” often refers to a slightly greener‑blue mix used in printing (which is non‑spectral). |
+| **Teal** | Usually a blue‑green mix (≈ 480–510 nm) that can be approximated by a single wavelength, but many commercial “teal” paints are actually a mix of blue + green + a bit of yellow. |
+| **Olive** | A yellowish‑green with a sizable amount of black (or a dark, desaturated green) – not a single wavelength. |
+
+---
+
+### Quick Take‑away
+
+If you need a **simple one‑liner** for “which colors are missing from a rainbow?” you could say:
+
+> **All colours that are created by mixing two or more pure hues (or by adding white, black, or a metallic sheen) – such as magenta, pink, brown, grey, white, black, gold, silver, bronze, etc. – do not appear in a rainbow.**
+
+If you’d like a **compact list**, here’s a minimal version:
+
+- **Magenta, Purple, Pink**
+- **Brown, Tan, Beige, Olive, Khaki**
+- **White, Grey, Black**
+- **Silver, Gold, Bronze, Copper**
+- **Lavender, Mauve, Lilac, Orchid**
+- **Maroon, Charcoal, Navy (as a dark blue), Forest Green**
+- **Neon/Fluorescent shades, Iridescent, Metallic shades**
+
+All of these colours require at least two distinct wavelengths (or a neutral addition) to be perceived, and therefore they lie outside the single‑wavelength band that a rainbow displays.

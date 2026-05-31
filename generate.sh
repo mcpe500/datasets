@@ -25,7 +25,7 @@ trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO_DIR"
 
-# ==== image-01 ====
+# ==== image-01 (3-retry) ====
 gen_image_01() {
     local prompts=(
         "A serene mountain lake at golden hour with reflections"
@@ -59,12 +59,29 @@ gen_image_01() {
         output="images/image_01/img_${TIMESTAMP}_${i}.png"
         mkdir -p "images/image_01"
         log "image-01: ${prompt:0:50}..."
-        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: image-01 $i"
+
+        success=0
+        for attempt in 1 2 3; do
+            if mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && [ -s "$output" ]; then
+                success=1
+                break
+            fi
+            if [ $attempt -lt 3 ]; then
+                log "image-01 retry $attempt failed, waiting 3s..."
+                sleep 3
+            fi
+        done
+
+        if [ $success -eq 1 ]; then
+            log "Saved: $output"
+        else
+            log "FAILED: image-01 $i (3 attempts)"
+        fi
         sleep 15
     done
 }
 
-# ==== speech-2.8-hd ====
+# ==== speech-2.8-hd (3-retry) ====
 gen_speech_hd() {
     local texts=(
         "Welcome to the future of artificial intelligence. Today we explore the boundaries of creativity and technology working together as one."
@@ -86,12 +103,29 @@ gen_speech_hd() {
         output="speech/speech_28_hd/speech_${TIMESTAMP}_${i}.mp3"
         mkdir -p "speech/speech_28_hd"
         log "speech-2.8-hd: ${text:0:50}..."
-        mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: speech $i"
+
+        success=0
+        for attempt in 1 2 3; do
+            if mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && [ -s "$output" ]; then
+                success=1
+                break
+            fi
+            if [ $attempt -lt 3 ]; then
+                log "speech retry $attempt failed, waiting 3s..."
+                sleep 3
+            fi
+        done
+
+        if [ $success -eq 1 ]; then
+            log "Saved: $output"
+        else
+            log "FAILED: speech $i (3 attempts)"
+        fi
         sleep 10
     done
 }
 
-# ==== music-2.6 ====
+# ==== music-2.6 (3-retry) ====
 gen_music_26() {
     local prompts=(
         "Upbeat electronic dance music with pulsing bass and uplifting melodies perfect for a party atmosphere"
@@ -114,7 +148,24 @@ gen_music_26() {
         output="music/music_26/music_${TIMESTAMP}_${i}.mp3"
         mkdir -p "music/music_26"
         log "music-2.6: ${prompt:0:50}..."
-        mmx music generate --prompt "$prompt" --lyrics-optimizer --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: music $i"
+
+        success=0
+        for attempt in 1 2 3; do
+            if mmx music generate --prompt "$prompt" --lyrics-optimizer --out "$output" --quiet 2>/dev/null && [ -s "$output" ]; then
+                success=1
+                break
+            fi
+            if [ $attempt -lt 3 ]; then
+                log "music retry $attempt failed, waiting 3s..."
+                sleep 3
+            fi
+        done
+
+        if [ $success -eq 1 ]; then
+            log "Saved: $output"
+        else
+            log "FAILED: music $i (3 attempts)"
+        fi
         sleep 30
     done
 }
@@ -216,7 +267,6 @@ _text_batch() {
         output="text/MiniMax_M27/text_${TIMESTAMP}_${safe}.txt"
         log "text/M2.7 [$batch_name]: $topic"
 
-        # Retry: up to 3 attempts with 3s backoff
         success=0
         for attempt in 1 2 3; do
             _raw=$(mmx text chat --message "$topic" --output json 2>/dev/null)
@@ -272,7 +322,7 @@ main() {
     log "=== Gen cycle started ==="
 
     # Full overlap: ALL generators start at t=0 simultaneously
-    gen_image_01 &
+    gen_image_01&
     local pid_img=$!
     gen_speech_hd &
     local pid_sp=$!

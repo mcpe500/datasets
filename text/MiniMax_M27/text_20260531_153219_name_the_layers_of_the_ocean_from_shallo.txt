@@ -1,0 +1,11 @@
+The ocean is divided into a series of **pelagic (water‑column) zones** that are named according to how far down the sunlight penetrates. From the shallowest to the deepest they are:
+
+| Zone (Depth range) | Common name | Typical light level | Notable features |
+|--------------------|-------------|----------------------|------------------|
+| **0 – 200 m** | **Epipelagic (Sunlight Zone)** | Full sunlight; warm, well‑mixed | Phytoplankton, most fish, marine mammals, sea‑birds; highest primary productivity |
+| **200 – 1,000 m** | **Mesopelagic (Twilight Zone)** | Dim, blue‑green light; little photosynthesis | Migratory organisms (e.g., lanternfish), bioluminescent species, vertical daily migrations |
+| **1,000 – 4,000 m** | **Bathypelagic (Midnight Zone)** | No sunlight; cold (≈2–4 °C) | Sparse fauna, many gelatinous organisms, no photosynthetic life |
+| **4,000 – 6,000 m** | **Abyssopelagic (Abyssal Zone)** | No light; near‑freezing temperatures, high pressure | Slow‑growing deep‑sea fish, sea cucumbers, abyssal plains |
+| **6,000 – ~11,000 m** | **Hadopelagic (Hadal Zone)** | Extreme pressure, near‑freezing | Inhabits ocean trenches (e.g., Mariana Trench); specialized mollusks, amphipods, and other extremophiles |
+
+(If you also want the **benthic (bottom) zones** that correspond to these depth ranges, they are: **littoral (intertidal) → sublittoral → bathyal → abyssal → hadal**, but the question usually refers to the water‑column pelagic layers listed above.)
