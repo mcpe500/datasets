@@ -1,10 +1,10 @@
 #!/bin/bash
-# Dataset generator using MiniMax API
-# Generates diverse content and pushes to datasets repo
+set -e
 
 REPO_DIR="/data/data/com.termux/files/home/datasets"
 LOG="$REPO_DIR/generator.log"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+GH="/data/data/com.termux/files/usr/bin/gh"
 
 log() {
     echo "[$(date '+%H:%M:%S')] $1" | tee -a "$LOG"
@@ -30,16 +30,20 @@ generate_images() {
         "Futuristic architecture with glass and steel"
         "Vintage map with compass and navigation elements"
         "A whimsy hedgehog character in a forest setting"
+        "A field of sunflowers under a bright blue sky"
+        "Steampunk mechanical owl with brass gears and clockwork"
+        "A cozy reading nook with books and soft blankets"
+        "Bioluminescent cave with glowing mushrooms"
+        "A futuristic city at night with holographic advertisements"
     )
     
-    for i in $(seq 1 5); do
+    local count=3
+    for i in $(seq 1 $count); do
         prompt="${prompts[$((RANDOM % ${#prompts[@]}))]}"
         output="images/img_${TIMESTAMP}_${i}.png"
         log "Generating image: ${prompt:0:50}..."
-        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null
-        if [ -f "$output" ]; then
-            log "Saved: $output"
-        fi
+        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: image $i"
+        sleep 15
     done
 }
 
@@ -56,20 +60,19 @@ generate_speech() {
         "Every sunset brings the promise of a new dawn. Hope persists even in the darkest of times."
         "The ancient warrior prepared for battle, knowing that courage is not the absence of fear, but the decision to act despite it."
         "In the kitchen, ingredients come together like old friends, creating dishes that nourish both body and soul."
+        "The stars have witnessed countless stories throughout human history and beyond."
     )
     
-    for i in $(seq 1 3); do
+    local count=2
+    for i in $(seq 1 $count); do
         text="${texts[$((RANDOM % ${#texts[@]}))]}"
         output="speech/speech_${TIMESTAMP}_${i}.mp3"
         log "Generating speech: ${text:0:50}..."
-        mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null
-        if [ -f "$output" ]; then
-            log "Saved: $output"
-        fi
+        mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: speech $i"
+        sleep 10
     done
 }
 
-# SOURCE: https://www.minimaxi.com/music
 # ==== MUSIC ====
 generate_music() {
     local prompts=(
@@ -83,16 +86,17 @@ generate_music() {
         "Pop ballad with emotional vocals and piano accompaniment telling a story of love and loss"
         "Traditional folk melody with acoustic instruments and harmonized vocals celebrating cultural heritage"
         "Electronic synthwave with retro synthesizers and driving beats reminiscent of 80s sci-fi movies"
+        "Classical piano piece with gentle melodic passages in the style of Debussy"
+        "Reggae groove with laid-back rhythm guitar and expressive organ sounds"
     )
     
-    for i in $(seq 1 2); do
+    local count=1
+    for i in $(seq 1 $count); do
         prompt="${prompts[$((RANDOM % ${#prompts[@]}))]}"
         output="music/music_${TIMESTAMP}_${i}.mp3"
         log "Generating music: ${prompt:0:50}..."
-        mmx music generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null
-        if [ -f "$output" ]; then
-            log "Saved: $output"
-        fi
+        mmx music generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: music $i"
+        sleep 30
     done
 }
 
@@ -114,16 +118,47 @@ generate_text() {
         "Create a creative excuse for being late"
         "Name colors that don't exist in the rainbow"
         "Write a haiku about code"
+        "Give me a random fact"
+        "Write a tongue twister"
+        "Create an acronym and explain what it means"
+        "Name the layers of the ocean from shallow to deep"
+        "Write a one-sentence summary of the meaning of life"
     )
     
     for topic in "${topics[@]}"; do
-        output="text/text_${TIMESTAMP}_$(echo "$topic" | tr ' ' '_' | tr -dc 'a-z_' | cut -c1-20).txt"
+        output="text/text_${TIMESTAMP}_$(echo "$topic" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-25).txt"
         log "Generating text: $topic"
-        mmx text chat --message "$topic" --output json --quiet 2>/dev/null | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('content',''))" > "$output"
+        result=$(mmx text chat --message "$topic" --output json --quiet 2>/dev/null)
+        echo "$result" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('content',''))" > "$output"
         if [ -s "$output" ]; then
             log "Saved: $output"
+        else
+            log "FAILED: text for $topic"
         fi
+        sleep 5
     done
+}
+
+# ==== GIT PUSH via gh auth ====
+git_push() {
+    log "=== Git push cycle ==="
+    git add -A
+    if git diff --cached --quiet 2>/dev/null; then
+        log "No changes to commit"
+    else
+        git commit -m "Auto-commit $(date '+%Y-%m-%d %H:%M')" 2>/dev/null
+        # Use gh auth token for push
+        TOKEN=$(/data/data/com.termux/files/usr/bin/gh auth token)
+        git push "https://${TOKEN}@github.com/mcpe500/datasets.git" HEAD:main 2>&1 | tee -a "$LOG" || log "Push failed (will retry next cycle)"
+        log "Git push complete"
+    fi
+    
+    # Stats
+    img_count=$(find "$REPO_DIR/images" -type f 2>/dev/null | wc -l)
+    sp_count=$(find "$REPO_DIR/speech" -type f 2>/dev/null | wc -l)
+    ms_count=$(find "$REPO_DIR/music" -type f 2>/dev/null | wc -l)
+    tx_count=$(find "$REPO_DIR/text" -type f 2>/dev/null | wc -l)
+    log "Stats — images:$img_count | speech:$sp_count | music:$ms_count | text:$tx_count"
 }
 
 # ==== MAIN ====
@@ -135,9 +170,9 @@ main() {
     generate_music
     generate_text
     
-    # Count files
-    total=$(find images speech music text video -type f 2>/dev/null | wc -l)
-    log "Total files in repo: $total"
+    git_push
+    
+    log "=== Cycle complete ==="
 }
 
 main
