@@ -1,0 +1,23 @@
+The speed of sound depends on the medium and its temperature. In **dry air at sea‑level pressure**:
+
+- **≈ 343 m/s** (≈ 1,235 km/h or ≈ 770 mph) at 20 °C (68 °F)  
+- **≈ 331 m/s** at 0 °C (32 °F)
+
+A useful rule‑of‑thumb for air is  
+
+\[
+v \approx 331\ \text{m/s} + (0.6\ \text{m/s·°C})\times T_{\!^\circ C}
+\]
+
+so the speed rises about 0.6 m/s for each degree Celsius increase.
+
+**Other common media**
+
+| Medium | Approx. speed of sound (at ~20 °C) |
+|--------|-----------------------------------|
+| Water (fresh) | ≈ 1,480 m/s |
+| Seawater | ≈ 1,540 m/s |
+| Steel (solid) | ≈ 5,000–6,000 m/s |
+| Concrete | ≈ 3,400 m/s |
+
+The speed is higher in denser/stiffer media because sound propagates through the intermolecular forces of the material. Humidity also has a small effect in air (moist air is slightly faster than dry air because the molar mass of water is lower), but temperature is the dominant factor.

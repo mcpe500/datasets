@@ -1,0 +1,20 @@
+The deepest known point in the world’s oceans is **the Challenger Deep**, which lies at the southern end of the **Mariana Trench** in the western Pacific Ocean.
+
+| Feature | Details |
+|---------|---------|
+| **Location** | About 255 km (158 mi) southwest of the island of Guam, in the Mariana Trench region. |
+| **Depth** | Approximately **10,984 meters** (36,070 feet) below sea level, according to the most recent high‑precision sonar surveys (2020). Earlier measurements placed it around 10,971 m (36,000 ft). |
+| **Discovery / Measurement** | First sounded by the British survey ship *HMS Challenger* in 1875, later precisely mapped by the U.S. Navy’s *Sokkurs* and *Kongsberg* multibeam echo‑sounders, and verified by deep‑submergence vehicles. |
+| **Human Exploration** | • **James Cameron** reached the bottom in the *Deepsea Challenger* in 2012, capturing video and data.<br>• **Victor Vescovo** and the *Limiting Factor* submersible made the first crewed repeat dives in 2019, establishing a depth of 10,983.9 m (±0.2 m). |
+| **Significance** | Challenger Deep represents the absolute limit of the ocean’s depth and serves as a natural laboratory for studying extreme‑pressure biology, geology, and chemistry. |
+
+### Why it’s the deepest
+
+- **Mariana Trench** is a convergent plate boundary where the Pacific Plate subducts beneath the Philippine Plate, creating a deep oceanic trench.
+- The **Challenger Deep** sits at the trench’s deepest point, where the ocean floor is pushed down to its maximum depth.
+
+### Other extremely deep spots
+
+While Challenger Deep holds the record, the **Horizon Deep** in the **Tonga Trench** is the second‑deepest known point at about **10,820 m (35,502 ft)**. However, the depth difference between the two is several hundred meters, making Challenger Deep the clear deepest part of the ocean.
+
+If you need more details about the technology used to measure these depths, the biology found there, or the history of deep‑sea exploration, feel free to ask!

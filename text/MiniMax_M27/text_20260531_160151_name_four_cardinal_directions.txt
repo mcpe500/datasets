@@ -1,0 +1,6 @@
+The four cardinal directions are:
+
+1. **North** (N)  
+2. **East** (E)  
+3. **South** (S)  
+4. **West** (W)

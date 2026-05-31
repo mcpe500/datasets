@@ -1,0 +1,21 @@
+The brightest star visible in the night sky is **Sirius** (also called the “Dog Star”).
+
+| Property | Value |
+|----------|-------|
+| **Common name** | Sirius |
+| **Designation** | α Canis Majoris (Alpha Canis Majoris) |
+| **Apparent magnitude** | –1.46 (the most luminous star we can see from Earth) |
+| **Distance from Earth** | ~8.6 light‑years (≈ 2.64 parsecs) |
+| **Spectral type** | A1 V (white‑main‑sequence star) |
+| **Location** | In the constellation **Canis Major** (the Greater Dog), just south of the celestial equator |
+
+Sirius is easy to spot: it appears as a brilliant, slightly twinkling white point low in the southern sky for observers in the Northern Hemisphere during winter evenings (it’s also prominent in the Southern Hemisphere’s summer). Its brightness comes from both its relatively close proximity to the Sun and its intrinsic luminosity—about 25 times more luminous than the Sun.
+
+**Other notably bright stars** (though none beat Sirius) include:
+
+- **Canopus** (α Carinae) – magnitude –0.74, the second‑brightest night‑sky star.
+- **Arcturus** (α Bootis) – magnitude –0.05.
+- **Vega** (α Lyrae) – magnitude 0.03.
+- **Capella** (α Aurigae) – magnitude 0.08.
+
+Sirius’s brightness and its position make it a key reference point for navigation, cultural mythologies, and astronomical training. If you ever want to locate it, look for the three bright “belt” stars of Orion (Alnitak, Alnilam, Mintaka) and follow the line down toward the southeast—Sirius lies just to the lower left of the belt.

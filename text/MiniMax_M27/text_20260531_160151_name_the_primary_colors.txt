@@ -1,0 +1,9 @@
+The usual “primary” color sets are:
+
+| Color system | Primary colors |
+|--------------|----------------|
+| **Subtractive (pigments, paints, printing)** | **Red**, **Yellow**, **Blue** (often abbreviated RYB) |
+| **Additive (light, screens, digital displays)** | **Red**, **Green**, **Blue** (RGB) |
+| **Modern subtractive printing (CMYK)** | **Cyan**, **Magenta**, **Yellow** (plus black, “K”) |
+
+So, depending on whether you’re mixing paints or mixing light, the primary colors are either **red, yellow, blue** or **red, green, blue** (or, in high‑end printing, cyan, magenta, yellow).

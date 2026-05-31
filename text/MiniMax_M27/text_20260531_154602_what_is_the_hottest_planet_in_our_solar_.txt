@@ -1,0 +1,8 @@
+**Venus** is the hottest planet in our solar system.
+
+| Planet | Average surface temperature | Why it’s hot |
+|--------|----------------------------|--------------|
+| **Venus** | ~ 465 °C (≈ 860 °F) | Thick atmosphere of carbon dioxide (≈ 96 %) creates an extreme greenhouse effect, trapping heat and raising surface pressure to about 90 times that of Earth. |
+| Mercury (for comparison) | ~ 167 °C (≈ 333 °F) average (day‑side can reach ~ 430 °C) | Though it’s closer to the Sun, it has virtually no atmosphere to retain heat, so its temperature plunges sharply at night. |
+
+So, despite being farther from the Sun than Mercury, Venus’s dense, CO₂‑rich atmosphere acts like a blanket, making it the hottest planet in our solar system.

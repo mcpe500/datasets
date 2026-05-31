@@ -1,0 +1,5 @@
+Here are three widely‑used programming languages:
+
+- **Python** – known for its readable syntax and versatility (web development, data science, scripting, etc.)  
+- **Java** – a class‑based, object‑oriented language that runs on the Java Virtual Machine (JVM) and is common in enterprise and Android development  
+- **C++** – a high‑performance, compiled language often used for system/software development, game engines, and applications requiring fine‑grained control of hardware resources

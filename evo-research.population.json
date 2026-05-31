@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generation": 7,
-  "active_candidate_id": "media-retry-v3",
-  "stagnation_runs": 1,
+  "generation": 9,
+  "active_candidate_id": "text-ultra-100-retry",
+  "stagnation_runs": 0,
   "candidates": [
     {
       "id": "baseline-seq",
@@ -489,9 +489,19 @@
         "media_text_overlap": true,
         "media_retry": true
       },
-      "status": "active",
-      "fitness_history": [],
-      "last_result_ref": null,
+      "status": "elite",
+      "fitness_history": [
+        {
+          "run": 8,
+          "status": "keep",
+          "metric": 102,
+          "direction": "higher",
+          "confidence": 5.5,
+          "timestamp": 1780217047266,
+          "description": "text-ultra-100-retry: 100 text topics (10 batches) + text retry only (no media retry). 99/100 text + 2 speech + 1 music = 102 files in 288s vs retry-resilient-v2 54/270s. 89% improvement. Images consistently fail (0/3) \u2014 text dominates count so total still excellent."
+        }
+      ],
+      "last_result_ref": 8,
       "notes": []
     },
     {
@@ -516,10 +526,10 @@
         "media_text_overlap": true,
         "media_retry": false
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "100 text (10 batches) + retry on text only. media_retry=False (retry hurts slow generators). 100 text items >> all else."
+      "notes": []
     },
     {
       "id": "img-sleep-more",
@@ -545,10 +555,10 @@
         "image_sleep": 30,
         "speech_sleep": 15
       },
-      "status": "pending",
+      "status": "active",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "Same as retry-resilient-v2 but longer media sleep (30s img, 15s speech) instead of retry. No extra API calls."
+      "notes": []
     },
     {
       "id": "text-100-plus-sleep",
@@ -574,20 +584,152 @@
         "image_sleep": 30,
         "speech_sleep": 15
       },
+      "status": "active",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": []
+    },
+    {
+      "id": "text-ultra-200",
+      "family": "architecture",
+      "parent_id": "text-ultra-100-retry",
+      "operator": "mutate",
+      "hypothesis": "Double text to 200 topics (20 batches of 10). Text is cheap/fast \u2014200 topics should fit in ~380s budget. ~196 files expected. Pure text scaling.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 200,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 20,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": false
+      },
+      "status": "explored",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "200 text topics, 20 batches. ~380s budget. Text dominates count."
+    },
+    {
+      "id": "text-150-balanced",
+      "family": "architecture",
+      "parent_id": "text-ultra-100-retry",
+      "operator": "mutate",
+      "hypothesis": "150 text topics (15 batches) \u2014 middle ground. Slightly more than100 but not as aggressive. ~150 files expected in ~330s.",
+      "genome": {
+        "images": 3,
+        "speech": 2,
+        "music": 1,
+        "text": 150,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 15,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": false
+      },
+      "status": "explored",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "150 text topics, 15 batches. Comfortable middle ground."
+    },
+    {
+      "id": "text-100-no-media",
+      "family": "architecture",
+      "parent_id": "text-ultra-100-retry",
+      "operator": "mutate",
+      "hypothesis": "Drop images entirely (0 img) +100 text. Images consistently fail (0/3) and waste ~45s. Removing them frees budget for more text reliability. Expected: 100 text + 2 speech + 1 music = 103 files in ~260s.",
+      "genome": {
+        "images": 0,
+        "speech": 2,
+        "music": 1,
+        "text": 100,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 3,
+        "retry_delay": 3,
+        "parallel_media": true,
+        "parallel_text": true,
+        "text_batches": 10,
+        "batch_size": 10,
+        "media_text_overlap": true,
+        "media_retry": false
+      },
+      "status": "explored",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "0 images + 100 text. Drop failing images, free budget. ~260s expected."
+    },
+    {
+      "id": "text-150-safe",
+      "family": "architecture",
+      "parent_id": "text-ultra-100-retry",
+      "operator": "mutate",
+      "hypothesis": "150 text topics (15 batches) with single retry. Text has1403 remaining quota in5h window. Text is fast (~3s/call). Music too slow (~150s/each). Expected ~150 files in ~300s.",
+      "genome": {
+        "images": 0,
+        "speech": 0,
+        "music": 0,
+        "text": 150,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 1,
+        "retry_delay": 3,
+        "parallel_text": true,
+        "text_batches": 15,
+        "batch_size": 10,
+        "media_text_overlap": false
+      },
       "status": "pending",
       "fitness_history": [],
       "last_result_ref": null,
-      "notes": "100 text + retry + longer image sleep. Most aggressive combo."
+      "notes": "150 text + lyrics (10). No slow media. Single retry only."
+    },
+    {
+      "id": "lyrics-heavy",
+      "family": "architecture",
+      "parent_id": "text-ultra-100-retry",
+      "operator": "mutate",
+      "hypothesis": "Lyrics has 100 remaining quota (0/100 used in 5h).50 lyrics + 100 text. Both fast generators. Expected ~150 files.",
+      "genome": {
+        "images": 0,
+        "speech": 0,
+        "music": 0,
+        "text": 100,
+        "lyrics": 50,
+        "parallel": true,
+        "retry": true,
+        "retry_attempts": 1,
+        "retry_delay": 3,
+        "parallel_text": true,
+        "text_batches": 10,
+        "lyrics_batches": 5,
+        "media_text_overlap": false
+      },
+      "status": "pending",
+      "fitness_history": [],
+      "last_result_ref": null,
+      "notes": "100 text + 50 lyrics. Both fast. Full quota available."
     }
   ],
   "families": [
     {
       "name": "architecture",
-      "attempts": 7,
+      "attempts": 8,
       "failures": 2,
-      "keeps": 5,
+      "keeps": 6,
       "retired": false,
-      "consecutive_failures": 1
+      "consecutive_failures": 0
     }
   ],
   "scheduler": {

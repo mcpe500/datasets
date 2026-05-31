@@ -1,0 +1,23 @@
+Below are the classic **pelagic zones** (open‑water layers) that stack from the surface down to the deepest ocean trenches.  The depth ranges give a quick sense of where each zone sits:
+
+| Zone (common name) | Depth range (approx.) | Main characteristics |
+|--------------------|-----------------------|----------------------|
+| **Epipelagic** (Sunlight Zone) | 0 – ≈200 m (0‑660 ft) | Sunlight, warm water, high photosynthesis, most marine life (fish, zooplankton, phytoplankton). |
+| **Mesopelagic** (Twilight Zone) | ≈200 – ≈1 000 m (660‑3 300 ft) | Dim blue light, temperature drop, thermocline; includes lanternfish, squid, and migrating organisms that move up at night. |
+| **Bathypelagic** (Midnight Zone) | ≈1 000 – ≈4 000 m (3 300‑13 100 ft) | No sunlight, near‑freezing temperatures, high pressure; bioluminescence common, sparse life (e.g., deep‑sea fish, cephalopods). |
+| **Abyssopelagic** (Abyssal Zone) | ≈4 000 – ≈6 000 m (13 100‑19 700 ft) | Very cold, extremely high pressure; soft sediments dominate; mostly small invertebrates, detritivores, and occasional fish. |
+| **Hadopelagic** (Hadal Zone) | >≈6 000 m (deep‑sea trenches) | Includes the deepest oceanic trenches (Mariana, Philippine, etc.). Temperature near freezing, crushing pressure, specialized fauna (e.g., snailfish, hadal amphipods). |
+
+### Quick mnemonic
+- **E**pipelagic → **E**veryone sees the sun.  
+- **M**esopelagic → **M**iddle of the twilight.  
+- **B**athypelagic → **B**lack (midnight).  
+- **A**byssal → **A**byss.  
+- **H**adopelagic → **H**oles (trenches).
+
+### Alternate terminology you might encounter
+- **Surface (mixed) layer** – the very top (0‑~50 m) where wind mixing keeps water relatively uniform.  
+- **Thermocline / pycnocline** – a zone of rapid change in temperature (and density) that separates the warm surface water from the deep, cold water.  
+- **Deep water** – sometimes used broadly for everything below the thermocline (roughly 200 m onward).
+
+These layers together make up the **vertical structure of the ocean**, each with its own physical conditions, chemistry, and ecological communities.

@@ -1,0 +1,7 @@
+Here are three common items that can produce a spark:
+
+1. **Flint and steel** – Striking a piece of flint against a steel surface creates a small, hot spark that can ignite tinder.  
+2. **A match** – The striking surface of a safety match (or a strike‑anywhere match) generates friction heat that lights the chemical primer, producing a flame and a spark.  
+3. **A lighter** – The piezoelectric or flint‑based ignition mechanism in a disposable lighter creates a spark that ignites the fuel‑air mixture.  
+
+(Other examples include spark plugs in engines, static‑electric discharges, and sparklers, but the three above are the most familiar everyday sources of sparks.)

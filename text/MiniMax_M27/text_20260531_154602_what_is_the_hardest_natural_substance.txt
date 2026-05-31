@@ -1,0 +1,27 @@
+**Diamond** is the hardest natural substance known to science.
+
+### Why diamond tops the rankings
+| Hardness scale | Typical value for diamond | How it’s measured |
+|----------------|---------------------------|-------------------|
+| **Mohs scale** | 10 (the highest possible) | Scratch resistance against ten reference minerals |
+| **Vickers hardness** | ~90–120 GPa (≈9,000–12,000 kgf mm⁻²) | Resistance to indentation under a diamond‑shaped pyramid loaded with a known force |
+| **Knoop hardness** | ~7,000–9,000 kgf mm⁻² | Resistance to indentation with a narrow, elongated pyramidal indenter |
+| **Brinell hardness** | ~2,000 kgf mm⁻² | Measure of the mean pressure under a hard ball indenter |
+
+The extreme hardness comes from diamond’s crystal structure: every carbon atom is covalently bonded to four others in a very rigid three‑dimensional tetrahedral lattice. This “sp³” network makes the crystal exceptionally resistant to deformation.
+
+### Other very hard natural materials (but not as hard as diamond)
+| Material | Where it occurs naturally | Hardness (Mohs) | Remarks |
+|----------|--------------------------|-----------------|---------|
+| **Lonsdaleite** (hexagonal diamond) | Found in some meteorite impact sites (e.g., Canyon Diablo) | ~9–10 (estimated) | A rare hexagonal form of carbon; theoretical hardness may exceed cubic diamond, but natural samples are usually nanocrystalline and flawed, so measured values don’t consistently surpass diamond. |
+| **Wurtzite boron nitride** | Extremely rare; forms under high‑pressure, high‑temperature conditions (e.g., meteorite impacts) | ~9.5 (Mohs) | Similar to diamond’s structure but composed of boron and nitrogen; rarely found in quantities large enough for reliable testing. |
+| **Moissanite** (silicon carbide) | Found in some meteorites and rare terrestrial occurrences | 9.25–9.5 (Mohs) | Very hard, but still softer than diamond. |
+| **Corundum** (Al₂O₃, e.g., ruby, sapphire) | Common in many rocks | 9 (Mohs) | Hard, but clearly behind diamond. |
+
+### Key points to remember
+- **Hardness** is a material’s resistance to permanent deformation, and different testing methods can give slightly different rankings.
+- On the classic Mohs scale (scratch test), diamond is the only mineral rated 10.
+- In more quantitative indentation tests (Vickers, Knoop, etc.), diamond consistently registers the highest values among natural materials.
+- While a few exotic minerals (e.g., lonsdaleite) may theoretically be even harder, they are either extremely rare, impure, or found only in tiny amounts, so diamond remains the definitive “hardest natural substance” in practice.
+
+**Bottom line:** If you need the hardest material nature provides, look no further than diamond.

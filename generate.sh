@@ -25,106 +25,83 @@ trap 'rm -rf "$LOCK" 2>/dev/null' EXIT
 
 cd "$REPO_DIR"
 
-# ==== image-01 (no retry — retry hurts rate-limited slow generators) ====
-gen_image_01() {
-    local prompts=(
-        "A serene mountain lake at golden hour with reflections"
-        "Cyberpunk cityscape with neon-lit streets and flying cars"
-        "A cozy coffee shop interior with warm lighting"
-        "Ancient temple ruins covered in tropical vegetation"
-        "Abstract geometric art with vibrant color gradients"
-        "A majestic wolf standing on a rocky cliff"
-        "Underwater coral reef teeming with colorful fish"
-        "Minimalist geometric pattern with pastel colors"
-        "A steaming bowl of ramen with chopsticks"
-        "Dramatic storm clouds over open farmland"
-        "Abstract digital art with flowing light streams"
-        "A detailed botanical illustration of exotic flowers"
-        "Futuristic architecture with glass and steel"
-        "Vintage map with compass and navigation elements"
-        "A whimsy hedgehog character in a forest setting"
-        "A field of sunflowers under a bright blue sky"
-        "Steampunk mechanical owl with brass gears and clockwork"
-        "A cozy reading nook with books and soft blankets"
-        "Bioluminescent cave with glowing mushrooms"
-        "A futuristic city at night with holographic advertisements"
-        "A coral reef teeming with tropical fish at sunset"
-        "A steampunk airship floating above fluffy clouds"
-        "A wizard's library with floating books and magical chandelier"
+# ==== lyrics (100 quota available — fast generator) ====
+gen_lyrics() {
+    local themes=(
+        "Love and heartbreak"
+        "Adventure and discovery"
+        "Dreams and aspirations"
+        "Nature and seasons"
+        "Memories and nostalgia"
+        "Hope and perseverance"
+        "Joy and celebration"
+        "Loss and healing"
+        "Journey and travel"
+        "Home and belonging"
+        "Freedom and choices"
+        "Time and memory"
+        "Stars and the cosmos"
+        "Rain and renewal"
+        "Strength and resilience"
+ "Music and rhythm"
+        "Stories we tell"
+        "Light and darkness"
+        "Birds and flight"
+        "Mountains and peaks"
     )
 
-    local count=3
-    for i in $(seq 1 $count); do
-        prompt="${prompts[$((RANDOM % ${#prompts[@]}))]}"
-        output="images/image_01/img_${TIMESTAMP}_${i}.png"
-        mkdir -p "images/image_01"
-        log "image-01: ${prompt:0:50}..."
-        mmx image generate --prompt "$prompt" --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: image-01 $i"
-        sleep 15
+    mkdir -p "lyrics"
+
+    local batch1=("${themes[0]}" "${themes[1]}" "${themes[2]}" "${themes[3]}" "${themes[4]}" "${themes[5]}" "${themes[6]}" "${themes[7]}" "${themes[8]}" "${themes[9]}")
+    local batch2=("${themes[10]}" "${themes[11]}" "${themes[12]}" "${themes[13]}" "${themes[14]}" "${themes[15]}" "${themes[16]}" "${themes[17]}" "${themes[18]}" "${themes[19]}")
+
+    _lyrics_batch "batch1" "${batch1[@]}" &
+    local pid1=$!
+    _lyrics_batch "batch2" "${batch2[@]}" &
+    local pid2=$!
+
+    wait $pid1 || log "lyrics batch1 subshell exited non-zero"
+    wait $pid2 || log "lyrics batch2 subshell exited non-zero"
+}
+
+_lyrics_batch() {
+    local batch_name=$1
+    shift
+    for theme in "$@"; do
+        safe=$(echo "$theme" | sed 's/[^a-zA-Z0-9]/_/g' | tr '[:upper:]' '[:lower:]' | cut -c1-30)
+        output="lyrics/lyrics_${TIMESTAMP}_${safe}.txt"
+        log "lyrics [$batch_name]: $theme"
+
+        success=0
+        for attempt in 1 2; do
+            _raw=$(mmx text chat --message "Write a short song lyric (4 verses, chorus) about $theme" --output json 2>/dev/null)
+            if printf '%s' "$_raw" | python3 -c "
+import sys,json
+d=json.load(sys.stdin)
+for block in d.get('content',[]):
+    if block.get('type')=='text':
+        txt=block.get('text','').strip()
+        if txt:
+            print(txt)
+" > "$output" 2>/dev/null && [ -s "$output" ]; then
+                success=1
+                break
+            fi
+            if [ $attempt -lt 2 ]; then
+                log "lyrics [$batch_name] retry failed, waiting 3s..."
+                sleep 3
+            fi
+        done
+        if [ $success -eq 1 ]; then
+            log "Saved: $output"
+        else
+            log "FAILED: lyrics for $theme"
+        fi
+        sleep 3
     done
 }
 
-# ==== speech-2.8-hd (no retry) ====
-gen_speech_hd() {
-    local texts=(
-        "Welcome to the future of artificial intelligence. Today we explore the boundaries of creativity and technology working together as one."
-        "In the depths of the ocean, light filters through the water in beautiful patterns. Life thrives in the most unexpected places."
-        "The old library held secrets in every book. Dust motes danced in beams of light that streamed through tall windows."
-        "Music is the universal language that connects all souls across time and space. Let the rhythm guide your heart."
-        "Walking through the ancient forest, one can feel the wisdom of centuries-old trees. Nature teaches patience and resilience."
-        "The city never sleeps. Neon lights paint the night sky as people chase their dreams under the stars."
-        "Science and art are two sides of the same coin. Both seek to understand the beauty hidden in the fabric of reality."
-        "Every sunset brings the promise of a new dawn. Hope persists even in the darkest of times."
-        "The ancient warrior prepared for battle, knowing that courage is not the absence of fear, but the decision to act despite it."
-        "In the kitchen, ingredients come together like old friends, creating dishes that nourish both body and soul."
-        "The stars have witnessed countless stories throughout human history and beyond."
-    )
-
-    local count=2
-    for i in $(seq 1 $count); do
-        text="${texts[$((RANDOM % ${#texts[@]}))]}"
-        output="speech/speech_28_hd/speech_${TIMESTAMP}_${i}.mp3"
-        mkdir -p "speech/speech_28_hd"
-        log "speech-2.8-hd: ${text:0:50}..."
-        mmx speech synthesize --text "$text" --model speech-2.8-hd --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: speech $i"
-        sleep 10
-    done
-}
-
-# ==== music-2.6 (no retry) ====
-gen_music_26() {
-    local prompts=(
-        "Upbeat electronic dance music with pulsing bass and uplifting melodies perfect for a party atmosphere"
-        "Peaceful acoustic instrumental with gentle guitar and soft piano creating a calm meditation atmosphere"
-        "Epic cinematic orchestral with dramatic drums and soaring strings for an adventurous journey"
-        "Lo-fi hip hop chill beats with vinyl crackle and mellow saxophone for relaxed study sessions"
-        "Energetic rock anthem with electric guitars and powerful drums inspiring determination and strength"
-        "Ambient soundscape with nature sounds and ethereal synths for deep focus and concentration"
-        "Jazz fusion with smooth saxophone solos and funky bass lines in a late-night lounge style"
-        "Pop ballad with emotional vocals and piano accompaniment telling a story of love and loss"
-        "Traditional folk melody with acoustic instruments and harmonized vocals celebrating cultural heritage"
-        "Electronic synthwave with retro synthesizers and driving beats reminiscent of 80s sci-fi movies"
-        "Classical piano piece with gentle melodic passages in the style of Debussy"
-        "Reggae groove with laid-back rhythm guitar and expressive organ sounds"
-    )
-
-    local count=1
-    for i in $(seq 1 $count); do
-        prompt="${prompts[$((RANDOM % ${#prompts[@]}))]}"
-        output="music/music_26/music_${TIMESTAMP}_${i}.mp3"
-        mkdir -p "music/music_26"
-        log "music-2.6: ${prompt:0:50}..."
-        mmx music generate --prompt "$prompt" --lyrics-optimizer --out "$output" --quiet 2>/dev/null && log "Saved: $output" || log "FAILED: music $i"
-        sleep 30
-    done
-}
-
-# ==== music-cover ====
-gen_music_cover() {
-    log "music-cover: skipped (requires reference audio)"
-}
-
-# ==== MiniMax-M2.7 (text) — 100 topics, 10 parallel batches, retry ====
+# ==== MiniMax-M2.7 (text) — 150 topics, 15 parallel batches, 1 retry ====
 gen_text() {
     local topics=(
         "Write a haiku about mountains"
@@ -232,6 +209,65 @@ gen_text() {
         "Write a haiku about the sunrise"
         "What is the deepest lake in the world"
         "Name three things that hum"
+        "What is the capital of Canada"
+        "Write a fortune cookie message about patience"
+        "Name three famous painters"
+        "Write a haiku about a rainbow"
+        "What is the fastest sea creature"
+        "Name four types of clouds"
+        "Write a tongue twister about a monkey"
+        "What is the most abundant gas in Earth's atmosphere"
+        "Name three things that are sticky"
+        "Write a limerick about a fish"
+        "What is the capital of Germany"
+        "Name five types of trees"
+        "Write a fortune cookie message about hope"
+        "What is the longest river in the world"
+        "Name three things that float"
+        "Write a haiku about the sunset"
+        "What is the hottest planet in our solar system"
+        "Name four ancient wonders of the world"
+        "Write a short riddle with a candle as the answer"
+        "What is the largest continent"
+        "Name three things that are transparent"
+        "Write a tongue twister about a rabbit"
+        "What is the capital of Italy"
+        "Name five types of flowers"
+        "Write a fortune cookie message about dreams"
+        "What is the deepest part of the ocean"
+        "Name three things that are magnetic"
+        "Write a haiku about a garden"
+        "What is the tallest animal in the world"
+        "Name four types of precipitation"
+        "Write a limerick about a duck"
+        "What is the capital of Spain"
+        "Name three things that are made of wood"
+        "Write a fortune cookie message about kindness"
+        "What is the largest desert in the world"
+        "Name three things that are cold"
+        "Write a haiku about a forest"
+        "What is the most visited country in the world"
+        "Name four types of birds"
+        "Write a short riddle with a book as the answer"
+        "What is the longest wall in the world"
+        "Name three things that grow"
+        "Write a tongue twister about a duck"
+        "What is the capital of China"
+        "Name five types of music"
+        "Write a fortune cookie message about love"
+        "What is the largest volcano in the world"
+        "Name three things that are loud"
+        "Write a haiku about the wind"
+        "What is the tallest mountain in Africa"
+        "Name four types of weather"
+        "Write a limerick about a chicken"
+        "What is the capital of Russia"
+        "Name three things that are heavy"
+        "Write a fortune cookie message about success"
+        "What is the largest island in the world"
+        "Name three things that are tall"
+        "Write a haiku about a river"
+        "What is the most populated city in the world"
     )
 
     mkdir -p "text/MiniMax_M27"
@@ -246,34 +282,34 @@ gen_text() {
     local batch8=("${topics[70]}" "${topics[71]}" "${topics[72]}" "${topics[73]}" "${topics[74]}" "${topics[75]}" "${topics[76]}" "${topics[77]}" "${topics[78]}" "${topics[79]}")
     local batch9=("${topics[80]}" "${topics[81]}" "${topics[82]}" "${topics[83]}" "${topics[84]}" "${topics[85]}" "${topics[86]}" "${topics[87]}" "${topics[88]}" "${topics[89]}")
     local batch10=("${topics[90]}" "${topics[91]}" "${topics[92]}" "${topics[93]}" "${topics[94]}" "${topics[95]}" "${topics[96]}" "${topics[97]}" "${topics[98]}" "${topics[99]}")
+    local batch11=("${topics[100]}" "${topics[101]}" "${topics[102]}" "${topics[103]}" "${topics[104]}" "${topics[105]}" "${topics[106]}" "${topics[107]}" "${topics[108]}" "${topics[109]}")
+    local batch12=("${topics[110]}" "${topics[111]}" "${topics[112]}" "${topics[113]}" "${topics[114]}" "${topics[115]}" "${topics[116]}" "${topics[117]}" "${topics[118]}" "${topics[119]}")
+    local batch13=("${topics[120]}" "${topics[121]}" "${topics[122]}" "${topics[123]}" "${topics[124]}" "${topics[125]}" "${topics[126]}" "${topics[127]}" "${topics[128]}" "${topics[129]}")
+    local batch14=("${topics[130]}" "${topics[131]}" "${topics[132]}" "${topics[133]}" "${topics[134]}" "${topics[135]}" "${topics[136]}" "${topics[137]}" "${topics[138]}" "${topics[139]}")
+    local batch15=("${topics[140]}" "${topics[141]}" "${topics[142]}" "${topics[143]}" "${topics[144]}" "${topics[145]}" "${topics[146]}" "${topics[147]}" "${topics[148]}" "${topics[149]}")
 
     _text_batch "batch1" "${batch1[@]}" &
-    local pid1=$!
     _text_batch "batch2" "${batch2[@]}" &
-    local pid2=$!
     _text_batch "batch3" "${batch3[@]}" &
-    local pid3=$!
     _text_batch "batch4" "${batch4[@]}" &
-    local pid4=$!
     _text_batch "batch5" "${batch5[@]}" &
-    local pid5=$!
     _text_batch "batch6" "${batch6[@]}" &
-    local pid6=$!
     _text_batch "batch7" "${batch7[@]}" &
-    local pid7=$!
     _text_batch "batch8" "${batch8[@]}" &
-    local pid8=$!
     _text_batch "batch9" "${batch9[@]}" &
-    local pid9=$!
     _text_batch "batch10" "${batch10[@]}" &
-    local pid10=$!
+    _text_batch "batch11" "${batch11[@]}" &
+    _text_batch "batch12" "${batch12[@]}" &
+    _text_batch "batch13" "${batch13[@]}" &
+    _text_batch "batch14" "${batch14[@]}" &
+    _text_batch "batch15" "${batch15[@]}" &
 
-    for pid in $pid1 $pid2 $pid3 $pid4 $pid5 $pid6 $pid7 $pid8 $pid9 $pid10; do
+    for pid in $(jobs -p); do
         wait $pid || log "text batch subshell exited non-zero"
     done
 }
 
-# _text_batch: handles one batch of topics with 3-retry on failure
+# _text_batch: handles one batch of topics with 1 retry on failure
 _text_batch() {
     local batch_name=$1
     shift
@@ -283,7 +319,7 @@ _text_batch() {
         log "text/M2.7 [$batch_name]: $topic"
 
         success=0
-        for attempt in 1 2 3; do
+        for attempt in 1 2; do
             _raw=$(mmx text chat --message "$topic" --output json 2>/dev/null)
             if printf '%s' "$_raw" | python3 -c "
 import sys,json
@@ -297,15 +333,15 @@ for block in d.get('content',[]):
                 success=1
                 break
             fi
-            if [ $attempt -lt 3 ]; then
-                log "text [$batch_name] retry $attempt failed, waiting 3s..."
+            if [ $attempt -lt 2 ]; then
+                log "text [$batch_name] retry failed, waiting 3s..."
                 sleep 3
             fi
         done
         if [ $success -eq 1 ]; then
             log "Saved: $output"
         else
-            log "FAILED: text for $topic (3 attempts)"
+            log "FAILED: text for $topic"
         fi
         sleep 5
     done
@@ -325,7 +361,7 @@ git_push() {
     fi
 
     log "--- Stats ---"
-    for folder in images/speech music text video; do
+    for folder in images/speech music lyrics text video; do
         count=$(find "$REPO_DIR/$folder" -type f 2>/dev/null | wc -l)
         log "  $folder: $count files"
     done
@@ -336,20 +372,13 @@ main() {
     acquire_lock
     log "=== Gen cycle started ==="
 
-    # Full overlap: ALL generators start at t=0 simultaneously
-    gen_image_01&
-    local pid_img=$!
-    gen_speech_hd &
-    local pid_sp=$!
-    gen_music_26 &
-    local pid_mus=$!
-    gen_music_cover &
+    # Full overlap: lyrics + text start simultaneously
+    gen_lyrics &
+    local pid_lyr=$!
     gen_text &
     local pid_txt=$!
 
-    wait $pid_img || log "image-01 subshell exited non-zero"
-    wait $pid_sp || log "speech-2.8-hd subshell exited non-zero"
-    wait $pid_mus || log "music-2.6 subshell exited non-zero"
+    wait $pid_lyr || log "lyrics subshell exited non-zero"
     wait $pid_txt || log "text subshell exited non-zero"
 
     git_push

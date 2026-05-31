@@ -1,0 +1,10 @@
+Here are four common cloud types:
+
+| Cloud type | Typical altitude | Key characteristics |
+|------------|------------------|----------------------|
+| **Cirrus** | High (≈ 6–13 km) | Thin, wispy, feather‑like; made of ice crystals. |
+| **Cumulus** | Low‑to‑mid (≈ 0.5–2 km) | White, puffy “cotton‑ball” shapes; fair‑weather when small. |
+| **Stratus** | Low (≈ 0–2 km) | Gray, uniform, sheet‑like layers; often produces overcast or light drizzle. |
+| **Nimbus** (or **Cumulonimbus/Nimbostratus**) | Low‑to‑very‑high (≈ 0.5–12 km) | Dense, dark, vertically developed; associated with heavy rain, thunderstorms, or persistent precipitation. |
+
+These cover the main categories (high, low, layered, and precipitation‑bearing) that you’ll encounter when looking at the sky.

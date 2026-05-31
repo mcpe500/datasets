@@ -1,0 +1,12 @@
+The eight planets in our solar system, ordered from closest to the Sun outward, are:
+
+1. **Mercury** – the smallest and fastest‑orbiting planet.  
+2. **Venus** – the hottest planet, covered in thick clouds of sulfuric acid.  
+3. **Earth** – our home, the only planet known to support life.  
+4. **Mars** – the “Red Planet,” with the largest volcano and canyon in the solar system.  
+5. **Jupiter** – the largest planet, a gas giant with a massive storm called the Great Red Spot.  
+6. **Saturn** – famous for its spectacular ring system.  
+7. **Uranus** – an ice giant that rotates on its side.  
+8. **Neptune** – the windiest planet, a deep blue ice giant at the solar system’s edge.  
+
+A common mnemonic to remember the order is: **“My Very Exciting Magic Carpet Just Sailed Under Nine Palaces.”** (Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.)

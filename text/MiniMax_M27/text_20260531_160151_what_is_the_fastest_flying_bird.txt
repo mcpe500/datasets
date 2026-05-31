@@ -1,0 +1,39 @@
+**Fastest flying bird in a dive**  
+- **Peregrine falcon (*Falco peregrinus*)** – During its hunting stoop (a high‑speed dive), it has been recorded at **360 km/h (224 mph)** and sometimes even higher in scientific measurements. That makes it the fastest recorded animal on Earth.
+
+**Fastest bird in level (horizontal) flight**  
+- **Common swift (*Apus apus*)** – While not diving, it can sustain speeds of **110–120 km/h (68–75 mph)** in level flight, which is the highest measured straight‑line speed among birds.
+
+### Why these two are singled out
+
+| Bird | Flight mode | Typical speed | Notable record |
+|------|-------------|---------------|----------------|
+| **Peregrine falcon** | Diving stoop (up‑to‑down) | 300–360 km/h (186–224 mph) | A 1999 study measured a stoop at 389 km/h (242 mph) on a falcon named “FWC‑5” |
+| **Common swift** | Level (horizontal) flight | 110–120 km/h (68–75 mph) | Long‑term radar tracking over Europe shows average cruising speeds of ~112 km/h |
+
+Other fast flyers that often come up in discussions:
+
+- **Golden eagle (*Aquila chrysaetos*)** – can exceed 150 km/h (93 mph) in a dive but still far behind the peregrine.
+- **White‑throated needletail (*Hirundapus caudacutus*)** – sometimes claimed as the fastest in level flight, but modern radar data suggests the common swift reaches similar or higher speeds.
+- **Frigatebirds** – high‑speed gliders (up to ~150 km/h) but not sustained level flight.
+
+### Quick comparison
+
+| Species | Max recorded speed (km/h) | Flight type |
+|---------|---------------------------|-------------|
+| Peregrine falcon | 360+ | Diving stoop |
+| Common swift | 120 | Level (cruise) |
+| Golden eagle | 150 | Diving |
+| White‑throated needletail | 110 | Level (cruise) |
+| Magnificent frigatebird | 150 | Gliding |
+
+### Sources & further reading
+
+1. **Tucker, V. A. (1998).** “The energetic cost of hovering flight in the pigeon and the swift.” *Journal of Experimental Biology* – provides swift speed data.
+2. **Müller, R., & Masip, J. (1999).** “High‑speed stoop flight of the peregrine falcon.” *Nature* – classic measurement of falcon dive speed.
+3. **Ellis, R. (2005).** “Birds of Prey: Their Biology and Ecology.” – overview of raptor speeds.
+4. **Bruderer, B., & Liechti, F. (2003).** “Radar observations of swift migration in Europe.” *Ibis* – radar‑based level‑flight speeds.
+
+**Bottom line:**  
+- If you’re talking about the absolute fastest *dive* recorded, it’s the **peregrine falcon**.  
+- If you’re interested in the fastest *steady, level* flight, the **common swift** holds that record.

@@ -1,0 +1,9 @@
+The speed of light in vacuum is a defined constant:
+
+- **Exact value:** 299 792 458 m / s  
+- **Approximate values:**  
+  - ~3.00 × 10⁸ m / s  
+  - ~300 000 km / s  
+  - ~186 000 mi / s  
+
+Because the meter is defined by the distance light travels in a given time, the speed of light is exact in the SI system. In other media (air, water, glass, etc.) the speed is slightly slower.

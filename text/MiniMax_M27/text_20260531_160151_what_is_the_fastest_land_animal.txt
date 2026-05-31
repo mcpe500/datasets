@@ -1,0 +1,18 @@
+The **cheetah** (*Acinonyx jubatus*) holds the title of the world’s fastest land animal.  
+
+| Animal          | Top Speed (≈) | Distance over which it’s sustained |
+|-----------------|---------------|-----------------------------------|
+| **Cheetah**     | 80–100 km/h (50–60 mph) | 0 – 400 m (short sprints) |
+| Pronghorn       | 88 km/h (55 mph) | Long distances (can maintain ~55 mph for several miles) |
+| Springbok       | 88 km/h (55 mph) | Short bursts, often in jumps |
+| Wildebeest      | 80 km/h (50 mph) | Sustained running during migrations |
+| Lion            | 80 km/h (50 mph) | Short chases |
+
+### Why cheetahs are so fast
+- **Lightweight skeleton** – only ~30 % body fat and a slender, aerodynamic body.
+- **Flexible spine** – acts like a spring, extending stride length up to 7 m per stride.
+- **Large nasal passages & lungs** – allow rapid oxygen intake during high‑intensity sprints.
+- **Semi‑retractable claws** – provide extra grip and traction.
+- **Specialized muscle fibers** – a high proportion of fast‑twitch fibers for explosive acceleration.
+
+Cheetahs can accelerate from 0 to 60 mph in roughly three seconds, making them the quickest accelerator among land mammals. Their speed is limited to short bursts (typically < 30 seconds) because the intense physiological demands generate a lot of heat and quickly deplete energy reserves.

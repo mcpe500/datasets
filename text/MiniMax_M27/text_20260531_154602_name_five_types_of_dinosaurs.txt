@@ -1,0 +1,11 @@
+Here are five well‑known dinosaur genera (or “types”):
+
+| # | Name | Era | Typical Size | Notable Features |
+|---|------|-----|--------------|------------------|
+| 1 | **Tyrannosaurus rex** | Late Cretaceous (≈68‑66 Ma) | Up to ~12 m (40 ft) long | Massive skull, powerful bite, short arms |
+| 2 | **Triceratops** | Late Cretaceous (≈68‑66 Ma) | ~9 m (30 ft) long | Three‑horned face, large bony frill |
+| 3 | **Velociraptor** | Late Cretaceous (≈75‑71 Ma) | ~2 m (6.5 ft) long | Feathered, sickle‑shaped claw on each foot |
+| 4 | **Stegosaurus** | Late Jurassic (≈155‑150 Ma) | ~9 m (30 ft) long | Rows of bony plates and tail spikes (thagomizers) |
+| 5 | **Brachiosaurus** | Late Jurassic (≈154‑153 Ma) | Up to ~25 m (82 ft) long | Very long neck, tall shoulders, front legs longer than rear |
+
+These are just a handful of the many diverse dinosaur groups that lived during the Mesozoic Era. If you’d like more examples or deeper details on any of them, just let me know!

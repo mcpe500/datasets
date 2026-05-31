@@ -1,0 +1,21 @@
+The deepest known spot on Earth is the **Challenger Deep**, which lies at the southern end of the **Mariana Trench** in the western Pacific Ocean.
+
+| Feature | Details |
+|---|---|
+| **Location** | Approximately 250 km (155 mi) southwest of the island of Guam, in the western Pacific. |
+| **Depth** | About **10,935 m** (35,853 ft) below sea level. Modern measurements (2020‑2022) by the submersible *Limiting Factor* recorded a depth of ~10,924 m (35,850 ft). |
+| **Why it’s so deep** | The Mariana Trench marks the subduction zone where the Pacific Plate slides beneath the smaller Philippine Plate, creating an extremely deep and narrow groove in the ocean floor. |
+| **First human descent** | Jacques Piccard and U.S. Navy Lieutenant Don Walsh reached the bottom in the **Trieste** bathyscaphe on 23 January 1960. |
+| **Recent robotic surveys** | In 2009 the hybrid ROV **Nereus** reached the bottom, and in 2019‑2020 the crewed submersible *Limiting Factor* (carrying explorer Victor Vescovo) made multiple dives, capturing high‑resolution maps and video. |
+| **Comparison** | If Mount Everest (8,849 m) were placed in the trench, its summit would still be more than **2 km** (1.2 mi) below the water’s surface. |
+
+### Other deep trenches (for context)
+
+| Trench | Approx. max depth (m) |
+|---|---|
+| **Tonga Trench** (south‑west Pacific) | ~10,800 |
+| **Philippine Trench** | ~10,540 |
+| **Kuril–Kamchatka Trench** (north‑west Pacific) | ~10,500 |
+| **Kermadec Trench** (south‑west Pacific) | ~10,040 |
+
+While those are also among the deepest places on Earth, Challenger Deep remains the deepest point measured so far. If you have any more specific questions—such as the geology of the trench, the technology used to explore it, or the unique organisms found there—feel free to ask!

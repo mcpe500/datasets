@@ -1,0 +1,13 @@
+The most abundant gas in Earth’s atmosphere is **nitrogen (N₂)**, making up about **78 %** of the dry air by volume.  
+
+For reference, the major components of the atmosphere are roughly:
+
+| Gas | Approximate volume fraction |
+|-----|-----------------------------|
+| Nitrogen (N₂) | 78.08 % |
+| Oxygen (O₂)   | 20.95 % |
+| Argon (Ar)    | 0.93 % |
+| Carbon dioxide (CO₂) | ~0.04 % (and rising) |
+| Neon, helium, methane, etc. | trace amounts |
+
+So, if you look at the composition of the air you breathe, nitrogen dominates the mix.

@@ -1,0 +1,72 @@
+**The speed of sound is the distance a sound wave travels per unit time.**  
+It depends on the medium the wave is moving through (air, water, steel, etc.) and on conditions such as temperature (and, to a much smaller extent, humidity or pressure).
+
+---
+
+## 1. In dry air at sea‑level pressure  
+
+| Temperature (°C) | Speed of sound (m s⁻¹) | Speed (km h⁻¹) | Speed (mph) |
+|------------------|------------------------|---------------|------------|
+| **0**            | **331 m/s**            | **1 193 km/h** | **740 mph** |
+| **20** (room temp) | **≈ 343 m/s**      | **≈ 1 235 km/h** | **≈ 767 mph** |
+| **30**            | **≈ 349 m/s**          | **≈ 1 256 km/h** | **≈ 780 mph** |
+
+A handy rule of thumb for dry air:  
+
+\[
+v \approx 331\;+\;0.6\,T_{\!^\circ\!C}\; \text{m/s}
+\]
+
+So the speed rises by about **0.6 m/s for each degree Celsius increase** in temperature.
+
+> **Humidity** has only a tiny effect: at 20 °C, a 50 % relative‑humidity increase raises the speed by ≈ 0.1 m/s, so it’s usually ignored for most practical purposes.
+
+---
+
+## 2. In other common media  
+
+| Medium | Approx. speed of sound | Typical value |
+|--------|------------------------|---------------|
+| **Fresh water** (20 °C) | 1,480 m/s | ≈ 5,328 km/h |
+| **Seawater** (20 °C, typical salinity) | 1,520 m/s | ≈ 5,472 km/h |
+| **Ice** (‑10 °C) | ≈ 3,200 m/s | ≈ 11,520 km/h |
+| **Wood (soft pine)** | ≈ 3,300 m/s | ≈ 11,880 km/h |
+| **Aluminium** | ≈ 6,300 m/s | ≈ 22,680 km/h |
+| **Steel** | ≈ 5,900–6,100 m/s | ≈ 21,240–21,960 km/h |
+| **Rubber** (soft) | ≈ 40–60 m/s | ≈ 144–216 km/h |
+
+These numbers vary with material density, elastic modulus, and temperature, but they give a quick sense of how dramatically the speed can change from one medium to another.
+
+---
+
+## 3. Why does it change with temperature (in gases)?
+
+For an ideal gas, the speed of sound is:
+
+\[
+v = \sqrt{\gamma\,R\,T / M}
+\]
+
+- **γ (gamma)** = ratio of specific heats (≈ 1.40 for diatomic gases like air).  
+- **R** = universal gas constant (8.314 J mol⁻¹ K⁻¹).  
+- **T** = absolute temperature (K).  
+- **M** = molar mass of the gas (≈ 0.02896 kg mol⁻¹ for dry air).
+
+Plugging in standard sea‑level pressure and a temperature of 20 °C (293 K) yields ≈ 343 m/s, matching the measured value.
+
+---
+
+## 4. Quick reference “Mach” numbers
+
+- **Mach 1** = speed of sound in the surrounding medium.  
+- At 20 °C in air, Mach 1 ≈ 343 m/s (≈ 1,235 km/h).  
+- A jet traveling at Mach 2 would be moving roughly twice that speed (≈ 2,470 km/h).
+
+---
+
+### Bottom line
+- **In everyday dry air at room temperature (≈ 20 °C): ~343 m/s (≈ 1,235 km/h, ≈ 767 mph).**  
+- **The speed rises about 0.6 m/s for each degree Celsius you heat the air.**  
+- **In water, the sound travels roughly 4–5 times faster than in air; in metals, it’s even faster.**  
+
+If you need the speed for a specific gas, liquid, or solid (or at a different temperature/pressure), just let me know and I can compute the exact value!

@@ -1,0 +1,1 @@
+The square root of 81 is **9** (since \(9 \times 9 = 81\)). The principal (positive) square root is 9; the other square root is \(-9\).

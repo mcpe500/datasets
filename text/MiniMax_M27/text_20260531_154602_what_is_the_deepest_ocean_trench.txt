@@ -1,0 +1,34 @@
+The deepest known trench on Earth is the **Mariana Trench**, located in the western Pacific Ocean east of the Mariana Islands.
+
+- **Deepest point:** The trench’s “Challenger Deep” is the world’s lowest known point.  
+  - **Depth:** ≈ 10,925 m (≈ 35,840 ft) below sea level (recent surveys give a range of about 10,910 – 10,984 m).  
+  - **Location:** At roughly 11°21′ N, 142°12′ E, about 200 km (124 mi) southwest of the island of Guam.
+
+### How we know its depth
+| Year | Expedition | Measured depth (approx.) |
+|------|------------|--------------------------|
+| 1960 | Trieste (Jacques Piccard & Don Walsh) | 10,911 m (35,797 ft) |
+| 2012 | Deepsea Challenger (James Cameron) | 10,908 m (35,787 ft) |
+| 2019–2021 | Five Deeps Expedition (Victor Vescovo) / autonomous deep‑sea mapping | 10,925 m (35,840 ft) (modernized multibeam sonar) |
+
+The 2021 survey using high‑resolution multibeam echo‑sounding and pressure‑derived depth corrections gave the most precise modern value: **10,925 ± 10 m**.
+
+### Why it’s so deep
+- The Mariana Trench marks the convergent plate boundary where the Pacific Plate subducts beneath the smaller Philippine Plate.  
+- The intense bending and down‑warping of the oceanic crust creates a narrow, extremely deep trough.
+
+### Other deep trenches
+While the Mariana Trench holds the record, several other trenches are also among the world’s deepest:
+
+| Trench | Depth (approx.) | Location |
+|--------|----------------|----------|
+| **Tonga Trench** (southernmost segment) | ~10,882 m | Southwest Pacific |
+| **Philippine Trench** | ~10,540 m | East of the Philippines |
+| **Kuril–Kamchatka Trench** | ~10,500 m | Northwest Pacific |
+| **Kermadec Trench** | ~10,047 m | Southwest Pacific |
+
+But none exceed the depth of Challenger Deep in the Mariana Trench.
+
+---
+
+**Bottom line:** The Mariana Trench’s Challenger Deep is the deepest point in the world’s oceans, measured at roughly **10.9 km (≈ 6.8 mi)** below the surface.

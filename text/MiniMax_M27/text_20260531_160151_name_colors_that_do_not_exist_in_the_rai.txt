@@ -1,0 +1,88 @@
+**The rainbow only contains the pure “spectral” colors – the single‑wavelength hues that make up the visible spectrum (red → orange → yellow → green → blue → indigo → violet).**  
+Anything that our eyes and brain interpret as a color but **cannot be produced by a single wavelength** is *not* in a rainbow.  
+
+Below is a practical “catalog” of common colors that do not appear in a rainbow, grouped by why they fall outside the spectrum.
+
+---
+
+## 1. Achromatic (neutral) colors  
+
+| Color | Why it isn’t in a rainbow |
+|-------|----------------------------|
+| **White** | A mixture of all visible wavelengths in roughly equal intensity. |
+| **Black** | Absence of visible light; no wavelength to display. |
+| **Gray (any lightness)** | A blend of white and black, i.e., a mixture of many wavelengths at a reduced intensity. |
+
+---
+
+## 2. Non‑spectral hues that require *more than one* wavelength
+
+These colors are created by additive (light) or subtractive (pigment) mixing of two or more spectral components.
+
+| Color | Typical composition (light/pigment) |
+|-------|--------------------------------------|
+| **Magenta** | Red + Blue (additive) / Magenta pigment (subtractive) |
+| **Pink** | Red + White (additive) or diluted magenta pigment |
+| **Brown** | Low‑intensity orange (red + yellow) with reduced brightness; not a single wavelength |
+| **Olive** | Yellow + Green + a dash of red, seen at low luminance |
+| **Teal** | Green + Blue at roughly equal proportions |
+| **Cyan** | Green + Blue (additive) – *Note*: near‑pure cyan (≈ 490 nm) can appear in a rainbow, but the “cyans” we usually think of (like turquoise) are mixtures. |
+| **Lavender / Mauve** | Blue + Red + a touch of violet, often with a lower saturation than pure violet |
+| **Chartreuse** | Yellow + Green, low‑saturation version of green |
+| **Burnt Orange** | Orange (single‑wavelength) with a lot of red and a hint of brown, making it non‑spectral |
+| **Beige / Tan** | Light brown (yellow + orange + white) |
+| **Cream** | Yellow + white, low saturation |
+| **Salmon** | Red + orange + a bit of pink |
+| **Khaki** | Olive‑green with some brown |
+| **Maroon** | Deep red + brown (low‑light red) |
+| **Burgundy** | Deep red + blue + brown |
+| **Coral** | Red + orange + pink |
+| **Gold** | Yellow + orange + a tiny amount of brown, often with a metallic sheen (extra specular reflection) |
+| **Silver** | Gray + white + metallic specular highlights |
+| **Bronze** | Brown + orange + metallic specular highlight |
+| **Neon / Fluorescent** colors (e.g., neon pink, neon green) | Intense, narrow‑band emissions mixed with high‑brightness white, not a single wavelength |
+
+---
+
+## 3. Colors defined by *surface* or *material* properties  
+
+Some hues are produced not by wavelength alone but by how the surface interacts with light (specular reflections, subsurface scattering, interference, etc.):
+
+| Example | Reason it’s absent from a rainbow |
+|---------|-----------------------------------|
+| **Iridescent** (peacock blue, oil‑slick rainbow) | Light interference produces shifting hues that are not representable by a single wavelength. |
+| **Metallic** (gold, copper, chrome) | High specular reflection plus colored diffuse components. |
+| **Pearlescent / Pearly** (pearl white, mother‑of‑pearl) | Multi‑layer interference and scattering. |
+| **Fluorescent** (neon pink, “glow‑in‑the‑dark” colors) | Emission of light at different wavelengths than the illumination, often combined with very high brightness. |
+| **Pattered** colors (e.g., “tartan” or “herringbone” blends) | Perception depends on spatial patterns rather than a single hue. |
+
+---
+
+## 4. “Non‑rainbow” variants of rainbow colors  
+
+Even colors that *appear* in the rainbow (red, orange, yellow, green, blue, indigo, violet) have many **non‑spectral variants** that are not present in the spectrum:
+
+| Rainbow base | Example of a non‑spectral variant |
+|--------------|-----------------------------------|
+| **Red** | Crimson, scarlet, maroon, vermilion, rose, ruby, rust |
+| **Orange** | Peach, apricot, tangerine, burnt orange, amber |
+| **Yellow** | Lemon, butter, goldenrod, cream, mustard |
+| **Green** | Mint, lime, teal‑green, olive, sage |
+| **Blue** | Navy, sky, cobalt, powder blue, teal‑blue |
+| **Indigo** | Deep indigo, midnight blue, prussian blue |
+| **Violet** | Lavender, lilac, purple, plum, amethyst |
+
+Each of these “sub‑hues” is created by adding a pinch of another spectral color or by changing its lightness/saturation, which shifts it away from the pure spectral hue.
+
+---
+
+## Quick “cheat‑sheet” list of colors that *are not* in a rainbow
+
+> **Black, White, Gray (any shade), Magenta, Pink, Brown, Olive, Teal (as a mixed hue), Cyan (as a mixed hue), Lavender, Chartreuse, Burnt Orange, Beige, Cream, Salmon, Khaki, Maroon, Burgundy, Coral, Gold, Silver, Bronze, Neon/Fluorescent colors, Iridescent/Metallic colors, Pearlescent colors, Pastel variants of rainbow hues, Deep or muted versions of spectral colors.**
+
+---
+
+### Bottom line
+- **A rainbow shows only the seven (or sometimes six) pure spectral colors.**  
+- Any color that requires **more than one wavelength**, or that depends on **brightness, saturation, or surface properties** rather than a single wavelength, will **never appear in a rainbow**.  
+- The list above captures the most common everyday colors that fall outside the spectrum. Use it whenever you need a quick reminder of what’s not in the rainbow.

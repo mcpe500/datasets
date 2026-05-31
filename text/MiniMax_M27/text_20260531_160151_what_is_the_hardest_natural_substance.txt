@@ -1,0 +1,35 @@
+**Diamond** is the hardest natural material that occurs on Earth.
+
+### Why diamond tops the list
+| Property | Diamond |
+|----------|---------|
+| **Mohs hardness** | 10 (the maximum on the scale) |
+| **Vickers hardness** | 70–100 GPa (≈ 7,000–10,000 kgf mm⁻²) |
+| **Bulk modulus** | ~440 GPa (very stiff) |
+| **Composition** | Pure carbon in a tetrahedral covalent network |
+
+- **Mohs scale** (1–10) ranks minerals by whether they can scratch each other. Diamond’s rating of 10 means it can scratch every other natural mineral.
+- **Vickers hardness** measures resistance to deformation under a pointed indenter. Diamond’s 70–100 GPa is far higher than any other natural material (e.g., quartz ≈ 9 GPa, topaz ≈ 2 GPa).
+
+### A close natural runner‑up: Lonsdaleite
+- **Lonsdaleite** is a hexagonal (wurtzite‑type) form of diamond found in some meteorite impact structures (e.g., the Canyon Diablo crater, the Sudbury basin).  
+- Theoretical studies suggest it could be *harder* than ordinary cubic diamond under certain stress conditions, but its natural occurrence is sparse and it is usually intergrown with cubic diamond, making reliable hardness measurements difficult.  
+
+### What “hardest” means
+Hardness can be measured in several ways:
+- **Scratch resistance** → Mohs scale (qualitative).
+- **Indentation resistance** → Vickers, Knoop, or Brinell hardness (quantitative, in GPa or MPa).
+
+Because diamond dominates both the qualitative and quantitative rankings, it’s universally accepted as the hardest natural substance.
+
+### Quick reference
+| Natural Substance | Mohs | Vickers (GPa) | Remarks |
+|-------------------|------|--------------|---------|
+| **Diamond** | 10 | 70–100 | Found in kimberlite pipes, alluvial deposits |
+| **Lonsdaleite** | ≈10 (theoretical) | ~100+ (theoretical) | Rare, meteorite‑derived |
+| **Corundum** (e.g., ruby, sapphire) | 9 | ~20 | Hard, but not as hard as diamond |
+| **Topaz** | 8 | ~6–7 | Transparent, used in jewelry |
+| **Quartz** | 7 | ~9 | Common in sand and many rocks |
+
+### Bottom line
+If you need the toughest material that nature provides, reach for **diamond**—whether it’s a gem in a ring or a industrial cutting tool, it stands at the top of the hardness hierarchy.
